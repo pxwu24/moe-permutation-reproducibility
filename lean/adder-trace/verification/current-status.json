@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "compiler_exit_code": 0,
+  "command": "bash verify.sh",
+  "lean_version": "4.24.0",
+  "mathlib_commit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+  "audited_theorem_count": 615,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "manuscript_results": [
+    "Lemma 5",
+    "Lemma 6",
+    "Proposition 4"
+  ],
+  "sources": {
+    "AdderTrace.lean": "5af5fc12e9b469220527b035c22373cf66a10426154eb11dc75cef8974bd4276",
+    "Audit.lean": "5a97b3a4bdacc3dfd395f71b8495a5856d9e7ae74072d085a48d0291b391da0b",
+    "SupplementAdder.lean": "afff7188d9e557e3364a0db89272ebe8dcfdba141a96723cf930a381b8ba21f1"
+  }
+}

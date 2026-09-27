@@ -1,0 +1,10 @@
+# Lean dependencies and build products
+**/.lake/
+**/build/
+**/*.olean
+**/*.ilean
+**/*.trace
+**/*.olean.private
+**/*.olean.server
+**/.DS_Store
+**/__pycache__/
