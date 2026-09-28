@@ -1,4 +1,4 @@
-# Quantum-channel reproducibility
+# Superadditivity of Holevo information
 
 This repository contains numerical code and formal proofs for two related
 quantum-channel projects.
