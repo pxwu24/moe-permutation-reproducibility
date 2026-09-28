@@ -1,42 +1,48 @@
-# Lean verification of the Supplement
+# Lean verification of the paper
 
 This collection accompanies *Explicit channels with unbounded gains in
-classical communication using entangled inputs*. Result numbering follows
-the supplied 18-page manuscript: Lemmas 3–6, Corollaries 1–2, and
-Propositions 3–4.
-
-The section **Details in the proof of the main theorem**, starting on page 17,
-and the parameter table on page 18 are excluded. In particular, this collection
-does not claim to verify the final theorem about vanishing one-copy Holevo
-information and diverging two-copy Holevo information. Corollary 2 is a
-technical entropy-gap result in the Supplement and remains included.
+classical communication using entangled inputs*. The active project covers
+Lemmas 3–6, Corollaries 1–2, Propositions 2–3, and the main theorem, including
+the prescribed parameters and dimension estimates.
 
 ## Projects
 
-| Directory | Toolchain | Dependencies | Subject |
-| --- | --- | --- | --- |
-| [`entropy`](entropy/) | Lean 4.33.0 | Physlib and mathlib, pinned commits | Entropy, coordinate marginals, and the uniform measurement estimate |
-| [`adder-trace`](adder-trace/) | Lean 4.24.0 | mathlib, pinned commit | The prescribed modular adders, word and moment bounds, and filter trace |
+| Directory | Toolchain | Role |
+| --- | --- | --- |
+| [`entropy`](entropy/) | Lean 4.33.0; pinned Physlib and mathlib | Unified proof project, including all adder proofs and the main theorem |
+| [`adder-trace`](adder-trace/) | Lean 4.24.0; pinned mathlib | Preserved original adder proof project, optional to rebuild |
 
-The projects intentionally use separate toolchains: these are the versions
-under which the recovered proofs were verified. They should not be imported
-into one another. Both use the unnormalized Hilbert–Schmidt norm.
+[`entropy/AllProofs.lean`](entropy/AllProofs.lean) imports the paper-facing
+results. `MainTheorem.main_theorem` proves both strict Holevo inequalities for
+an actual, fully specified CPTP map. `MainTheorem.main_dimensions` bounds the
+dimensions of that same map. `MainParameterGrowth` supplies the `IsTheta`
+statements underlying the parameter table.
+
+The Lean 4.24 project is retained for provenance. The active proof imports the
+ported adder modules inside the Lean 4.33 project; no compiled proof is imported
+across toolchains.
 
 ## Reproduce
 
 Install Git, Python 3, Bash, and the
 [elan Lean toolchain manager](https://github.com/leanprover/elan).
-From this directory run:
+From the repository root run:
 
 ```sh
-bash verify-all.sh
+bash lean/verify-all.sh
 ```
 
-The scripts download the pinned dependencies and may use their standard
-mathlib caches. All proof modules in this repository are compiled from source.
-The audit rejects `sorryAx` and any additional axiom; only `propext`,
-`Classical.choice`, and `Quot.sound` are allowed.
+To additionally check the unchanged original Lean 4.24 adder project:
 
-See [COVERAGE.md](COVERAGE.md) for the correspondence between the paper and
-Lean statements. Dependency notices are preserved in
-[`entropy/NOTICE.md`](entropy/NOTICE.md).
+```sh
+VERIFY_LEGACY_ADDER=1 bash lean/verify-all.sh
+```
+
+The verifier checks pinned dependency revisions, rebuilds every local Lean
+source in dependency order, and audits every originating declaration's
+transitive axiom dependencies. It rejects `sorryAx` and additional axioms;
+only `propext`, `Classical.choice`, and `Quot.sound` are allowed.
+
+See [COVERAGE.md](COVERAGE.md) for the correspondence with the paper and the
+precise scope of the finite-field representation and capacity statements.
+Dependency notices are preserved in [`entropy/NOTICE.md`](entropy/NOTICE.md).

@@ -99,7 +99,7 @@ lemma reindexedCoordinate_real (e : Fin n ≃ (Fin r → d))
 
 /-- Enumerate all `M^r` output tuples by their finite cardinality. -/
 def eOut (M r : ℕ) : Fin (M ^ r) ≃ (Fin r → Fin M) :=
-  Fintype.equivOfCardEq (by simp)
+  (Fintype.equivFinOfCardEq (by simp : Fintype.card (Fin r → Fin M) = M ^ r)).symm
 
 /-- A finite input basis with the exact tensor-product cardinality. -/
 def eInput (d : Type*) [Fintype d] (r : ℕ) :

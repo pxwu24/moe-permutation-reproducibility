@@ -1,0 +1,184 @@
+\subsection{Proof of the main theorem}
+\label{subsec:technical-main-proof}
+
+\begin{table}[tbp]
+\centering\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{0.20\textwidth}p{0.45\textwidth}p{0.28\textwidth}@{}}
+\toprule
+\textbf{Parameter} & \textbf{Explicit choice} & \textbf{Scaling in $r$}\\
+\midrule
+$M$ & $2^{27}$ & Fixed\\
+$\gamma$ & $1-10^{-6}$ & Fixed\\
+$C_1$ & $2\times10^8$ & Fixed\\
+$C_{2,r}$ & $10001\sqrt{2}\sqrt{(M+9)^r-M^r}$ & $\Theta((M+9)^{r/2})$\\
+$L_r$ & $\left\lceil\dfrac{\log(2P_r/E)}{2\log\theta}\right\rceil$ & $\Theta(rM^{2r})$\\[3pt]
+$Q_r$ & $2^{q_r}$, with $q_r$ in \eqref{eq:q-choice} & $\exp(\Theta(r^2M^{2r}))$\\
+Input dimension $n_r$ & $k^2Q_r^{2r}$ & $\exp(\Theta(r^3M^{2r}))$\\
+Output dimension $k$ & $M^r$ & $\exp(\Theta(r))$\\
+\bottomrule
+\end{tabular}
+\caption{Parameters of the final channel $\widehat\Lambda_r$.
+The basic channel $\Phi_r$ has input dimension $Q_r^{2r}$.
+The quantities $E,\theta,P_r$ are defined below.}
+\label{tab:all-r}
+\end{table}
+
+We use the parameters in Table~\ref{tab:all-r}. Thus
+$M=2^{27}$, $\gamma=1-10^{-6}$, and $C_1=2\times10^8$.
+Throughout this proof, $r\ge1$ is an integer. Put
+\[
+ k=M^r,\qquad A_r=(M+9)^r-M^r,\qquad
+ E=10^{-6},\qquad \theta=\frac{10001}{10000},\qquad
+ P_r=\left(2\left\lceil\sqrt{C_1}k\right\rceil\right)^{k(k-1)}.
+\]
+Choose
+\begin{equation}\label{eq:q-choice}
+ \begin{gathered}
+ C_{2,r}=10001\sqrt{2A_r},\qquad
+ L_r=\left\lceil\frac{\log(2P_r/E)}{2\log\theta}\right\rceil,\\
+ Q_r=2^{q_r},\qquad
+ q_r=2+\left\lceil L_r\bigl[4\log_2(4M-1)+2\log_2 k\bigr]\right\rceil.
+ \end{gathered}
+\end{equation}
+These choices satisfy $C_{2,r}>\sqrt{C_1A_r}$, $L_r\ge1$,
+and give $P_r\theta^{-2L_r}\le E/2$ and
+$Q_r>B_{L_r}k^{2L_r}$. Since $A_r\ge1$, Proposition~3 yields
+\begin{equation}\label{eq:main-filter-bound}
+ \frac{\operatorname{Tr}F}{Q_r^{2r}}
+ \le P_r\theta^{-2L_r}
+ \left[1+\frac{B_{L_r}}{Q_r}
+ \left(\frac{k(k-1)}{A_r}\right)^{L_r}\right]<E.
+\end{equation}
+Let $\Phi_r$ be the resulting basic channel and write
+\begin{equation}\label{eq:main-a}
+ a_r=1+\frac{\gamma^2}{k}
+ \left(\frac{C_{2,r}}{\sqrt{C_1}-\sqrt2}\right)^2.
+\end{equation}
+The matrices $U_I$ are real, and the grid $\mathcal W_k$ is closed
+under entrywise conjugation. Hence $F$ and $H=\sqrt{\gamma}(I+F)^{-1/2}$ are real, so $\overline{\Phi_r}=\Phi_r$.
+Proposition~2, Lemma~3, and Corollary~1 give
+\begin{equation}\label{eq:main-basic-bounds}
+ k\left\|\Phi_r(\sigma)-\frac{I_k}{k}\right\|_2^2\le a_r-1,
+ \qquad
+ H\bigl((\Phi_r\otimes\Phi_r)(\omega_{Q_r^{2r}})\bigr)
+ \le 2\log k-rd_M\!\left(\frac{\gamma^2}{(1+E)^2}\right),
+\end{equation}
+where $\omega_{Q_r^{2r}}$ is the maximally entangled input state defined above.
+
+We next make every one-copy output close to the maximally mixed state
+using a short average of Pauli conjugations. Set
+\[
+ m=27r,\qquad
+ t_r=\left\lceil\log_2(54r^2\sqrt{a_r})\right\rceil,
+ \qquad h_r=2^{t_r},\qquad \ell_r=h_r^2.
+\]
+Represent $\mathbb F_{h_r}$ using the lexicographically first monic
+irreducible binary polynomial of degree $t_r$, and let
+$\tau:\mathbb F_{h_r}\to\mathbb F_2$ be its field trace.
+For $x,y\in\mathbb F_{h_r}$, define
+\[
+ P_{x,y}=\bigotimes_{j=1}^{m}
+ X^{\tau(yx^{j-1})}Z^{\tau(yx^{m+j-1})},
+ \qquad
+ \mathcal R_r(Y)=\frac1{\ell_r}\sum_{x,y}P_{x,y}YP_{x,y}^{\dagger}.
+\]
+Here $X,Z$ are the qubit Pauli matrices and $x^0=1$.
+For every nonidentity Pauli matrix $P$, conjugation contributes a
+sign $(-1)^{\tau(yp(x))}$ for a nonzero binary polynomial $p$ of degree
+at most $2m-1$. Averaging first over $y$ gives
+\[
+ \mathcal R_r(P)=\frac{\#\{x:p(x)=0\}}{h_r}P,
+ \qquad
+ \frac{\#\{x:p(x)=0\}}{h_r}\le\frac{2m-1}{h_r}
+ <\frac1{r\sqrt{a_r}}.
+\]
+Orthogonality of the Pauli basis and the definition of $t_r$ imply
+\begin{equation}\label{eq:main-randomizer}
+ \|\mathcal R_r(Y)\|_2\le\frac{\|Y\|_2}{r\sqrt{a_r}}
+ \quad(\operatorname{Tr}Y=0),\qquad
+ \ell_r<108^2r^4a_r.
+\end{equation}
+Consequently $\Lambda_r=\mathcal R_r\circ\Phi_r$ satisfies
+\[
+ k\left\|\Lambda_r(\sigma)-\frac{I_k}{k}\right\|_2^2
+ \le\frac{a_r-1}{r^2a_r}\le r^{-2}.
+\]
+The inequality $H(\rho)\ge-\log\operatorname{Tr}(\rho^2)$ now gives
+\begin{equation}\label{eq:main-smoothed-single}
+ H_{\min}(\Lambda_r)\ge\log k-\log(1+r^{-2}).
+\end{equation}
+On the other hand, $(\mathcal R_r\otimes\mathcal R_r)$ averages
+$\ell_r^2$ unitary conjugations. Applying the entropy-of-mixture
+inequality to the Bell output in \eqref{eq:main-basic-bounds} gives
+\begin{equation}\label{eq:main-smoothed-double}
+ H\bigl((\Lambda_r\otimes\Lambda_r)(\omega_{Q_r^{2r}})\bigr)
+ \le 2\log k-rd_M\!\left(\frac{\gamma^2}{(1+E)^2}\right)
+       +2\log\ell_r.
+\end{equation}
+
+We obtain the final channel by appending a classical label.
+For $u,v\in\{0,1\}^{m}$, write
+$W_{uv}=\bigotimes_{j=1}^{m}X^{u_j}Z^{v_j}$, and define
+\begin{equation}\label{eq:main-weyl-extension}
+ \widehat\Lambda_r(\rho)
+ =\sum_{u,v}W_{uv}
+ \Lambda_r\!\left(\langle u,v|\rho|u,v\rangle\right)W_{uv}^{\dagger}.
+\end{equation}
+Its input and output dimensions are $k^2Q_r^{2r}$ and $k$.
+Every output is a mixture of unitary conjugates of outputs of $\Lambda_r$.
+Entropy concavity therefore gives
+\[
+ \chi_{\max}(\widehat\Lambda_r)\le\log k-H_{\min}(\Lambda_r).
+\]
+For two copies, use the Bell input and choose both labels independently
+and uniformly. The average output is $I_{k^2}/k^2$, while all states
+in this ensemble have the same entropy. Hence
+\[
+ \chi_{\max}(\widehat\Lambda_r^{\otimes2})
+ \ge 2\log k-H\bigl((\Lambda_r\otimes\Lambda_r)(\omega_{Q_r^{2r}})\bigr)
+ \ge rd_M\!\left(\frac{\gamma^2}{(1+E)^2}\right)-2\log\ell_r.
+\]
+
+It remains to check that the two-copy gain exceeds the cost of this
+short average. Put $\beta=(10001\gamma/9999)^2$. Then
+$1<\beta<1.001$, and the binomial theorem gives
+\[
+ a_r=1+\beta\left[\left(1+\frac9M\right)^r-1\right]
+ \le\left(1+\frac{9\beta}{M}\right)^r.
+\]
+For $s=\gamma^2/(1+E)^2$, the elementary estimate
+\[
+ d_M(s)\ge\frac{s\log M+s\log s+(1-s)\log(1-s)}{M}
+\]
+and $-s\log s\le1-s$ imply
+\begin{align*}
+ d_M(s)-2\log\left(1+\frac{9\beta}{M}\right)
+ &\ge\frac{\log M-(1-s)[\log M+1-\log(1-s)]-18\beta}{M}\\
+ &>\frac{0.692868}{M}>5\times10^{-9}.
+\end{align*}
+Here we used only $18.711<\log M<19$,
+$1-s<4\times10^{-6}$, $\log(1-s)>-13$, and $\beta<1.001$.
+The first estimate follows by writing $1+(M-1)s=M(s+(1-s)/M)$
+and using $(x+y)\log(x+y)\ge x\log x+y\log y$ for $x,y>0$.
+Combining the preceding bounds proves
+\begin{equation}\label{eq:main-final-bounds}
+ \chi_{\max}(\widehat\Lambda_r)\le\log(1+r^{-2}),\qquad
+ \chi_{\max}(\widehat\Lambda_r^{\otimes2})
+ >5\times10^{-9}r-8\log r-4\log108.
+\end{equation}
+
+Given $N\ge1$, take $J=\lceil N\rceil$ and $r_N=10^{11}J$, and define
+$\Phi_N=\widehat\Lambda_{r_N}$. Since $\log(1+x)<x$ for $x>0$, the first bound in
+\eqref{eq:main-final-bounds} is less than $r_N^{-2}<1/N$.
+Using $\log(10^{11})<26$, $4\log108<20$, and $\log J\le J-1$,
+the second bound is greater than
+\[
+ 500J-8(26+\log J)-20\ge492J-220>N.
+\]
+Also $C(\Phi_N)\ge\tfrac12\chi_{\max}(\Phi_N^{\otimes2})$, so
+$C(\Phi_N)-\chi_{\max}(\Phi_N)>N/2-1/N$.
+Finally, $\log P_r=\Theta(rM^{2r})$ gives the scalings in
+Table~\ref{tab:all-r}. Since $r_N=\Theta(N)$, the output dimension
+is $\exp(\Theta(N))$ and the input dimension is
+$\exp(\exp(\Theta(N)))$, as claimed.

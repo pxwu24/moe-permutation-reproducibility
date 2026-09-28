@@ -1,36 +1,39 @@
-# Entropy and filter proofs
+# Unified formalization of the Supplement and main theorem
 
-This project formalizes the entropy, tensor, and filter estimates in the
-Supplement. The [coverage map](../COVERAGE.md) identifies the corresponding
-statements and their assumptions.
+This Lean 4.33 project contains the entropy, adder, filter, randomizer, and
+Holevo proofs in one import graph. Start with [`AllProofs.lean`](AllProofs.lean)
+or the [paper-to-Lean coverage map](../COVERAGE.md).
 
-| Statement | Lean endpoint |
+| Statement | Principal endpoint |
 | --- | --- |
-| Lemma 3, including the pointwise Hilbert–Schmidt estimate | `SupplementSingle.lemma3` |
-| Lemma 4, including the Bell-input sandwich | `SupplementEntropy.lemma4` |
-| Corollary 1 for the actual tensor tuple | `SupplementEntropy.corollary1` |
-| Corollary 2 and its unbounded-gap consequence | `SupplementEntropy.corollary2`, `SupplementEntropy.corollary2_unbounded` |
-| Proposition 3, the Gaussian-grid filter support estimate | `ActualGridSupport.actual_grid_support_bound` |
+| Lemma 3: single-copy estimate | `SupplementSingle.lemma3` |
+| Lemma 4: Bell-input entropy sandwich | `SupplementEntropy.lemma4` |
+| Corollary 1: actual tensor-coordinate estimate | `SupplementEntropy.corollary1` |
+| Corollary 2: linear and unbounded entropy gap | `SupplementEntropy.corollary2`, `SupplementEntropy.corollary2_unbounded` |
+| Proposition 2: uniform measurement estimate | `ActualGridSupport.actual_grid_support_bound` |
+| Proposition 3: prescribed filter trace | `AdderTrace.technical_trace_bound` |
+| Lemmas 5–6: word and moment estimates | `SupplementAdder.lemma5_word_trace`, `SupplementAdder.lemma6_moment_bound` |
+| Main theorem: both strict Holevo bounds | `MainTheorem.main_theorem` |
+| Dimensions of the same channels | `MainTheorem.main_dimensions` |
+| Parameter table growth rates | `MainParameterGrowth.L_theta`, `q_theta`, `log_Q_theta`, `log_inputDimension_theta`, `C₂_theta`, `log_outputDimension_theta` |
+| Unbounded regularized-capacity gap | `MainCapacityCorollary.unbounded_capacity_gap` |
 
-The channel parameters `hΦ` and `hconj` specify the matrix-entry formula and
-the complex-conjugate channel. The tensor marginal identities are derived in
-the proof of Corollary 1, for arbitrary complex unitary factors. The suppressor
-and trace bounds remain the hypotheses stated in the corresponding Supplement
-results.
+The main theorem has only the premise `1 ≤ N`. Its imported proofs construct
+the adder matrices, full Gaussian-grid filter, measurement channel, finite-field
+Pauli randomizer, and classical Pauli completion. The required trace, norm,
+entropy, and twirling bounds are proved for those objects.
 
-The source modules are organized into four groups:
+The general Supplement statements retain their stated hypotheses. In
+particular, the channel-entry and conjugate-entry hypotheses specify the
+channel formulas; they do not assume the desired entropy or marginal bounds.
+`MainChannel`, `MainReal`, and `MainConcreteBasic` discharge these conditions
+for the actual main-theorem construction.
 
-- `BellAlgebra`, `FilterTrace`, `Joint*`, `Single*`, and `TensorBridge` prove the
-  single-channel and two-channel estimates.
-- `ActualTensor*`, `ActualCoordinateMarginal`, and `TensorMarginalEntropy`
-  construct tensor labels and prove the coordinate marginal formulas.
-- `Grid*`, `GaussianSign*`, `SignFilterLower`, `FiniteFilterSupport`, and
-  `ActualGrid*` prove the concrete filter and support estimates.
-- `Gap*`, `TensorAmplification`, `SymbolicAmplification`, and `TensorCalibration`
-  supply the scalar estimates used by the two corollaries.
-
-`SupplementSingle.lean` and `SupplementEntropy.lean` provide the paper-facing
-statements. The final main-result construction is outside this project.
+The randomizer uses Mathlib's `GaloisField 2 t` and the field trace. The proof is
+independent of a chosen polynomial representation; it does not implement the
+lexicographically first irreducible-polynomial search. Capacity is formalized
+by its regularized Holevo formula, without re-proving the operational coding
+theorem. These distinctions are explained in [COVERAGE.md](../COVERAGE.md).
 
 ## Reproduce
 
@@ -41,36 +44,36 @@ From this directory, run:
 bash verify.sh
 ```
 
-The dependencies are pinned to:
-
-| Dependency | Version |
+| Dependency | Pinned version |
 | --- | --- |
 | Lean | `leanprover/lean4:v4.33.0` |
 | Physlib | `c76e3ccab04eacb69a126ca5c021b0788d513292` |
 | Mathlib | `db584cd6d46c92f209a44c0f1c829460d327499d` |
 
 The script checks out Physlib, applies the published `upstream.patch`, obtains
-the standard Mathlib dependency cache, and builds the required Physlib modules.
-It then compiles **every local proof source** in dependency order and audits
-every declaration originating in those modules. The audit follows dependencies
-transitively and fails on `sorryAx` or any axiom other than `propext`,
-`Classical.choice`, and `Quot.sound`.
+standard Mathlib dependency artifacts, and builds the required Physlib modules.
+It then compiles every local `.lean` source, including `AllProofs.lean`, and
+checks every declaration originating in those modules. The axiom audit follows
+dependencies transitively and allows only `propext`, `Classical.choice`, and
+`Quot.sound`.
 
-An existing checkout at the pinned Physlib revision can be selected with:
+An existing pinned checkout can be selected with:
 
 ```sh
 PHYSLIB_DIR=/absolute/path/to/physlib bash verify.sh
 ```
 
-`SKIP_CACHE_DOWNLOAD=1` uses already available standard dependency artifacts.
-All local proofs are still recompiled. `VERIFICATION_DIR` selects a different
-output directory; the default is `verification/`.
+`SKIP_CACHE_DOWNLOAD=1` uses already available dependency artifacts; every local
+proof is still rebuilt. `VERIFICATION_DIR` changes the output directory from
+its default, `verification/`.
 
-Each run writes a compiler log, an exhaustive axiom-audit log, exact source
-hashes, the build order, dependency versions, and `verification_status.json`.
-The JSON success record is created only after compilation and the aggregate
-audit both pass.
+Each run records compiler output, the exhaustive axiom audit, exact source
+hashes, build order, dependency versions, and `verification_status.json`.
+The success record is written only after the entire build and audit pass.
+Use its source manifest to identify exactly which source versions were checked;
+a record from the earlier Supplement-only collection does not certify later
+main-theorem additions.
 
-Dependency attribution and the compatibility-patch description are in
-[`NOTICE.md`](NOTICE.md); the applicable third-party license text is in
+Attribution and the dependency patch are documented in
+[`NOTICE.md`](NOTICE.md), with the applicable third-party license in
 [`LICENSE-APACHE-2.0.txt`](LICENSE-APACHE-2.0.txt).

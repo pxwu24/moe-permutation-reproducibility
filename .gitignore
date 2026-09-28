@@ -8,3 +8,8 @@
 **/*.olean.server
 **/.DS_Store
 **/__pycache__/
+
+# LaTeX intermediates (the proof PDF is included)
+supplement/*.aux
+supplement/*.log
+supplement/*.out
