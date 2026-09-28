@@ -1,0 +1,68 @@
+diff --git a/QuantumInfo/Channels/Unbundled.lean b/QuantumInfo/Channels/Unbundled.lean
+index b12dce9..615af4e 100644
+--- a/QuantumInfo/Channels/Unbundled.lean
++++ b/QuantumInfo/Channels/Unbundled.lean
+@@ -7,6 +7,7 @@ module
+ 
+ public import QuantumInfo.Channels.MatrixMap
+ public import QuantumInfo.ForMathlib.MatrixNorm.TraceNorm
++public import Mathlib.LinearAlgebra.Matrix.Bilinear
+ 
+ /-! # Properties of Matrix Maps
+ 
+diff --git a/QuantumInfo/ForMathlib/Filter.lean b/QuantumInfo/ForMathlib/Filter.lean
+index 503835a..0f118de 100644
+--- a/QuantumInfo/ForMathlib/Filter.lean
++++ b/QuantumInfo/ForMathlib/Filter.lean
+@@ -5,7 +5,11 @@ Authors: Alex Meiburg
+ -/
+ module
+ 
+-public import Mathlib
++public import Mathlib.Topology.Instances.ENNReal.Lemmas
++public import Mathlib.Analysis.SpecificLimits.Basic
++public import Mathlib.Algebra.Order.Floor.Ring
++public import Mathlib.Algebra.Order.Floor.Semifield
++public import Mathlib.Tactic
+ 
+ public import Mathlib.Tactic.Bound
+ 
+diff --git a/QuantumInfo/ForMathlib/HermitianMat/Rpow.lean b/QuantumInfo/ForMathlib/HermitianMat/Rpow.lean
+index 3d2c413..3dbfc3c 100644
+--- a/QuantumInfo/ForMathlib/HermitianMat/Rpow.lean
++++ b/QuantumInfo/ForMathlib/HermitianMat/Rpow.lean
+@@ -9,6 +9,7 @@ public import QuantumInfo.ForMathlib.HermitianMat.CompoundMatrix
+ public import QuantumInfo.ForMathlib.HermitianMat.LogExp
+ public import QuantumInfo.ForMathlib.HermitianMat.Sqrt
+ public import QuantumInfo.ForMathlib.HermitianMat.Unitary
++public import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
+ 
+ @[expose] public section
+ 
+diff --git a/QuantumInfo/ForMathlib/Majorization.lean b/QuantumInfo/ForMathlib/Majorization.lean
+index 9bb2579..290130e 100644
+--- a/QuantumInfo/ForMathlib/Majorization.lean
++++ b/QuantumInfo/ForMathlib/Majorization.lean
+@@ -5,7 +5,12 @@ Authors: Alex Meiburg
+ -/
+ module
+ 
+-public import Mathlib
++public import Mathlib.Analysis.MeanInequalitiesPow
++public import Mathlib.Data.Finset.Sort
++public import Mathlib.Data.Multiset.Sort
++public import Mathlib.Analysis.SpecialFunctions.Pow.Real
++public import Mathlib.Analysis.SpecialFunctions.Log.Basic
++public import Mathlib.Tactic
+ public import QuantumInfo.ForMathlib.Matrix
+ 
+ /-! # Majorization and weak log-majorization
+@@ -266,7 +271,7 @@ lemma compoundMatrix_diagonal (f : d → ℂ) (k : ℕ) :
+     obtain ⟨j, hj⟩ : ∃ j : Fin k, (S.val.orderEmbOfFin S.2) j = i := by
+       have h_row_zero : Finset.image (fun j : Fin k => S.val.orderEmbOfFin S.2 j) Finset.univ = S.val := by
+         refine' Finset.eq_of_subset_of_card_le (Finset.image_subset_iff.mpr fun j _ => Finset.orderEmbOfFin_mem _ _ _) _
+-        simp [Finset.card_image_of_injective, Function.Injective, *]
++        simp [Finset.card_image_of_injective, Function.Injective, S.2, *]
+       exact Exists.elim (Finset.mem_image.mp (h_row_zero.symm ▸ hiS)) fun j hj => ⟨j, hj.2⟩
+     -- Since the row corresponding to $i$ in the submatrix is all zeros, the determinant of this submatrix is zero.
+     have h_det_zero : Matrix.det (Matrix.of (fun i j => if (S.val.orderEmbOfFin S.2 i) = (T.val.orderEmbOfFin T.2 j) then f (T.val.orderEmbOfFin T.2 j) else 0) : Matrix (Fin k) (Fin k) ℂ) = 0 := by

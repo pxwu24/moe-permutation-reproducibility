@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "full_proposition_proved": true,
+  "main_theorem": "AdderTrace.technical_trace_bound",
+  "compiler_exit_code": 0,
+  "verification_command": "lake env lean AdderTrace.lean",
+  "lean_version": "4.24.0",
+  "mathlib_commit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+  "source_sha256": "5af5fc12e9b469220527b035c22373cf66a10426154eb11dc75cef8974bd4276",
+  "source_lines": 5465,
+  "source_components": 49,
+  "audited_theorem_count": 595,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "proof_placeholders": false,
+  "extra_mathematical_hypotheses": false,
+  "trace_representation": "Real part, with a theorem identifying it with the actual complex trace",
+  "compiler_log": "verification.log"
+}

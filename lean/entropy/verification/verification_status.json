@@ -1,0 +1,436 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-09-28T00:49:43.963042+00:00",
+  "lean_version": "4.33.0",
+  "physlib_commit": "c76e3ccab04eacb69a126ca5c021b0788d513292",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "all_local_modules_recompiled": true,
+  "audited_declarations": 2048,
+  "audited_modules": 57,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_manifest": {
+    "modules": [
+      "BellAlgebra",
+      "FilterTrace",
+      "JointBound",
+      "JointProjection",
+      "JointEntropy",
+      "SingleEntropy",
+      "TensorBridge",
+      "JointChannel",
+      "TensorMarginalEntropy",
+      "ActualTensorTuple",
+      "ActualCoordinateMarginal",
+      "FiniteFilterSupport",
+      "SignFilterLower",
+      "GaussianSignCoefficient",
+      "GridNet",
+      "GridCardinality",
+      "GaussianSignGrid",
+      "ActualGridFilterLower",
+      "ActualGridSupport",
+      "ActualGridFilterProperties",
+      "ActualTensorBasis",
+      "AdderTrace",
+      "MainHolevo",
+      "MainHolevoTensor",
+      "MainCapacity",
+      "MainAdderTuple",
+      "MainChannel",
+      "MainReal",
+      "SingleChannel",
+      "GapObstruction",
+      "GapRemainder",
+      "GapAsymptotics",
+      "TensorAmplification",
+      "SymbolicAmplification",
+      "TensorCalibration",
+      "SupplementEntropy",
+      "SupplementSingle",
+      "MainBasic",
+      "MainFilterParameters",
+      "MainGridBridge",
+      "MainParameters",
+      "MainConcreteBasic",
+      "MainRandomizer",
+      "MainPauli",
+      "MainConcreteRandomizer",
+      "MainSmoothing",
+      "MainSmoothedChannel",
+      "MainConcreteSmoothed",
+      "MainDimensions",
+      "MainFlaggedEntropy",
+      "MainPauliTensor",
+      "MainPauliHolevo",
+      "MainTheorem",
+      "MainCapacityCorollary",
+      "MainParameterGrowth",
+      "SupplementAdder",
+      "AllProofs"
+    ],
+    "imports": {
+      "GapAsymptotics": [
+        "GapObstruction",
+        "GapRemainder",
+        "Mathlib.Analysis.SpecificLimits.Normed"
+      ],
+      "ActualGridFilterProperties": [
+        "ActualGridSupport"
+      ],
+      "MainConcreteSmoothed": [
+        "MainSmoothedChannel",
+        "MainConcreteBasic",
+        "MainHolevoTensor"
+      ],
+      "SupplementSingle": [
+        "SingleChannel"
+      ],
+      "TensorCalibration": [
+        "Mathlib.Analysis.Real.Sqrt",
+        "Mathlib.Tactic"
+      ],
+      "GapObstruction": [
+        "JointChannel"
+      ],
+      "JointEntropy": [
+        "QuantumInfo.Entropy.VonNeumann",
+        "QuantumInfo.ForMathlib.HermitianMat.Peierls",
+        "JointProjection"
+      ],
+      "AllProofs": [
+        "SupplementSingle",
+        "SupplementEntropy",
+        "SupplementAdder",
+        "ActualGridSupport",
+        "MainTheorem",
+        "MainParameterGrowth",
+        "MainCapacityCorollary"
+      ],
+      "GridNet": [
+        "QuantumInfo.ForMathlib.HermitianMat.Inner",
+        "Mathlib.Algebra.Order.Round"
+      ],
+      "FiniteFilterSupport": [
+        "QuantumInfo.ForMathlib.HermitianMat.Sqrt",
+        "Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Order",
+        "Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Isometric",
+        "Mathlib.Analysis.Normed.Operator.Basic"
+      ],
+      "ActualCoordinateMarginal": [
+        "ActualTensorTuple"
+      ],
+      "SingleEntropy": [
+        "QuantumInfo.Entropy.VonNeumann"
+      ],
+      "MainBasic": [
+        "MainReal",
+        "SupplementSingle",
+        "SupplementEntropy"
+      ],
+      "ActualTensorTuple": [
+        "TensorMarginalEntropy",
+        "Mathlib.Logic.Equiv.Prod"
+      ],
+      "MainFlaggedEntropy": [
+        "MainHolevo"
+      ],
+      "SupplementEntropy": [
+        "ActualCoordinateMarginal",
+        "ActualTensorBasis",
+        "SingleChannel",
+        "SymbolicAmplification",
+        "TensorCalibration"
+      ],
+      "MainGridBridge": [
+        "AdderTrace",
+        "ActualGridFilterLower",
+        "MainFilterParameters",
+        "MainAdderTuple"
+      ],
+      "MainPauli": [
+        "MainRandomizer",
+        "Mathlib.Analysis.InnerProductSpace.Orthonormal",
+        "Mathlib.LinearAlgebra.Matrix.ConjTranspose",
+        "Mathlib.LinearAlgebra.Matrix.Trace"
+      ],
+      "GaussianSignCoefficient": [
+        "SignFilterLower"
+      ],
+      "MainTheorem": [
+        "MainConcreteSmoothed",
+        "MainPauliHolevo",
+        "MainDimensions"
+      ],
+      "SignFilterLower": [
+        "FiniteFilterSupport",
+        "Mathlib.Algebra.Order.Ring.Pow"
+      ],
+      "MainHolevo": [
+        "SingleEntropy",
+        "QuantumInfo.Entropy.SSA",
+        "QuantumInfo.ForMathlib.HermitianMat.Peierls"
+      ],
+      "BellAlgebra": [
+        "Mathlib.LinearAlgebra.Matrix.Trace",
+        "Mathlib.LinearAlgebra.Matrix.ConjTranspose",
+        "Mathlib.Tactic"
+      ],
+      "MainDimensions": [
+        "MainFilterParameters",
+        "MainParameters"
+      ],
+      "MainHolevoTensor": [
+        "MainHolevo"
+      ],
+      "ActualGridSupport": [
+        "ActualGridFilterLower",
+        "Mathlib.Analysis.Normed.Module.FiniteDimension"
+      ],
+      "MainChannel": [
+        "QuantumInfo.Channels.CPTP",
+        "BellAlgebra",
+        "ActualGridFilterProperties"
+      ],
+      "MainCapacity": [
+        "MainHolevoTensor"
+      ],
+      "GapRemainder": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Tactic"
+      ],
+      "ActualGridFilterLower": [
+        "GaussianSignCoefficient",
+        "GaussianSignGrid"
+      ],
+      "MainSmoothing": [
+        "SingleEntropy"
+      ],
+      "TensorBridge": [
+        "QuantumInfo.Channels.CPTP",
+        "BellAlgebra"
+      ],
+      "JointBound": [
+        "FilterTrace",
+        "BellAlgebra"
+      ],
+      "JointProjection": [
+        "QuantumInfo.ForMathlib.HermitianMat.LogExp",
+        "Mathlib.Tactic.Module",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "FilterTrace": [
+        "Mathlib.Analysis.Matrix.PosDef",
+        "Mathlib.Analysis.MeanInequalities",
+        "Mathlib.Tactic"
+      ],
+      "MainPauliTensor": [
+        "MainPauli",
+        "Mathlib.LinearAlgebra.Matrix.Kronecker"
+      ],
+      "TensorMarginalEntropy": [
+        "QuantumInfo.Entropy.SSA",
+        "JointChannel",
+        "Mathlib.LinearAlgebra.Matrix.Kronecker"
+      ],
+      "MainRandomizer": [
+        "Mathlib.NumberTheory.LegendreSymbol.AddCharacter",
+        "Mathlib.Algebra.Polynomial.Roots",
+        "Mathlib.Analysis.InnerProductSpace.PiL2",
+        "Mathlib.Tactic"
+      ],
+      "MainAdderTuple": [
+        "AdderTrace",
+        "ActualTensorBasis"
+      ],
+      "JointChannel": [
+        "JointBound",
+        "TensorBridge",
+        "JointEntropy",
+        "SingleEntropy"
+      ],
+      "MainReal": [
+        "ActualGridFilterProperties",
+        "MainChannel"
+      ],
+      "ActualTensorBasis": [
+        "ActualTensorTuple",
+        "Mathlib.Data.Fintype.EquivFin"
+      ],
+      "SymbolicAmplification": [
+        "TensorAmplification"
+      ],
+      "MainFilterParameters": [
+        "AdderTrace",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic"
+      ],
+      "MainConcreteRandomizer": [
+        "MainPauli",
+        "MainParameters"
+      ],
+      "SingleChannel": [
+        "SingleEntropy",
+        "BellAlgebra",
+        "Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Order",
+        "Mathlib.Analysis.Matrix.Order"
+      ],
+      "TensorAmplification": [
+        "GapAsymptotics",
+        "Mathlib.Analysis.SpecialFunctions.BinaryEntropy",
+        "Mathlib.Analysis.Complex.ExponentialBounds"
+      ],
+      "MainParameterGrowth": [
+        "MainDimensions",
+        "Mathlib.Analysis.Asymptotics.Defs"
+      ],
+      "MainParameters": [
+        "GapRemainder",
+        "Mathlib.Analysis.Complex.ExponentialBounds",
+        "Mathlib.Analysis.Real.Sqrt",
+        "Mathlib.Tactic"
+      ],
+      "MainCapacityCorollary": [
+        "MainTheorem",
+        "MainCapacity"
+      ],
+      "GridCardinality": [
+        "GridNet",
+        "Mathlib.Data.Int.Interval",
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Data.Fintype.Pi"
+      ],
+      "SupplementAdder": [
+        "AdderTrace"
+      ],
+      "AdderTrace": [
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Analysis.Real.Sqrt",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Data.Fintype.BigOperators",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Data.Finsupp.Basic",
+        "Mathlib.Algebra.BigOperators.Finsupp.Basic",
+        "Mathlib.GroupTheory.FreeGroup.Reduce",
+        "Mathlib.LinearAlgebra.Finsupp.LinearCombination",
+        "Mathlib.Data.Complex.Basic",
+        "Mathlib.Tactic.SplitIfs",
+        "Mathlib.Logic.Equiv.Prod",
+        "Mathlib.Algebra.MonoidAlgebra.Basic",
+        "Mathlib.Data.Complex.BigOperators",
+        "Mathlib.LinearAlgebra.Matrix.Hermitian",
+        "Mathlib.Tactic.Ring",
+        "Lean.Elab.Tactic.Omega",
+        "Mathlib.Algebra.Group.TypeTags.Basic",
+        "Mathlib.GroupTheory.Perm.Basic",
+        "Mathlib.Algebra.Order.Ring.Int",
+        "Mathlib.Algebra.Order.Ring.Abs",
+        "Mathlib.Algebra.BigOperators.Group.List.Basic",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.LinearAlgebra.Matrix.Notation",
+        "Mathlib.Data.Matrix.Basic",
+        "Mathlib.GroupTheory.CoprodI",
+        "Mathlib.Tactic.LinearCombination",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Data.Real.Basic",
+        "Mathlib.Data.ZMod.Basic",
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.LinearAlgebra.Matrix.Trace",
+        "Mathlib.Algebra.BigOperators.Fin",
+        "Mathlib.Data.Fin.Tuple.Basic",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Analysis.Normed.Field.Basic",
+        "Mathlib.Algebra.Algebra.Basic",
+        "Mathlib.LinearAlgebra.Matrix.ConjTranspose",
+        "Mathlib.Data.Int.Interval",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Data.Set.Finite.Basic"
+      ],
+      "MainSmoothedChannel": [
+        "MainSmoothing",
+        "MainHolevo",
+        "MainConcreteRandomizer"
+      ],
+      "GaussianSignGrid": [
+        "GridCardinality",
+        "SignFilterLower"
+      ],
+      "MainPauliHolevo": [
+        "MainHolevoTensor",
+        "MainFlaggedEntropy",
+        "MainPauli",
+        "MainPauliTensor"
+      ],
+      "MainConcreteBasic": [
+        "MainBasic",
+        "MainAdderTuple",
+        "MainGridBridge",
+        "MainParameters"
+      ]
+    },
+    "sha256": {
+      "BellAlgebra.lean": "7673c12fec7ea38e84efaa9ca28e94ec166bee1e3032e09d11bf81fd8862eb07",
+      "FilterTrace.lean": "b27362f31216b4fc286108b7e5f5c58919e1e931f1b422e003db2deb3546bd92",
+      "JointBound.lean": "822a69642ebbbec51e916787238c1952d9bae34c6387b2ffbb5d7d38a778d64b",
+      "JointProjection.lean": "b05dfb45aa702843dafcead6e9bb96d08b07554708c0f83c4b65240ddb1ffb41",
+      "JointEntropy.lean": "fa9cd244f73e91f85557442d5c31f925894974bc63befd3ea83fd0e0371821d6",
+      "SingleEntropy.lean": "4e320d2fcf4299af83b08613b6da54722dc42b39050f6968e8351c729d491ce2",
+      "TensorBridge.lean": "4554cae734d9040a9d916734d415a8da19a571fa0ca9499fe2ef143f2fe6030f",
+      "JointChannel.lean": "cfddbf4e2943dc89158d763017a48c91c6424789835043b14bdfd77b11d009e0",
+      "TensorMarginalEntropy.lean": "21a7da9b63c1987d3faad0f92c68da28414f927ff4662f05779116cff4a7f4d3",
+      "ActualTensorTuple.lean": "54cfe7b5494684a1891a9e6757be372cbcb658cfcb7983250a09560b27eaefc7",
+      "ActualCoordinateMarginal.lean": "f27fcf82b8083ae42cf74394dcbc967234d03010c62e2c87a0cf67c034f19736",
+      "FiniteFilterSupport.lean": "3601e03fed07c774fcfcfb4c9c80dcffbd2f5f9f2af959613757c87cec6222be",
+      "SignFilterLower.lean": "9eb6b83485cfc7f4441c6c49c048e04d327d7c63ab8fd3948cbc97692f6149fd",
+      "GaussianSignCoefficient.lean": "03de195a93ef4fd621ac2ced7debcbdcd93b0a7f14f985c3e94527f60bf27867",
+      "GridNet.lean": "00272b6f438349e3a3f86f00804931f7caeed7463caa9fb7b17c4d1988b2de21",
+      "GridCardinality.lean": "affca05e7890f6646fb5cd9875a397f71c70ae7b553985604741b969d1bca450",
+      "GaussianSignGrid.lean": "ac32cb693c9f98288281793a7dea8d752a981293f6eda9e5865d5b34e6ac0efb",
+      "ActualGridFilterLower.lean": "452caec663a8c97ced360172fee69a58632c5e14e0063f89f958a9c7e9ea17c1",
+      "ActualGridSupport.lean": "b819d1533b72c22fbf5a429711b4b5da9b2fe4753f34d9225790910128a2acd8",
+      "ActualGridFilterProperties.lean": "dcbf26d13d560f2188bf0099eebdf047ba2fc57c2eea186b7cb0fa5af83f5dd9",
+      "ActualTensorBasis.lean": "f0616b4b977d4d7cb3ee8996143256c8e0aae83ed23999b096ef3b671826ec61",
+      "AdderTrace.lean": "7ff0f4573c5d04c2f0df6c9d6170fee2d062b8affe86b77042382355c4336bf6",
+      "MainHolevo.lean": "66e781070cae8a0af22f8756697b49ce891ed512540e5dbe3d76ac2150d734af",
+      "MainHolevoTensor.lean": "4491d4ce87aff1b85f92a22b874b02419883b888c94820d671ed864f8ffa7e02",
+      "MainCapacity.lean": "738f9aa7a3a7a451475e00cc6c46457cdcfa3caa72bae13ff4fc8da06a57b5bc",
+      "MainAdderTuple.lean": "ecb18033f2e39e124c70dd98862a71faeb9445d6fa6fd711fd539fc2a35fe5b7",
+      "MainChannel.lean": "96ce449faf371603527c9791269050fb5f6a26a5a6be1907860744b3d9514f96",
+      "MainReal.lean": "dd105a967418710d5d1b810df97a72d30c13bda37ff5d0d1d9651b9385323488",
+      "SingleChannel.lean": "40d2c7ba576de4af4e6bc4ebbfd762d156698db34e86030b4e9e2c8a1b2ca0c2",
+      "GapObstruction.lean": "5d97d6e714716707edf6b8e2c2906d2c8c0bdb95226ee1a94bb83f6e2ac35492",
+      "GapRemainder.lean": "fa63ee4c7d7035de634476295c77de7af22e6f6203b607d947b110a2ab0ea06b",
+      "GapAsymptotics.lean": "c598904fa768cf93017af901ad990c61fdf4101bff6fd574c8711b306168e434",
+      "TensorAmplification.lean": "dc51778af5db16079f63ec52682500aa84d639160cbc0790b3995aecf282a676",
+      "SymbolicAmplification.lean": "070cc73255c6ba57ab8cba427873038574cb623e6c9ae850dd045646111b318d",
+      "TensorCalibration.lean": "99ba11017c1950e02d3714a1ba6d7c32662e68a6ec313a237769354648b39635",
+      "SupplementEntropy.lean": "2c8951711b2c3dd8e6a056f0413c876bbad70bd8736dd007675111b5b9809ce7",
+      "SupplementSingle.lean": "4415d3095872d7b08c80062581b7cbbc666f488408929700115f2d1b100f24dd",
+      "MainBasic.lean": "7527f6917d336692938d9a1e85dc63b2f0e4c08780ee9c8c9baf7e17d2b798aa",
+      "MainFilterParameters.lean": "91d670c12fc38d562e07489b6b5c1495affae584ea99f5ea11be9879e8207359",
+      "MainGridBridge.lean": "ba4b24fc5a6989062c7876328aabccd60d049123bd13ecd39f64f3e094fbe520",
+      "MainParameters.lean": "7eb6ebd0d4e401e45ebe6912ee79c0fe33e0e30b74a83885f021001d5c744426",
+      "MainConcreteBasic.lean": "4c74478f27b5ffc59508cedc875a76887f0b6630ae1fcf138ea6818435bcac29",
+      "MainRandomizer.lean": "9692ea22e2f2742097b05f59a48e355dd5a411fc23d075ad40c852d34b98f313",
+      "MainPauli.lean": "d0b85689fa59d51e8f4311fe2b553203ff0fedae30ffb9597cca7251d9a0bb5c",
+      "MainConcreteRandomizer.lean": "57478ea43cba596b7c5c4b5d7319ab5e479648f533833db197602198bc460dcf",
+      "MainSmoothing.lean": "a2cc9b3cc0f246540113c8ad21031418dae2dd1654d7b7e43fd544e1ca6f5b0e",
+      "MainSmoothedChannel.lean": "3f9158443fbc52747ae2f72c4ec97a1085034d0bfe601a185b86ce5eb4b24d7d",
+      "MainConcreteSmoothed.lean": "e2eaf79de50c16601e07ad4b154a8c29a3bed265a8b40b315c6698b2bc9c6b7e",
+      "MainDimensions.lean": "a8f8266ddad0ad1eb2668b60f2bd4f81c0811b14c6a4ea817f7708fd4cceb956",
+      "MainFlaggedEntropy.lean": "1c892e28b90876277b4e7eb3651ff94fa3a6bf9e7889e1c54743fe8e485eee22",
+      "MainPauliTensor.lean": "23ef700f3f9d4946842b8a4a57087beb4c30364e8aca3258d8e5b9d0e98acf50",
+      "MainPauliHolevo.lean": "7d47e4af026edb037518369f6f4e61bcdabc07d8aed63a5c042b550a97e739a1",
+      "MainTheorem.lean": "e75a571d8e03d9c9d9ae91bff78b3ee06acaae9984e8cdcae9a7260f42fe1a91",
+      "MainCapacityCorollary.lean": "5014c9fb11faaa24efbd252ac334b227fc45a17a8011fceeed134b3b3908a854",
+      "MainParameterGrowth.lean": "1a3c73257e1a122174950d78c9f35196332669828623d1cadd256145b8abb65d",
+      "SupplementAdder.lean": "ae33139227d3aac6e862d4ba9e5cdd72c02cffe30867b07e83990265a79a03d8",
+      "AllProofs.lean": "d6e71cb9266908e3d68ca84ab7b1d03a242acf44555cdada931b474690c98447"
+    }
+  }
+}

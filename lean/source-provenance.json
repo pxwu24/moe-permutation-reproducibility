@@ -1,0 +1,213 @@
+{
+  "manuscript_title": "Explicit channels with unbounded gains in classical communication using entangled inputs",
+  "manuscript_sha256": "a9de3041e2168f1c8157772d613dd15b2be5ad2c3805d17a35901e81254fb0e9",
+  "original_proof_sources": [
+    {
+      "path": "entropy/ActualCoordinateMarginal.lean",
+      "sha256": "f27fcf82b8083ae42cf74394dcbc967234d03010c62e2c87a0cf67c034f19736",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/ActualGridFilterLower.lean",
+      "sha256": "452caec663a8c97ced360172fee69a58632c5e14e0063f89f958a9c7e9ea17c1",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/ActualGridFilterProperties.lean",
+      "sha256": "dcbf26d13d560f2188bf0099eebdf047ba2fc57c2eea186b7cb0fa5af83f5dd9",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/ActualGridSupport.lean",
+      "sha256": "b819d1533b72c22fbf5a429711b4b5da9b2fe4753f34d9225790910128a2acd8",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/ActualTensorBasis.lean",
+      "sha256": "dca60ad00915a448099cbe9d7442d5250d2d02f5104e08a06427fe0a5edf7ce5",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": false,
+      "current_sha256": "f0616b4b977d4d7cb3ee8996143256c8e0aae83ed23999b096ef3b671826ec61",
+      "modification": "eOut now uses equivFinOfCardEq.symm, aligning the arbitrary output enumeration with AdderTrace.indexEquiv.symm; all tensor statements are preserved."
+    },
+    {
+      "path": "entropy/ActualTensorTuple.lean",
+      "sha256": "54cfe7b5494684a1891a9e6757be372cbcb658cfcb7983250a09560b27eaefc7",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/BellAlgebra.lean",
+      "sha256": "7673c12fec7ea38e84efaa9ca28e94ec166bee1e3032e09d11bf81fd8862eb07",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/FilterTrace.lean",
+      "sha256": "b27362f31216b4fc286108b7e5f5c58919e1e931f1b422e003db2deb3546bd92",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/FiniteFilterSupport.lean",
+      "sha256": "3601e03fed07c774fcfcfb4c9c80dcffbd2f5f9f2af959613757c87cec6222be",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/GapAsymptotics.lean",
+      "sha256": "c598904fa768cf93017af901ad990c61fdf4101bff6fd574c8711b306168e434",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/GapObstruction.lean",
+      "sha256": "5d97d6e714716707edf6b8e2c2906d2c8c0bdb95226ee1a94bb83f6e2ac35492",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/GapRemainder.lean",
+      "sha256": "fa63ee4c7d7035de634476295c77de7af22e6f6203b607d947b110a2ab0ea06b",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/GaussianSignCoefficient.lean",
+      "sha256": "03de195a93ef4fd621ac2ced7debcbdcd93b0a7f14f985c3e94527f60bf27867",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/GaussianSignGrid.lean",
+      "sha256": "ac32cb693c9f98288281793a7dea8d752a981293f6eda9e5865d5b34e6ac0efb",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/GridCardinality.lean",
+      "sha256": "affca05e7890f6646fb5cd9875a397f71c70ae7b553985604741b969d1bca450",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/GridNet.lean",
+      "sha256": "00272b6f438349e3a3f86f00804931f7caeed7463caa9fb7b17c4d1988b2de21",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/JointBound.lean",
+      "sha256": "822a69642ebbbec51e916787238c1952d9bae34c6387b2ffbb5d7d38a778d64b",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/JointChannel.lean",
+      "sha256": "cfddbf4e2943dc89158d763017a48c91c6424789835043b14bdfd77b11d009e0",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/JointEntropy.lean",
+      "sha256": "fa9cd244f73e91f85557442d5c31f925894974bc63befd3ea83fd0e0371821d6",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/JointProjection.lean",
+      "sha256": "b05dfb45aa702843dafcead6e9bb96d08b07554708c0f83c4b65240ddb1ffb41",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/SignFilterLower.lean",
+      "sha256": "9eb6b83485cfc7f4441c6c49c048e04d327d7c63ab8fd3948cbc97692f6149fd",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/SingleChannel.lean",
+      "sha256": "40d2c7ba576de4af4e6bc4ebbfd762d156698db34e86030b4e9e2c8a1b2ca0c2",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/SingleEntropy.lean",
+      "sha256": "4e320d2fcf4299af83b08613b6da54722dc42b39050f6968e8351c729d491ce2",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/SymbolicAmplification.lean",
+      "sha256": "070cc73255c6ba57ab8cba427873038574cb623e6c9ae850dd045646111b318d",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/TensorAmplification.lean",
+      "sha256": "dc51778af5db16079f63ec52682500aa84d639160cbc0790b3995aecf282a676",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/TensorBridge.lean",
+      "sha256": "4554cae734d9040a9d916734d415a8da19a571fa0ca9499fe2ef143f2fe6030f",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/TensorCalibration.lean",
+      "sha256": "99ba11017c1950e02d3714a1ba6d7c32662e68a6ec313a237769354648b39635",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "entropy/TensorMarginalEntropy.lean",
+      "sha256": "21a7da9b63c1987d3faad0f92c68da28414f927ff4662f05779116cff4a7f4d3",
+      "recovered_from": "explicit_group_latex_and_lean.zip",
+      "source_unchanged": true
+    },
+    {
+      "path": "adder-trace/AdderTrace.lean",
+      "sha256": "5af5fc12e9b469220527b035c22373cf66a10426154eb11dc75cef8974bd4276",
+      "recovered_from": "adder_trace_checked_components.zip",
+      "source_unchanged": true
+    }
+  ],
+  "previous_manuscripts": [
+    {
+      "sha256": "7191593778706d3ca154d0952a25495421dafed3d845d3aa17bbdc81f4ddac1b",
+      "pages": 18,
+      "scope": "Original Supplement-only collection; main theorem excluded."
+    }
+  ],
+  "manuscript_pages": 19,
+  "active_project": "entropy",
+  "active_lean_toolchain": "leanprover/lean4:v4.33.0",
+  "current_scope": "Supplement technical results, actual main-theorem construction, Holevo inequalities, parameter and dimension bounds, and regularized-capacity corollary.",
+  "lean433_ports": [
+    {
+      "path": "entropy/AdderTrace.lean",
+      "sha256": "7ff0f4573c5d04c2f0df6c9d6170fee2d062b8affe86b77042382355c4336bf6",
+      "ported_from": "adder-trace/AdderTrace.lean",
+      "original_sha256": "5af5fc12e9b469220527b035c22373cf66a10426154eb11dc75cef8974bd4276",
+      "original_preserved": true,
+      "changes": "Mathlib/Lean API migration only; coefficient access through MonoidAlgebra.coeff, dependent finite-case definitions, and proof tactic/rewrite updates."
+    },
+    {
+      "path": "entropy/SupplementAdder.lean",
+      "sha256": "ae33139227d3aac6e862d4ba9e5cdd72c02cffe30867b07e83990265a79a03d8",
+      "ported_from": "adder-trace/SupplementAdder.lean",
+      "original_sha256": "afff7188d9e557e3364a0db89272ebe8dcfdba141a96723cf930a381b8ba21f1",
+      "original_preserved": true,
+      "changes": "Mathlib/Lean API migration only; coefficient access through MonoidAlgebra.coeff, dependent finite-case definitions, and proof tactic/rewrite updates."
+    }
+  ],
+  "integration_entry_point": "entropy/AllProofs.lean",
+  "verification_record": "entropy/verification/verification_status.json; exact hashes and aggregate audit are generated by entropy/verify.sh after a successful full run."
+}

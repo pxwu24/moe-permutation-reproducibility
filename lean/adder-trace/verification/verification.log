@@ -1,0 +1,317 @@
+../deliverable/AdderTrace.lean:159:37: warning: unused variable `hM`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../deliverable/AdderTrace.lean:458:50: warning: This simp argument is unused:
+  Prod.mk.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [FreeGroup.isReduced_cons_cons, P̵r̵o̵d̵.̵m̵k̵.̵i̵n̵j̵E̵q̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵Bool.false_eq_true, Bool.true_eq_false] at hw ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+../deliverable/AdderTrace.lean:462:59: warning: This simp argument is unused:
+  List.isChain_cons_cons
+
+Hint: Omit it from the simp argument list.
+  simp_all [FreeGroup.IsReduced,̵ ̵L̵i̵s̵t̵.̵i̵s̵C̵h̵a̵i̵n̵_̵c̵o̵n̵s̵_̵c̵o̵n̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+../deliverable/AdderTrace.lean:453:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+../deliverable/AdderTrace.lean:528:0: warning: automatically included section variable(s) unused in theorem `AdderTrace.PrefixOperators.createBasis_eq_projection`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:602:0: warning: automatically included section variable(s) unused in theorem `AdderTrace.PrefixOperators.prefix_injective`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:607:0: warning: automatically included section variable(s) unused in theorem `AdderTrace.PrefixOperators.prefix_ranges_disjoint`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:621:0: warning: automatically included section variable(s) unused in theorem `AdderTrace.PrefixOperators.prefix_family_injective`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:703:8: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.mergeIndex_mem`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:707:8: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.mergeIndex_notmem`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:726:4: warning: Try `simp at hm` instead of `simpa using hm`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+../deliverable/AdderTrace.lean:779:13: warning: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  simp [T, Fintype.card_f̵u̵n̵,̵ ̵F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵subtype_compl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+../deliverable/AdderTrace.lean:788:4: warning: Try `simp at this` instead of `simpa using this`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+../deliverable/AdderTrace.lean:782:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.diffSupport_eq_empty`:
+  [DecidableEq ι]
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:847:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.sum_mergeIndex`:
+  [DecidableEq α]
+  [Module ℂ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [Module ℂ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:913:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.pureCreate_eq_lmapDomain`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:946:39: warning: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [h, F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+../deliverable/AdderTrace.lean:946:61: warning: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  simp [h, Finsupp.single_apply,̵ ̵e̵q̵_̵c̵o̵m̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+../deliverable/AdderTrace.lean:1031:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.reducedProjection_eq_filter`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1295:8: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.splitWords_fst`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1298:8: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.splitWords_snd`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1306:8: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.splitWordMap_single`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1310:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.splitWordMap_eq_embDomain`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1319:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.reduce_same_pair`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1326:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.equal_outside_diffSupport`:
+  [DecidableEq ι]
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1334:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.splitWords_action`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1490:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.sliceWeight_pos`:
+  [DecidableEq ι]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1495:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.sum_sliceWeights`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1735:8: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.erase_nil`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1739:8: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.pureCreate_nil`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1749:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.pairPrefix_injective`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1753:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.negPrefix_injective`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1757:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.emptyPrefix_injective`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:1761:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.reversePairPrefix_injective`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:2089:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.TensorPattern.cancellationPiece_eq`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:2327:0: warning: automatically included section variable(s) unused in theorem `ExplicitFilter.support_slice_convolution_bound`:
+  [Nonempty α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+../deliverable/AdderTrace.lean:2992:12: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+../deliverable/AdderTrace.lean:3024:54: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+../deliverable/AdderTrace.lean:3033:74: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'AdderTrace.reduced_conjugateWord_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.reduced_cyclic_conjugation_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderCones.freeRepresentation_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderCones.freeRepresentation_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.freeWord_conjugateWord_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+../deliverable/AdderTrace.lean:3481:40: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [labelAction,̵ ̵M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+../deliverable/AdderTrace.lean:3533:11: warning: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../deliverable/AdderTrace.lean:3534:12: warning: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../deliverable/AdderTrace.lean:3542:40: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'AdderTrace.free_nontrivial_word_fixed_fraction_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.modularRepresentation_freeWord_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.modular_word_fixedRatio_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+../deliverable/AdderTrace.lean:4257:21: warning: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  simp [TensorLabel, F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵f̵u̵n̵,̵ ̵Fintype.card_prod, ZMod.card, pow_mul, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'AdderTrace.concrete_word_trace_discrepancy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.normalize_moment_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.finite_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.normalizedTrace_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.filter_bound_of_pointwise_and_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.tensor_adder_raw_moment_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.MatrixGrid.hermitian_grid_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.MatrixGrid.matrix_grid_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.MatrixGrid.energy_eq_trace_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+../deliverable/AdderTrace.lean:4845:45: warning: unused variable `I`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../deliverable/AdderTrace.lean:4851:6: warning: unused variable `I`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+../deliverable/AdderTrace.lean:4851:8: warning: unused variable `J`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'AdderTrace.finTraceOperator_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.liftedCoefficients_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.coefficient_l1_le_offDiag_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.normalizedTrace_scaled_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.filter_bound_of_raw_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.explicit_filter_bound_of_raw_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.full_grid_filter_bound_of_raw_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.concrete_fin_moment_re_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+../deliverable/AdderTrace.lean:5251:0: warning: automatically included section variable(s) unused in theorem `AdderTrace.momentMatrix_conjTranspose`:
+  [DecidableEq N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'AdderTrace.filter_trace_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.finite_adder_raw_moment_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.prescribedFilter_trace_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.technical_trace_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.modularStepPerm_circuit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AdderTrace.tensorAdderMatrix_unitary' depends on axioms: [propext, Classical.choice, Quot.sound]
+AXIOM AUDIT PASSED: 595 theorems; only propext, Classical.choice, Quot.sound.

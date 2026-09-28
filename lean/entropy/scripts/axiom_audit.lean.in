@@ -1,0 +1,32 @@
+import Lean
+@@IMPORTS@@
+
+open Lean Elab Command
+
+-- Enumerate the complete imported environment, independently of its size.
+set_option maxHeartbeats 0
+
+/- This command audits every declaration from the selected proof modules,
+including auxiliary definitions and private lemmas. `collectAxioms` follows
+dependencies transitively; an unexpected axiom is a compilation error. -/
+run_cmd do
+  let selected : Array Name := #[@@MODULE_NAMES@@]
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let env ← getEnv
+  for moduleName in selected do
+    unless env.allImportedModuleNames.contains moduleName do
+      throwError "Audit module was not imported: {moduleName}"
+  let declarations := env.constants.toList.filterMap fun (name, _) => do
+    let moduleIdx ← env.getModuleIdxFor? name
+    let moduleName ← env.allImportedModuleNames[moduleIdx.toNat]?
+    if selected.contains moduleName then some name else none
+  let declarations := declarations.toArray.qsort Name.lt
+  if declarations.isEmpty then
+    throwError "The axiom audit selected no declarations."
+  for name in declarations do
+    let axioms ← Lean.collectAxioms name
+    for axiomName in axioms do
+      unless allowed.contains axiomName do
+        throwError "Unsupported axiom dependency: {name} uses {axiomName}"
+    logInfo m!"AUDIT_DECL {name}: {axioms}"
+  logInfo m!"AXIOM_AUDIT_OK declarations={declarations.size} modules={selected.size}"
