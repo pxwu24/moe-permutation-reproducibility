@@ -29,21 +29,16 @@ is not re-proved here.
 
 ## Citation
 
-If you use this repository's numerical code or formal proofs, cite the code
-and the corresponding research paper listed above.
+For the Lean verification of arXiv:2609.26743, use:
 
 ```bibtex
-@misc{wu_superadditivity_code,
+@misc{wu_lean_2609_26743,
   author       = {Wu, Peixue},
-  title        = {Superadditivity of classical communication:
-                  Numerical code and {Lean} verification},
-  howpublished = {\url{https://github.com/pxwu24/superadditivity-of-classical-communication}},
-  note         = {GitHub repository}
+  title        = {{Lean verification for explicit channels with unbounded gains in classical communication using entangled inputs}},
+  howpublished = {\href{https://github.com/pxwu24/superadditivity-of-classical-communication/tree/5f4ddefcb814141acdf2a8957beb4f7c7382e86d/lean_arXiv:2609.26743}{Github Repository}}
 }
 ```
 
-The repository URL follows the latest version. For reproducible research,
-record the commit you used and cite its snapshot URL. A ready-to-use citation
-for the Lean verification of arXiv:2609.26743 is in the
-[project citation guide](./lean_arXiv:2609.26743/README.md#citation).
-Load `\usepackage{url}` or `\usepackage{hyperref}` in LaTeX to typeset the URL.
+Load `\usepackage{hyperref}` in your LaTeX preamble. The bibliography displays
+only the clickable label “Github Repository”; the link identifies a fixed
+code snapshot without printing its URL or commit hash.

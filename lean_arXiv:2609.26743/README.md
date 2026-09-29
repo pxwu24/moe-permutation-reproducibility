@@ -126,27 +126,16 @@ Dependency setup and optional build settings are described in
 
 ## Citation
 
-If you use these formal proofs, cite this code snapshot and the accompanying
-[research paper, arXiv:2609.26743](https://arxiv.org/abs/2609.26743).
-The entry below identifies the proof sources, verifier, and verification records
-at commit `5f4ddefcb814141acdf2a8957beb4f7c7382e86d`.
+For the Lean verification of arXiv:2609.26743, use:
 
 ```bibtex
 @misc{wu_lean_2609_26743,
   author       = {Wu, Peixue},
-  title        = {{Lean} verification for {arXiv:2609.26743}},
-  howpublished = {\url{https://github.com/pxwu24/superadditivity-of-classical-communication/tree/5f4ddefcb814141acdf2a8957beb4f7c7382e86d/lean_arXiv:2609.26743}},
-  note         = {GitHub repository, commit 5f4ddefcb814141acdf2a8957beb4f7c7382e86d}
+  title        = {{Lean verification for explicit channels with unbounded gains in classical communication using entangled inputs}},
+  howpublished = {\href{https://github.com/pxwu24/superadditivity-of-classical-communication/tree/5f4ddefcb814141acdf2a8957beb4f7c7382e86d/lean_arXiv:2609.26743}{Github Repository}}
 }
 ```
 
-Load `\usepackage{url}` or `\usepackage{hyperref}` in LaTeX to typeset the URL.
-When using another version, replace the commit in both `howpublished` and `note`
-with the commit you actually used.
-
-- [Latest version for collaborators](https://github.com/pxwu24/superadditivity-of-classical-communication/tree/main/lean_arXiv%3A2609.26743)
-- [Fixed snapshot used in the citation](https://github.com/pxwu24/superadditivity-of-classical-communication/tree/5f4ddefcb814141acdf2a8957beb4f7c7382e86d/lean_arXiv%3A2609.26743)
-
-The latest-version link changes as `main` is updated; the snapshot link fixes
-the contents to one commit. The `%3A` in these links is the URL encoding of the
-colon in the folder name.
+Load `\usepackage{hyperref}` in your LaTeX preamble. The bibliography displays
+only the clickable label “Github Repository”; the link identifies a fixed
+code snapshot without printing its URL or commit hash.
