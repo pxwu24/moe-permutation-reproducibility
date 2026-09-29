@@ -3,7 +3,7 @@ This repository groups numerical code and formal proofs by arXiv paper.
 
 | Paper | Available files |
 | --- | --- |
-| arXiv:2607.15210 | Lean files not yet included |
+| arXiv:2607.15210 | [Lean verification (partial)](./lean_arXiv_2607.15210/README.md) |
 | arXiv:2608.25961 | [Numerical reproducibility code](reproduce_numerics.py) |
 | arXiv:2609.26743 | [`lean_arXiv:2609.26743/`](./lean_arXiv:2609.26743/README.md) |
 
