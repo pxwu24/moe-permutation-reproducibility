@@ -2,7 +2,7 @@
 
 This directory formalizes the mathematical results in the Supplemental
 Material of *Explicit channels with unbounded gains in classical communication
-using entangled inputs*. The unified project is [`entropy/`](entropy/), and
+using entangled inputs* https://arxiv.org/abs/2609.26743. The unified project is [`entropy/`](entropy/), and
 [`AllProofs.lean`](entropy/AllProofs.lean) imports its paper-facing results.
 
 ## Verify all results
