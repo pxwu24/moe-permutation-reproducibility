@@ -26,3 +26,24 @@ its Lean theorem, and the commands to check it. The [coverage map](./lean_arXiv:
 explains the hypotheses and representation conventions. The regularized-capacity
 corollary uses the regularized Holevo definition; the operational coding theorem
 is not re-proved here.
+
+## Citation
+
+If you use this repository's numerical code or formal proofs, cite the code
+and the corresponding research paper listed above.
+
+```bibtex
+@misc{wu_superadditivity_code,
+  author       = {Wu, Peixue},
+  title        = {Superadditivity of classical communication:
+                  Numerical code and {Lean} verification},
+  howpublished = {\url{https://github.com/pxwu24/superadditivity-of-classical-communication}},
+  note         = {GitHub repository}
+}
+```
+
+The repository URL follows the latest version. For reproducible research,
+record the commit you used and cite its snapshot URL. A ready-to-use citation
+for the Lean verification of arXiv:2609.26743 is in the
+[project citation guide](./lean_arXiv:2609.26743/README.md#citation).
+Load `\usepackage{url}` or `\usepackage{hyperref}` in LaTeX to typeset the URL.
