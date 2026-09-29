@@ -24,11 +24,11 @@ modules were built locally. Every local proof module is rebuilt from source by
 the repository verifier, and its declarations are audited transitively against
 `propext`, `Classical.choice`, and `Quot.sound` only.
 
-The run uses the unchanged verifier, with its output isolated from historical
-verification records:
+To reproduce verification with output written to the published record directory,
+run from the repository root:
 
 ```bash
-VERIFICATION_DIR="$PWD/lean/entropy/verification" bash lean/verify-all.sh
+VERIFICATION_DIR="$PWD/lean_arXiv:2609.26743/entropy/verification" bash lean_arXiv:2609.26743/verify-all.sh
 ```
 
 `verification_status.json`, `exit_code.txt`, `verification.log`, and

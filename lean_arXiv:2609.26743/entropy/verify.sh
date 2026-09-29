@@ -3,9 +3,11 @@
 set -euo pipefail
 
 script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+repo_root="$(cd -- "$script_dir/../.." && pwd -P)"
 physlib_commit=c76e3ccab04eacb69a126ca5c021b0788d513292
 mathlib_commit=db584cd6d46c92f209a44c0f1c829460d327499d
-physlib_dir="${PHYSLIB_DIR:-$script_dir/build/physlib}"
+# Lake puts absolute package paths in colon-separated LEAN_PATH on POSIX.
+physlib_dir="${PHYSLIB_DIR:-$repo_root/build/arxiv-2609.26743/physlib}"
 verification_dir="${VERIFICATION_DIR:-$script_dir/verification}"
 
 for executable in git lake python3; do
@@ -16,6 +18,10 @@ for executable in git lake python3; do
 done
 
 physlib_dir="$(python3 -c 'from pathlib import Path; import sys; print(Path(sys.argv[1]).resolve())' "$physlib_dir")"
+if [[ "$physlib_dir" == *:* ]]; then
+  echo "PHYSLIB_DIR must resolve to a path without ':' for Lean's search path." >&2
+  exit 1
+fi
 verification_dir="$(python3 -c 'from pathlib import Path; import sys; print(Path(sys.argv[1]).resolve())' "$verification_dir")"
 mkdir -p -- "$verification_dir/generated"
 exec > >(tee "$verification_dir/verification.log") 2>&1

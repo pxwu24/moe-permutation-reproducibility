@@ -17,7 +17,7 @@ Install Git, Python 3, Bash 4 or newer, and
 bash verify.sh
 ```
 
-Equivalently, from the repository root, run `bash lean/verify-all.sh`.
+Equivalently, from the repository root, run `bash lean_arXiv:2609.26743/verify-all.sh`.
 
 | Dependency | Pinned version |
 | --- | --- |
@@ -31,6 +31,10 @@ Physlib modules. It copies the local proof sources into the pinned Physlib
 checkout, recompiles them in dependency order, and audits every originating
 declaration. Only `propext`, `Classical.choice`, and `Quot.sound` are allowed.
 A proof placeholder or additional axiom causes the audit to fail.
+
+The default checkout is `build/arxiv-2609.26743/physlib` at the repository root.
+It is outside the source folder because Lean's import-search paths cannot
+contain a colon. A custom `PHYSLIB_DIR` must also resolve to a path without `:`.
 
 This directory is not a standalone Lake project. Run individual `lake env lean`
 commands inside the prepared Physlib checkout, as shown in the

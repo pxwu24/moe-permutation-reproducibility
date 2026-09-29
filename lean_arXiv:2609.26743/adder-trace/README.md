@@ -14,6 +14,12 @@ using the statements of Lemmas 5 and 6. It imports the complete proof above.
 bash verify.sh
 ```
 
+The script copies this project's sources into
+`build/arxiv-2609.26743/adder-trace` at the repository root before building.
+This keeps the build path free of colons, which separate Lean import-search
+paths. Set `ADDER_BUILD_DIR` to use another directory without `:`. Verification
+records are still written to this source directory's `verification/` folder.
+
 Dependencies: Lean 4.24.0 and mathlib
 `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`. The supplied Lake manifest pins
 transitive dependencies. No Physlib dependency is needed by this project.

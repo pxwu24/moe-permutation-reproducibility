@@ -1,4 +1,4 @@
-# Verify the Supplemental Material in Lean
+# Lean verification for arXiv:2609.26743
 
 This directory formalizes the mathematical results in the Supplemental
 Material of *Explicit channels with unbounded gains in classical communication
@@ -12,8 +12,13 @@ Install Git, Python 3, Bash 4 or newer, and
 From the repository root, run:
 
 ```sh
-bash lean/verify-all.sh
+bash lean_arXiv:2609.26743/verify-all.sh
 ```
+
+Use Linux, macOS, or a WSL Linux filesystem: the folder name contains a literal
+colon, which native Windows filenames do not support. Build files are placed
+in `build/arxiv-2609.26743/` at the repository root, since Lean also uses colons
+to separate import-search paths.
 
 The script obtains the pinned dependencies, rebuilds every local proof module,
 and audits the transitive axiom dependencies of every declaration. A successful
@@ -58,7 +63,7 @@ location, run the following from the repository root:
 
 ```sh
 (
-cd lean/entropy/build/physlib
+cd build/arxiv-2609.26743/physlib
 cat > InspectSupplement.lean <<'LEAN'
 import AllProofs
 
@@ -78,16 +83,16 @@ To recheck a source module after the full build, run from the repository root:
 
 ```sh
 (
-cd lean/entropy/build/physlib
+cd build/arxiv-2609.26743/physlib
 lake env lean SupplementEntropy.lean
 )
 ```
 
 These commands inspect the source copies prepared by the full verifier.
-After editing files in `lean/entropy/`, rerun `bash lean/verify-all.sh` from
+After editing files in `lean_arXiv:2609.26743/entropy/`, rerun `bash lean_arXiv:2609.26743/verify-all.sh` from
 the repository root to copy the changes, rebuild dependencies, and repeat the
 complete axiom audit. If you used `PHYSLIB_DIR`, use that directory in place
-of `lean/entropy/build/physlib`.
+of `build/arxiv-2609.26743/physlib`.
 
 ## Read the verification records
 
@@ -108,7 +113,7 @@ success record is produced after both compilation and the axiom audit pass.
 From the repository root, run the numerical parameter cross-check separately:
 
 ```sh
-python3 lean/scripts/check_parameters.py
+python3 lean_arXiv:2609.26743/scripts/check_parameters.py
 ```
 
 This uses high-precision Decimal arithmetic and is not a Lean certificate.
@@ -117,4 +122,4 @@ The saved output is [parameters.json](numerics/parameters.json).
 Dependency setup and optional build settings are described in
 [`entropy/README.md`](entropy/README.md). The independent
 [`adder-trace/`](adder-trace/) project can additionally be checked with
-`VERIFY_LEGACY_ADDER=1 bash lean/verify-all.sh`.
+`VERIFY_LEGACY_ADDER=1 bash lean_arXiv:2609.26743/verify-all.sh`.
