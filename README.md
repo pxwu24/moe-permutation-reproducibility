@@ -1,5 +1,4 @@
-# Superadditivity of Holevo information
-
+# Superadditivity of classical communication
 This repository groups numerical code and formal proofs by arXiv paper.
 
 | Paper | Available files |
