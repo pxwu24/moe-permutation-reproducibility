@@ -1,11 +1,16 @@
 # Paper-to-Lean coverage
 
 This map refers to *Explicit channels with unbounded gains in classical
-communication using entangled inputs*. The current supplied manuscript has
-19 pages; its SHA-256 is
-`a9de3041e2168f1c8157772d613dd15b2be5ad2c3805d17a35901e81254fb0e9`.
-`source-provenance.json` preserves the previous manuscript and original-source
-hashes as well.
+communication using entangled inputs*. It was aligned on 2026-09-29 with the
+attached final-letter and supplemental LaTeX fragments. Their exact SHA-256
+hashes are recorded under `current_manuscript_sources` in
+[`source-provenance.json`](source-provenance.json). The earlier 19-page PDF
+and recovered original-source hashes remain there for historical provenance.
+
+The attached final subsection omitted the definition and proof of the
+postprocessing map. The complete construction remains in Lean and in
+[`../supplement/main_theorem.tex`](../supplement/main_theorem.tex); it is
+necessary for the main theorem. See [the revision notes](PRL_REVIEW_2026-09-29.md).
 
 All active proofs below belong to the unified `entropy/` project, using Lean
 4.33.0. [`entropy/AllProofs.lean`](entropy/AllProofs.lean) is the entry point.
@@ -42,6 +47,7 @@ the mathematical trace statement is unchanged.
 | Randomizer seed count and exact numerical gap certificate | `MainConcreteRandomizer.seed_count_bound`, `MainParameters.numerical_margin`, `fixed_signal_gap` |
 | Entropy after output randomization and entropy cost of a finite mixture | `MainSmoothing`, `MainFlaggedEntropy`, `MainSmoothedChannel`, `MainConcreteSmoothed.single_copy`, `two_copy` |
 | Holevo supremum, classical Pauli completion, and the two-copy Bell-and-Pauli ensemble | `MainHolevo`, `MainHolevoTensor`, `MainPauliHolevo.completion_holevo_upper`, `completion_tensor_holevo_lower` |
+| Revised sharp asymptotic slope, actual Bell-output entropy bound, and completed-channel Holevo bound | `MainSharperPostprocessing.numerical_margin_sharp`, `two_copy_sharp`, `holevo_two_copy_sharp` |
 | Both strict Holevo inequalities for the defined channel, for every real `N ≥ 1` | `MainTheorem.main_theorem` |
 | Exact input/output cardinalities and exponential/doubly exponential dimension bounds for that same channel | `MainTheorem.input_card`, `output_card`, `main_dimensions` |
 | Parameter-table asymptotics as actual `Asymptotics.IsTheta` statements | `MainParameterGrowth.log_P_theta`, `L_theta`, `q_theta`, `log_Q_theta`, `C₂_theta`, `log_inputDimension_theta`, `log_outputDimension_theta` |
@@ -110,10 +116,10 @@ originating in those modules, following their axiom dependencies transitively.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. Source scans
 alone are not treated as Lean verification.
 
-The authoritative aggregate result is
+The historical aggregate result for the unchanged 57-module project is
 `entropy/verification/verification_status.json`, with the compiler log,
 axiom-audit log, and exact source manifest in the same directory. A success
-record is generated only after both the complete build and audit pass. The fresh combined run passed: all **57 local proof modules** were rebuilt,
+record is generated only after both the complete build and audit pass. That recorded combined run passed: all **57 local proof modules** were rebuilt,
 and all **2,048 originating declarations** passed the transitive axiom audit.
 The process exited with code 0. Only the three standard axioms listed above
 occur; there are no proof placeholders or additional mathematical axioms.
@@ -121,3 +127,26 @@ occur; there are no proof placeholders or additional mathematical axioms.
 `source-provenance.json` retains all recovered original-source hashes and
 records the Lean 4.33 adder ports and the enumeration adjustment. Historical
 Lean 4.24 records remain under `adder-trace/verification/`.
+
+## Revised coefficient (2026-09-29)
+
+`MainSharperPostprocessing` keeps the fixed prefactor `beta` outside the
+r-th power. Its actual Bell-output and Holevo endpoints have slope
+`d_M(s) - 2 log(1+9/M)` and explicit error
+`8 log r + 4 log 108 + 2 log beta`. It also proves this slope exceeds
+`5*10^-9`. The existing fully explicit main theorem and dimension statements
+are unchanged. The new module is imported by `AllProofs.lean`.
+
+The separately labelled Python numerical cross-check is
+[`scripts/check_prl_parameters.py`](scripts/check_prl_parameters.py);
+its output is under `verification-prl-2026-09-29/`. It is not a Lean certificate.
+
+## Current verification result
+
+The fresh 2026-09-29 aggregate run passed with exit code 0: **58 local proof
+modules** were rebuilt from source and **2,054 originating declarations**
+passed the exhaustive transitive axiom audit. Only `propext`,
+`Classical.choice`, and `Quot.sound` occur. The successful source manifest
+matches the current proof files, including `MainSharperPostprocessing.lean`.
+
+Current record: [`entropy/verification-2026-09-29/verification_status.json`](entropy/verification-2026-09-29/verification_status.json).

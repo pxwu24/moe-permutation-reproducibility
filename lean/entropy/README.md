@@ -77,3 +77,23 @@ main-theorem additions.
 Attribution and the dependency patch are documented in
 [`NOTICE.md`](NOTICE.md), with the applicable third-party license in
 [`LICENSE-APACHE-2.0.txt`](LICENSE-APACHE-2.0.txt).
+
+## Revised final Supplement (2026-09-29)
+
+`MainSharperPostprocessing` proves the revised coefficient
+`d_M(s) - 2 log(1+9/M)` with an explicit logarithmic error, both for the
+actual Bell-output entropy and for the final channel's two-copy Holevo
+information. The main theorem and explicit dimension estimates are unchanged.
+The manuscript must retain the explicit Pauli postprocessing construction
+and its proof; tensoring the adder tuple alone does not give the stated
+vanishing one-copy bound.
+
+## Current verification result
+
+The fresh 2026-09-29 aggregate run passed with exit code 0: **58 local proof
+modules** were rebuilt from source and **2,054 originating declarations**
+passed the exhaustive transitive axiom audit. Only `propext`,
+`Classical.choice`, and `Quot.sound` occur. The successful source manifest
+matches the current proof files, including `MainSharperPostprocessing.lean`.
+
+Current record: [`verification-2026-09-29/verification_status.json`](verification-2026-09-29/verification_status.json).

@@ -43,7 +43,7 @@ Choose
 \end{equation}
 These choices satisfy $C_{2,r}>\sqrt{C_1A_r}$, $L_r\ge1$,
 and give $P_r\theta^{-2L_r}\le E/2$ and
-$Q_r>B_{L_r}k^{2L_r}$. Since $A_r\ge1$, Proposition~3 yields
+$Q_r>B_{L_r}k^{2L_r}$. Since $A_r\ge1$, Proposition~\ref{prop:app-two-copy} yields
 \begin{equation}\label{eq:main-filter-bound}
  \frac{\operatorname{Tr}F}{Q_r^{2r}}
  \le P_r\theta^{-2L_r}
@@ -57,7 +57,7 @@ Let $\Phi_r$ be the resulting basic channel and write
 \end{equation}
 The matrices $U_I$ are real, and the grid $\mathcal W_k$ is closed
 under entrywise conjugation. Hence $F$ and $H=\sqrt{\gamma}(I+F)^{-1/2}$ are real, so $\overline{\Phi_r}=\Phi_r$.
-Proposition~2, Lemma~3, and Corollary~1 give
+Proposition~\ref{prop:measurement-support}, Lemma~\ref{lemma:app-single-copy}, and Corollary~\ref{cor:supp-tensor-entropy} give
 \begin{equation}\label{eq:main-basic-bounds}
  k\left\|\Phi_r(\sigma)-\frac{I_k}{k}\right\|_2^2\le a_r-1,
  \qquad
@@ -84,7 +84,7 @@ For $x,y\in\mathbb F_{h_r}$, define
  \mathcal R_r(Y)=\frac1{\ell_r}\sum_{x,y}P_{x,y}YP_{x,y}^{\dagger}.
 \]
 Here $X,Z$ are the qubit Pauli matrices and $x^0=1$.
-For every nonidentity Pauli matrix $P$, conjugation contributes a
+For every nonidentity element $P$ of the Pauli basis, conjugation contributes a
 sign $(-1)^{\tau(yp(x))}$ for a nonzero binary polynomial $p$ of degree
 at most $2m-1$. Averaging first over $y$ gives
 \[
@@ -167,6 +167,18 @@ Combining the preceding bounds proves
  \chi_{\max}(\widehat\Lambda_r^{\otimes2})
  >5\times10^{-9}r-8\log r-4\log108.
 \end{equation}
+
+The sharper asymptotic coefficient follows from
+$a_r=1+\beta[(1+9/M)^r-1]\le\beta(1+9/M)^r$:
+\begin{equation}\label{eq:main-sharp-holevo}
+ \chi_{\max}(\widehat\Lambda_r^{\otimes2})
+ \ge r\left[d_M(s)-2\log\left(1+\frac9M\right)\right]
+       -8\log r-4\log108-2\log\beta.
+\end{equation}
+The corresponding upper bound holds for the entropy of the actual Bell
+output of $\Lambda_r^{\otimes2}$, by \eqref{eq:main-smoothed-double}.
+Thus the remainder in the stated asymptotic estimate is explicitly
+controlled by $8\log r+4\log108+2\log\beta$.
 
 Given $N\ge1$, take $J=\lceil N\rceil$ and $r_N=10^{11}J$, and define
 $\Phi_N=\widehat\Lambda_{r_N}$. Since $\log(1+x)<x$ for $x>0$, the first bound in

@@ -13,10 +13,14 @@ The proof keeps the proposed constants and the choice
 `r_N = 10^11 ceil(N)`. It supplies the reality argument for the basic channel
 and defines the Pauli-label extension explicitly. A direct Bell-state ensemble
 is enough for the two-copy bound, so no minimum-entropy optimizer is needed.
-Proposition numbers match the supplied 19-page manuscript: the uniform bound
-is Proposition 2 and the adder trace bound is Proposition 3.
+The replacement uses the final source labels for the uniform bound, adder
+trace bound, single-copy lemma, and tensor-coordinate corollary. The standalone
+preview supplies illustrative numbers for these external statements.
 
 The complete Lean project is in [`../lean/entropy`](../lean/entropy/), with
 `AllProofs.lean` as its entry point. Run `bash lean/verify-all.sh` from the
 repository root. See [`../lean/COVERAGE.md`](../lean/COVERAGE.md) for individual
 endpoints and [`PROOF_NOTES.md`](PROOF_NOTES.md) for the formalization scope.
+
+The 2026-09-29 revision also includes the sharper slope
+`d_M(s)-2 log(1+9/M)` and its explicit logarithmic remainder.

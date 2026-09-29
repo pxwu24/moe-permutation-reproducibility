@@ -46,3 +46,23 @@ only `propext`, `Classical.choice`, and `Quot.sound` are allowed.
 See [COVERAGE.md](COVERAGE.md) for the correspondence with the paper and the
 precise scope of the finite-field representation and capacity statements.
 Dependency notices are preserved in [`entropy/NOTICE.md`](entropy/NOTICE.md).
+
+## Revised final Supplement (2026-09-29)
+
+`MainSharperPostprocessing` proves the revised coefficient
+`d_M(s) - 2 log(1+9/M)` with an explicit logarithmic error, both for the
+actual Bell-output entropy and for the final channel's two-copy Holevo
+information. The main theorem and explicit dimension estimates are unchanged.
+The manuscript must retain the explicit Pauli postprocessing construction
+and its proof; tensoring the adder tuple alone does not give the stated
+vanishing one-copy bound.
+
+## Current verification result
+
+The fresh 2026-09-29 aggregate run passed with exit code 0: **58 local proof
+modules** were rebuilt from source and **2,054 originating declarations**
+passed the exhaustive transitive axiom audit. Only `propext`,
+`Classical.choice`, and `Quot.sound` occur. The successful source manifest
+matches the current proof files, including `MainSharperPostprocessing.lean`.
+
+Current record: [`entropy/verification-2026-09-29/verification_status.json`](entropy/verification-2026-09-29/verification_status.json).

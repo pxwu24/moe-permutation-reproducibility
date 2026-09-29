@@ -3,6 +3,7 @@ import SupplementEntropy
 import SupplementAdder
 import ActualGridSupport
 import MainTheorem
+import MainSharperPostprocessing
 import MainParameterGrowth
 import MainCapacityCorollary
 

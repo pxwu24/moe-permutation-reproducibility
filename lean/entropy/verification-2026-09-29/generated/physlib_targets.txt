@@ -1,0 +1,7 @@
+QuantumInfo.Channels.CPTP
+QuantumInfo.Entropy.SSA
+QuantumInfo.Entropy.VonNeumann
+QuantumInfo.ForMathlib.HermitianMat.Inner
+QuantumInfo.ForMathlib.HermitianMat.LogExp
+QuantumInfo.ForMathlib.HermitianMat.Peierls
+QuantumInfo.ForMathlib.HermitianMat.Sqrt

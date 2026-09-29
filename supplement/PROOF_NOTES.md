@@ -26,6 +26,19 @@ This presentation choice does not affect the averaged Pauli channel: a field iso
 
 Replace the old main-proof subsection **and its parameter table** with `main_theorem.tex`. The replacement intentionally reuses `subsec:technical-main-proof`, `tab:all-r`, and `eq:q-choice`. There are no duplicate labels or unresolved internal references inside the replacement.
 
-In the newly attached manuscript, the uniform measurement estimate is **Proposition 2** and the adder trace estimate is **Proposition 3**. Lemmas 3–4 and Corollary 1 retain those numbers. Some Lean declarations retain the earlier manuscript's proposition numbering; their mathematical statements are unchanged. The PDF does not expose the original LaTeX label names, so references to the earlier results are written using their current printed numbers.
+In the earlier manuscript, the uniform measurement estimate is **Proposition 2** and the adder trace estimate is **Proposition 3**. Lemmas 3–4 and Corollary 1 retain those numbers. Some Lean declarations retain the earlier manuscript's proposition numbering; their mathematical statements are unchanged. The 2026-09-29 revision restores the supplied source label names for cross-references, avoiding hard-coded proposition and lemma numbers.
 
 Compilation and axiom-audit results are recorded in the project's verification logs. The final main-result endpoints are checked against the same standard-axiom policy as the earlier supplement results; no additional mathematical hypothesis is hidden in an unchecked certificate.
+
+## Revised asymptotic statement (2026-09-29)
+
+The new `MainSharperPostprocessing` module proves the sharper coefficient
+`d_M(s)-2 log(1+9/M)`, with error
+`8 log r+4 log 108+2 log beta`. Both the actual Bell-output entropy statement
+and its final-channel Holevo consequence are formalized. The previously
+proved conservative numerical estimate and `r_N=10^11 ceil(N)` are retained.
+
+The final uploaded supplement omitted the randomizer definition and proof.
+This repository's complete `main_theorem.tex` supplies that essential step.
+A bound on minimum output entropy alone cannot justify an entropy bound
+for the particular Bell input; the proof and new endpoint give the latter.
