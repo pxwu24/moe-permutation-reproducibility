@@ -20,7 +20,8 @@ above `N`, for every real `N ≥ 1`.
 bash lean/verify-all.sh
 ```
 
-See the [coverage map](lean/COVERAGE.md) for the exact statements, theorem names,
-representation conventions, and verification records. The regularized-capacity
+See the [verification guide](lean/README.md) for each supplemental result,
+its Lean theorem, and the commands to check it. The [coverage map](lean/COVERAGE.md)
+explains the hypotheses and representation conventions. The regularized-capacity
 corollary uses the regularized Holevo definition; the operational coding theorem
 is not re-proved here.

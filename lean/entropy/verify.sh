@@ -143,7 +143,6 @@ lake env lean SupplementAxiomAudit.lean | tee "$verification_dir/axiom_audit.log
 python3 - "$verification_dir/axiom_audit.log" "$verification_dir/generated/source_manifest.json" \
   "$verification_dir/verification_status.json" "$script_dir" <<'PY_AUDIT'
 from pathlib import Path
-import datetime
 import hashlib
 import json
 import re
@@ -162,7 +161,6 @@ if declarations < 1:
     raise SystemExit('The aggregate axiom audit contains no declarations.')
 result = {
     'status': 'passed',
-    'checked_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
     'lean_version': '4.33.0',
     'physlib_commit': 'c76e3ccab04eacb69a126ca5c021b0788d513292',
     'mathlib_commit': 'db584cd6d46c92f209a44c0f1c829460d327499d',

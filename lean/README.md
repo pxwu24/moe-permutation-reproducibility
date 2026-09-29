@@ -1,68 +1,120 @@
-# Lean verification of the paper
+# Verify the Supplemental Material in Lean
 
-This collection accompanies *Explicit channels with unbounded gains in
-classical communication using entangled inputs*. The active project covers
-Lemmas 3–6, Corollaries 1–2, Propositions 2–3, and the main theorem, including
-the prescribed parameters and dimension estimates.
+This directory formalizes the mathematical results in the Supplemental
+Material of *Explicit channels with unbounded gains in classical communication
+using entangled inputs*. The unified project is [`entropy/`](entropy/), and
+[`AllProofs.lean`](entropy/AllProofs.lean) imports its paper-facing results.
 
-## Projects
+## Verify all results
 
-| Directory | Toolchain | Role |
-| --- | --- | --- |
-| [`entropy`](entropy/) | Lean 4.33.0; pinned Physlib and mathlib | Unified proof project, including all adder proofs and the main theorem |
-| [`adder-trace`](adder-trace/) | Lean 4.24.0; pinned mathlib | Preserved original adder proof project, optional to rebuild |
-
-[`entropy/AllProofs.lean`](entropy/AllProofs.lean) imports the paper-facing
-results. `MainTheorem.main_theorem` proves both strict Holevo inequalities for
-an actual, fully specified CPTP map. `MainTheorem.main_dimensions` bounds the
-dimensions of that same map. `MainParameterGrowth` supplies the `IsTheta`
-statements underlying the parameter table.
-
-The Lean 4.24 project is retained for provenance. The active proof imports the
-ported adder modules inside the Lean 4.33 project; no compiled proof is imported
-across toolchains.
-
-## Reproduce
-
-Install Git, Python 3, Bash, and the
-[elan Lean toolchain manager](https://github.com/leanprover/elan).
-From the repository root run:
+Install Git, Python 3, Bash 4 or newer, and
+[elan](https://github.com/leanprover/elan), with `lake` available on your PATH.
+From the repository root, run:
 
 ```sh
 bash lean/verify-all.sh
 ```
 
-To additionally check the unchanged original Lean 4.24 adder project:
+The script obtains the pinned dependencies, rebuilds every local proof module,
+and audits the transitive axiom dependencies of every declaration. A successful
+run exits with code `0` and prints `Aggregate audit passed` followed by
+`Verification completed`.
+
+Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. A dependency
+on `sorryAx` or an additional axiom makes verification fail.
+
+## Find the proof of a result
+
+Every result in this table is checked by the command above. The source links
+open the relevant Lean file; the declaration names identify the exact statements.
+
+| Supplemental result | Lean source | Declaration |
+| --- | --- | --- |
+| Lemma 3: single-copy entropy estimate | [SupplementSingle.lean](entropy/SupplementSingle.lean) | `SupplementSingle.lemma3` |
+| Single-copy Hilbert–Schmidt estimate | [SupplementSingle.lean](entropy/SupplementSingle.lean) | `SupplementSingle.single_copy_hilbertSchmidt_bound` |
+| Lemma 4: two-copy Bell-input entropy estimate | [SupplementEntropy.lean](entropy/SupplementEntropy.lean) | `SupplementEntropy.lemma4` |
+| Corollary 1: tensor-coordinate entropy estimate | [SupplementEntropy.lean](entropy/SupplementEntropy.lean) | `SupplementEntropy.corollary1` |
+| Corollary 2: entropy-gap lower bound and unbounded violation | [SupplementEntropy.lean](entropy/SupplementEntropy.lean) | `SupplementEntropy.corollary2`, `SupplementEntropy.corollary2_unbounded` |
+| Proposition 2: uniform measurement estimate | [ActualGridSupport.lean](entropy/ActualGridSupport.lean) | `ActualGridSupport.actual_grid_support_bound` |
+| Proposition 3: filter trace estimate | [AdderTrace.lean](entropy/AdderTrace.lean) | `AdderTrace.technical_trace_bound` |
+| Lemma 5: word trace estimate | [SupplementAdder.lean](entropy/SupplementAdder.lean) | `SupplementAdder.lemma5_word_trace` |
+| Lemma 6: matrix moment estimate | [SupplementAdder.lean](entropy/SupplementAdder.lean) | `SupplementAdder.lemma6_moment_bound` |
+| Parameter choice and filter trace error | [MainFilterParameters.lean](entropy/MainFilterParameters.lean) | `MainFilterParameters.prescribedFilter_small` |
+| Entropy estimates after Pauli postprocessing | [MainConcreteSmoothed.lean](entropy/MainConcreteSmoothed.lean) | `MainConcreteSmoothed.single_copy`, `MainConcreteSmoothed.two_copy` |
+| Sharp Bell-output and two-copy Holevo estimates | [MainSharperPostprocessing.lean](entropy/MainSharperPostprocessing.lean) | `MainSharperPostprocessing.two_copy_sharp`, `MainSharperPostprocessing.holevo_two_copy_sharp` |
+| Main theorem: both strict Holevo inequalities | [MainTheorem.lean](entropy/MainTheorem.lean) | `MainTheorem.main_theorem` |
+| Input and output dimensions | [MainTheorem.lean](entropy/MainTheorem.lean) | `MainTheorem.main_dimensions` |
+| Parameter-table growth rates | [MainParameterGrowth.lean](entropy/MainParameterGrowth.lean) | `MainParameterGrowth.L_theta`, `MainParameterGrowth.q_theta`, `MainParameterGrowth.log_inputDimension_theta`, `MainParameterGrowth.log_outputDimension_theta` |
+| Regularized-capacity gap | [MainCapacityCorollary.lean](entropy/MainCapacityCorollary.lean) | `MainCapacityCorollary.unbounded_capacity_gap` |
+
+The [coverage guide](COVERAGE.md) explains the hypotheses and construction
+behind these statements, including the remaining parameter-table entries.
+
+## Inspect an individual theorem
+
+First run the complete verifier. It copies the proof sources into the pinned
+Physlib project, where Lean can resolve their imports. With the default build
+location, run the following from the repository root:
 
 ```sh
-VERIFY_LEGACY_ADDER=1 bash lean/verify-all.sh
+(
+cd lean/entropy/build/physlib
+cat > InspectSupplement.lean <<'LEAN'
+import AllProofs
+
+#check SupplementEntropy.lemma4
+#print axioms SupplementEntropy.lemma4
+LEAN
+lake env lean InspectSupplement.lean
+)
 ```
 
-The verifier checks pinned dependency revisions, rebuilds every local Lean
-source in dependency order, and audits every originating declaration's
-transitive axiom dependencies. It rejects `sorryAx` and additional axioms;
-only `propext`, `Classical.choice`, and `Quot.sound` are allowed.
+Replace `SupplementEntropy.lemma4` with any declaration in the table.
+`#check` displays its hypotheses and conclusion; `#print axioms` displays its
+transitive axiom dependencies. Use `#print` instead of `#check` to display
+the proof term as well.
 
-See [COVERAGE.md](COVERAGE.md) for the correspondence with the paper and the
-precise scope of the finite-field representation and capacity statements.
-Dependency notices are preserved in [`entropy/NOTICE.md`](entropy/NOTICE.md).
+To recheck a source module after the full build, run from the repository root:
 
-## Revised final Supplement (2026-09-29)
+```sh
+(
+cd lean/entropy/build/physlib
+lake env lean SupplementEntropy.lean
+)
+```
 
-`MainSharperPostprocessing` proves the revised coefficient
-`d_M(s) - 2 log(1+9/M)` with an explicit logarithmic error, both for the
-actual Bell-output entropy and for the final channel's two-copy Holevo
-information. The main theorem and explicit dimension estimates are unchanged.
-The manuscript must retain the explicit Pauli postprocessing construction
-and its proof; tensoring the adder tuple alone does not give the stated
-vanishing one-copy bound.
+These commands inspect the source copies prepared by the full verifier.
+After editing files in `lean/entropy/`, rerun `bash lean/verify-all.sh` from
+the repository root to copy the changes, rebuild dependencies, and repeat the
+complete axiom audit. If you used `PHYSLIB_DIR`, use that directory in place
+of `lean/entropy/build/physlib`.
 
-## Current verification result
+## Read the verification records
 
-The fresh 2026-09-29 aggregate run passed with exit code 0: **58 local proof
-modules** were rebuilt from source and **2,054 originating declarations**
-passed the exhaustive transitive axiom audit. Only `propext`,
-`Classical.choice`, and `Quot.sound` occur. The successful source manifest
-matches the current proof files, including `MainSharperPostprocessing.lean`.
+The supplied successful record covers **58 modules and 2,054 declarations**.
+Its source hashes match the proof files in this repository.
 
-Current record: [`entropy/verification-2026-09-29/verification_status.json`](entropy/verification-2026-09-29/verification_status.json).
+| Record | Purpose |
+| --- | --- |
+| [verification_status.json](entropy/verification/verification_status.json) | Aggregate outcome, dependency versions, counts, and source hashes |
+| [verification.log](entropy/verification/verification.log) | Compiler output and audit output |
+| [axiom_audit.log](entropy/verification/axiom_audit.log) | Transitive axiom dependencies of each declaration |
+| [source_manifest.json](entropy/verification/generated/source_manifest.json) | Exact proof-source hashes and import graph |
+| [exit_code.txt](entropy/verification/exit_code.txt) | Process exit code; `0` denotes success |
+
+A new run writes these records only for its own source snapshot. The aggregate
+success record is produced after both compilation and the axiom audit pass.
+
+From the repository root, run the numerical parameter cross-check separately:
+
+```sh
+python3 lean/scripts/check_parameters.py
+```
+
+This uses high-precision Decimal arithmetic and is not a Lean certificate.
+The saved output is [parameters.json](numerics/parameters.json).
+
+Dependency setup and optional build settings are described in
+[`entropy/README.md`](entropy/README.md). The independent
+[`adder-trace/`](adder-trace/) project can additionally be checked with
+`VERIFY_LEGACY_ADDER=1 bash lean/verify-all.sh`.

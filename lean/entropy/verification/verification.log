@@ -2,8 +2,11 @@ The pinned dependency patch is already applied.
 Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)
 Physlib: c76e3ccab04eacb69a126ca5c021b0788d513292
 Mathlib: db584cd6d46c92f209a44c0f1c829460d327499d
-Local proof modules: 57 (all rebuilt from source)
-Using existing standard dependency artifacts; every local proof is still rebuilt.
+Local proof modules: 58 (all rebuilt from source)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 3626 file(s)
 Build completed successfully (3693 jobs).
 Checking BellAlgebra.lean
 Checking FilterTrace.lean
@@ -1033,6 +1036,10 @@ Checking MainTheorem.lean
 Checking MainCapacityCorollary.lean
 'MainCapacityCorollary.unbounded_capacity_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
 Checking MainParameterGrowth.lean
+Checking MainSharperPostprocessing.lean
+'MainSharperPostprocessing.numerical_margin_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MainSharperPostprocessing.two_copy_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MainSharperPostprocessing.holevo_two_copy_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
 Checking SupplementAdder.lean
 SupplementAdder.lean:141:2: warning: Unused tactic linter: `change Complex.normSq (W i j) = (star (W i j) * W i j).re` does nothing
 
@@ -1937,6 +1944,12 @@ AUDIT_DECL MainReal.transpose_inGrid: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainReal.transpose_mat: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainReal.transpose_norm: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainReal.transpose_transpose: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.a_le_beta_power: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.holevo_two_copy_sharp: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.log_a_le_sharp: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.log_randomizerSize_bound_sharp: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.numerical_margin_sharp: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.two_copy_sharp: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainSmoothedChannel.pauliUnitary: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainSmoothedChannel.pauli_uniformChannel_map: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainSmoothedChannel.randomizer: [propext, Classical.choice, Quot.sound]
@@ -3117,6 +3130,6 @@ AUDIT_DECL _private.AdderTrace.0.ExplicitFilter.TensorPattern.slotEquiv.match_1.
 AUDIT_DECL _private.AdderTrace.0.ExplicitFilter.TensorPattern.slotEquiv.match_1.eq_2: [propext]
 AUDIT_DECL _private.AdderTrace.0.ExplicitFilter.TensorPattern.slotEquiv.match_1.eq_3: [propext]
 AUDIT_DECL _private.AdderTrace.0.ExplicitFilter.TensorPattern.slotEquiv.match_1.splitter: [propext]
-AXIOM_AUDIT_OK declarations=2048 modules=57
-Aggregate audit passed: 2048 declarations in 57 modules; standard axioms only.
-Verification completed. Results: /workspace/scratch/ca20910c35a8/repository/lean/entropy/verification
+AXIOM_AUDIT_OK declarations=2054 modules=58
+Aggregate audit passed: 2054 declarations in 58 modules; standard axioms only.
+Verification completed. Results: lean/entropy/verification

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce the scalar PRL parameter checks using standard-library Decimal.
+"""Reproduce the scalar parameter checks using standard-library Decimal.
 
 This is a high-precision numerical cross-check, not a Lean certificate or an
 interval-arithmetic proof. Integer parameters and the grid ceiling are exact.

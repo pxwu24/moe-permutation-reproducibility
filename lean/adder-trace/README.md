@@ -1,8 +1,8 @@
 # Modular-adder trace estimates
 
-`AdderTrace.lean` is the complete, previously verified source for the actual
+`AdderTrace.lean` contains the complete proof for the actual
 two-register adder construction. Its theorem
-`AdderTrace.technical_trace_bound` is Proposition 4 of the Supplement, with
+`AdderTrace.technical_trace_bound` is the filter trace estimate (Proposition 3 in the result guide), with
 only the parameter hypotheses printed in the paper. The Gaussian-integer
 grid and the filter are the actual full definitions, not abstract quantities
 assumed to satisfy moment or counting estimates.

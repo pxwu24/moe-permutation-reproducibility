@@ -894,6 +894,12 @@ AUDIT_DECL MainReal.transpose_inGrid: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainReal.transpose_mat: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainReal.transpose_norm: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainReal.transpose_transpose: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.a_le_beta_power: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.holevo_two_copy_sharp: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.log_a_le_sharp: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.log_randomizerSize_bound_sharp: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.numerical_margin_sharp: [propext, Classical.choice, Quot.sound]
+AUDIT_DECL MainSharperPostprocessing.two_copy_sharp: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainSmoothedChannel.pauliUnitary: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainSmoothedChannel.pauli_uniformChannel_map: [propext, Classical.choice, Quot.sound]
 AUDIT_DECL MainSmoothedChannel.randomizer: [propext, Classical.choice, Quot.sound]
@@ -2074,4 +2080,4 @@ AUDIT_DECL _private.AdderTrace.0.ExplicitFilter.TensorPattern.slotEquiv.match_1.
 AUDIT_DECL _private.AdderTrace.0.ExplicitFilter.TensorPattern.slotEquiv.match_1.eq_2: [propext]
 AUDIT_DECL _private.AdderTrace.0.ExplicitFilter.TensorPattern.slotEquiv.match_1.eq_3: [propext]
 AUDIT_DECL _private.AdderTrace.0.ExplicitFilter.TensorPattern.slotEquiv.match_1.splitter: [propext]
-AXIOM_AUDIT_OK declarations=2048 modules=57
+AXIOM_AUDIT_OK declarations=2054 modules=58

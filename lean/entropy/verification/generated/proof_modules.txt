@@ -53,5 +53,6 @@ MainPauliHolevo
 MainTheorem
 MainCapacityCorollary
 MainParameterGrowth
+MainSharperPostprocessing
 SupplementAdder
 AllProofs
