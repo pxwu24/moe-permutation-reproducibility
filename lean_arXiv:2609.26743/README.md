@@ -41,7 +41,7 @@ open the relevant Lean file; the declaration names identify the exact statements
 | Corollary 1: tensor-coordinate entropy estimate | [SupplementEntropy.lean](entropy/SupplementEntropy.lean) | `SupplementEntropy.corollary1` |
 | Corollary 2: entropy-gap lower bound and unbounded violation | [SupplementEntropy.lean](entropy/SupplementEntropy.lean) | `SupplementEntropy.corollary2`, `SupplementEntropy.corollary2_unbounded` |
 | Proposition 2: uniform measurement estimate | [ActualGridSupport.lean](entropy/ActualGridSupport.lean) | `ActualGridSupport.actual_grid_support_bound` |
-| Proposition 3: filter trace estimate | [AdderTrace.lean](entropy/AdderTrace.lean) | `AdderTrace.technical_trace_bound` |
+| Proposition 3: main trace estimate - two-copy bound | [AdderTrace.lean](entropy/AdderTrace.lean) | `AdderTrace.technical_trace_bound` |
 | Lemma 5: word trace estimate | [SupplementAdder.lean](entropy/SupplementAdder.lean) | `SupplementAdder.lemma5_word_trace` |
 | Lemma 6: matrix moment estimate | [SupplementAdder.lean](entropy/SupplementAdder.lean) | `SupplementAdder.lemma6_moment_bound` |
 | Parameter choice and filter trace error | [MainFilterParameters.lean](entropy/MainFilterParameters.lean) | `MainFilterParameters.prescribedFilter_small` |
