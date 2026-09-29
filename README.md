@@ -1,7 +1,7 @@
 # Superadditivity of Holevo information
 
-This repository contains numerical code and formal proofs for two related
-quantum-channel projects.
+This repository contains numerical code and formal proofs for 
+arXiv:2607.15210, arXiv:2608.25961, arXiv:2609.26743
 
 - [`reproduce_numerics.py`](reproduce_numerics.py): numerical reproducibility
   code for *Additivity violations of minimum output entropy via random and
