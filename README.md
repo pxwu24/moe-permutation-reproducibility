@@ -3,9 +3,17 @@ This repository groups numerical code and formal proofs by arXiv paper.
 
 | Paper | Available files |
 | --- | --- |
-| arXiv:2607.15210 | [Lean verification (partial)](./lean_arXiv_2607.15210/README.md) |
+| arXiv:2607.15210 | [Lean verification and output-dimension-182 certificate](./lean_arXiv_2607.15210/README.md) |
 | arXiv:2608.25961 | [Numerical reproducibility code](reproduce_numerics.py) |
 | arXiv:2609.26743 | [`lean_arXiv:2609.26743/`](./lean_arXiv:2609.26743/README.md) |
+
+For arXiv:2607.15210, the new `k182` certificate establishes the upper bound
+`k_high(1) <= 182`, with a strict limiting von Neumann entropy gap greater
+than `0.000477` nats. It includes reproducible Python interval arithmetic,
+the analytic proof, and Lean checks of the scalar and numerical bounds.
+The Lean entropy conclusion has an explicit minimizer-shape hypothesis;
+that analytic reduction is not yet formalized. See the paper folder for
+the exact verification scope.
 
 The Lean project for arXiv:2609.26743 formalizes the Supplement and the main
 theorem of *Explicit channels with unbounded gains in classical communication

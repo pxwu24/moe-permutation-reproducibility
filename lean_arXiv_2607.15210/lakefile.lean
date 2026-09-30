@@ -43,4 +43,8 @@ lean_lib Preliminaries where
     `CauchyHolomorphy,
     `CauchyLocalInverse,
     `FullAudit,
+    `K182Dual,
+    `K182Numerics,
+    `K182Entropy,
+    `K182Audit,
     `UnprovedTargets]

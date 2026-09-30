@@ -1,5 +1,17 @@
 # Formalization scope audit
 
+## Output-dimension-182 extension
+
+The new `K182Dual`, `K182Numerics`, and `K182Entropy` modules accompany
+the rigorous certificate in `k182/`. Their separate scope and audit are
+documented in `k182/README.md`. The scalar eigenvalue bound and the
+real-logarithm numerical gap are proved in Lean; the global entropy
+comparison retains an explicit minimizer-shape hypothesis. Its analytic
+proof is in `k182/k182_revision.tex`, but it is not yet a Lean theorem.
+The random-matrix limit gaps described below are unchanged.
+
+## Original preliminaries snapshot
+
 This audit compares the supplied appendix and the current `deliverables/preliminaries_revised.tex` / `appendix_revised.tex` against the actual Lean statements. It describes the current source snapshot, not a claim that every sentence of the manuscript has been formalized.
 
 ## Established results
