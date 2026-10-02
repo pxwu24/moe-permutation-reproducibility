@@ -77,8 +77,8 @@ theorem spectral_nonadditivity_all_orders (p : ℝ) (hp : 0 < p) :
   · exact hb.trans he
 
 /-- A strict limiting Bell witness yields finite-index nonadditivity.  This lemma
-makes the remaining bridge explicit: the real sequences must actually be the
-channel entropies and satisfy the displayed convergence and Bell-input bounds. -/
+is a generic transport step: its application to actual channels supplies
+the entropy limits and Bell-input bounds from the proved operator results. -/
 theorem eventual_nonadditivity_from_limits
     (single bell product conjugate : ℕ → ℝ) (S B : ℝ)
     (hS : Tendsto single atTop (nhds S))

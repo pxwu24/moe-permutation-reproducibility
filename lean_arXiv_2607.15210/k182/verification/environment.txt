@@ -24,3 +24,4 @@ Formal scope:
   Scalar/eigenvalue and numerical logarithm bounds: proved unconditionally.
   Global entropy conclusion: conditional on HasOneHighEntropyMinimizer.
   Random-matrix and channel-limit theorems: not proved by these new modules.
+

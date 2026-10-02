@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](../../README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Main-result audit of the final draft
 
 Source: `upload/Pasted text(20261002-051404).txt`, main theorem at lines 182–192 and proof at lines 1315–1362.

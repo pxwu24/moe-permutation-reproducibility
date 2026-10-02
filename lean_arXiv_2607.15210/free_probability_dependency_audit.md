@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Free-probability dependency audit
 
 Audit date: 2026-09-29. Installed mathlib: commit
@@ -171,3 +173,4 @@ No unconditional high-moment estimate of the displayed strength, no
 replacement local law, and no full Collins--Male proof has been
 obtained in the current work. No definition, hypothesis wrapper, or
 axiom was added to conceal this remaining research input.
+

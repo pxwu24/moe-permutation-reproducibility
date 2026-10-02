@@ -123,3 +123,4 @@ if __name__ == "__main__":
     parser.add_argument("--prec", type=int, default=256, help="Arb precision in bits (default: 256)")
     args = parser.parse_args()
     certify(args.prec)
+

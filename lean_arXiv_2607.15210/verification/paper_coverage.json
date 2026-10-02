@@ -1,0 +1,6 @@
+{
+  "all_requested_paper_results_complete": true,
+  "unfinished_paper_results": [],
+  "only_permitted_external_assumption": "Block-modified strong-convergence theorem (including the limiting free-convolution law), if not formalized.",
+  "note": "Successful compilation does not discharge explicit theorem hypotheses."
+}

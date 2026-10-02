@@ -1,0 +1,9 @@
+import RevisionMatrixEntropyBell
+#print axioms RevisionMatrixEntropy.matrixRenyiEntropy_continuousOn
+#print axioms RevisionMatrixEntropy.matrixRenyiEntropy_uniformContinuousOn
+#print axioms RevisionMatrixEntropy.matrixRenyiEntropy_eq_eigenvalues
+#print axioms RevisionMatrixEntropy.minimumOutputEntropy_conjugateMap
+#print axioms RevisionMatrixEntropy.matrixRenyiEntropy_isotropic
+#check RevisionMatrixEntropy.matrixRenyiEntropy_continuousOn
+#check RevisionMatrixEntropy.minimumOutputEntropy_conjugateMap
+#check RevisionMatrixEntropy.matrixRenyiEntropy_isotropic

@@ -24,3 +24,4 @@
   "lean_global_entropy_scope": "Conditional on HasOneHighEntropyMinimizer normalizedFeasible; this shape theorem remains unformalized.",
   "random_matrix_limit_scope": "Not proved by the new certificate modules."
 }
+

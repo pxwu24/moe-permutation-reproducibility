@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Preliminaries: revision and verification
 
 ## Mathematical conclusion
@@ -67,3 +69,4 @@ The project uses Lean 4.19.0 and mathlib commit `c44e0c8ee63ca166450922a373c7409
 `FullAudit.lean` audited 421 theorem declarations (including generated helpers). It examines every theorem declaration from the project modules, including generated and private helper theorems, using Lean's transitive axiom collector. The allowed dependencies are the standard foundational axioms `propext`, `Classical.choice`, and `Quot.sound`. Compiler-generated unsafe implementation artifacts are reported separately and are not theorem dependencies. The project adds no logical axiom, and no proof depends on `sorryAx`.
 
 This audit checks the integrity of the statements actually proved. It does not establish that those statements cover the whole manuscript. See `formalization_scope_map.md` and `free_probability_dependency_audit.md` for the remaining mathematical work.
+

@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](../../README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Audit of the dimension-182 result in the final draft
 
 Audited source: `upload/Pasted text(20261002-051404).txt`, lines 1393–1477 and 2394–2563; attached `certify_k182.py`; prior repository `K182Dual.lean`, `K182Numerics.lean`, `K182Entropy.lean`, and `K182Audit.lean`.

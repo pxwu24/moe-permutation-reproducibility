@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](../../README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Output-state-space audit
 
 The theorem and entropy corollary are mathematically correct conditional on the random compression formula and the preceding channel construction. The final draft's strict-sign bracketing correctly repairs the earlier unjustified interchange of an infimum and a pointwise limit.

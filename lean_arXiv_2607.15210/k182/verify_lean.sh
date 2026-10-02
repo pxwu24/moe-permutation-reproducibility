@@ -12,3 +12,4 @@ for module in PreliminariesLegendre K182Dual K182Numerics K182Entropy; do
   lake env lean -o ".lake/build/lib/lean/$module.olean" "$module.lean"
 done
 lake env lean K182Audit.lean
+

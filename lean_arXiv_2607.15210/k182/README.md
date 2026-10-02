@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](../README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Output dimension 182: certificate and Lean checks
 
 For the projection-induced ensemble in arXiv:2607.15210, the rational choice
@@ -99,3 +101,4 @@ Belinschi, Collins, and Nechita, *Almost one bit violation for the
 additivity of the minimum output entropy*, Communications in Mathematical
 Physics 341 (2016), 885–909. That ensemble's threshold is 183; it is a
 different ensemble from the locally normalized projection construction.
+

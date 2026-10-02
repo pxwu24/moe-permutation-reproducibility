@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](../README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Formal verification scope
 
 The formal objects are the spectra defined in `Entropy/Defs.lean`:

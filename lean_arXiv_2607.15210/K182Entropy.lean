@@ -11,12 +11,12 @@ This file proves the entropy of a one-exceptional-eigenvalue spectrum,
 its monotonicity, and the passage from a strict limiting gap to an
 eventual finite-dimensional gap.
 
-The theorem `entropy_lower_bound_of_one_high_minimizer` is intentionally
-conditional on the existence of a global minimizer of this shape. The
-zero-coordinate exclusion and constrained second-variation argument
-establishing that shape for the Bernoulli feasible body are NOT formalized
-here. A bound on the largest eigenvalue by itself does not imply the
-claimed Shannon entropy lower bound.
+The theorem `entropy_lower_bound_of_one_high_minimizer` is a generic
+conditional helper. Its shape hypothesis is proved for the actual Bernoulli
+body in `RevisionLemmaC1.lean` and discharged at the certified parameters in
+`RevisionK182Minimizer.lean`. `RevisionPropositionVI.lean` gives the resulting
+actual matrix and finite-channel conclusions. A coordinate cap alone would
+not establish the Shannon entropy lower bound.
 -/
 
 open scoped BigOperators
@@ -78,16 +78,16 @@ theorem finiteShannon_oneHigh {k : ℕ} (hk : 2 ≤ k) (i : Fin k)
   field_simp [hk1]
   ring
 
-/-- The exact analytic hypothesis still required from the manuscript:
-a global minimizer has one exceptional coordinate and equal others. -/
+/-- The minimizer-shape property, proved for the paper body in
+`RevisionLemmaC1.lean`: one exceptional coordinate and equal others. -/
 def HasOneHighEntropyMinimizer {k : ℕ} (C : Set (Fin k → ℝ)) : Prop :=
   ∃ v ∈ C, ∃ i : Fin k, ∃ x : ℝ,
     1/(k:ℝ) ≤ x ∧ x ≤ 1 ∧
     (∀ j, v j = if j = i then x else (1-x)/((k:ℝ)-1)) ∧
     ∀ w ∈ C, finiteShannon v ≤ finiteShannon w
 
-/-- This is a conditional consequence, not a proof of the minimizer-shape
-theorem. All dependence on that unformalized theorem is explicit. -/
+/-- Generic entropy consequence of a one-high minimizer. The paper-specific
+shape proof is supplied by `RevisionLemmaC1.lean`. -/
 theorem entropy_lower_bound_of_one_high_minimizer {k : ℕ} (hk : 2 ≤ k)
     (C : Set (Fin k → ℝ)) (hshape : HasOneHighEntropyMinimizer C)
     (L : ℝ) (hL : L ≤ 1) (hcap : ∀ v ∈ C, ∀ i, v i ≤ L) :

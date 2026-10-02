@@ -1,3 +1,5 @@
+> Historical report from the earlier verification snapshot. For the current numbered results, complete source dependencies, and compiler records, use [the current README](../README.md), [RESULTS.json](../RESULTS.json), and [verification/](../verification/). The gaps listed below describe that earlier snapshot.
+
 # Final-draft verification — 2026-10-02
 
 The mathematical audit supports the seven requested results, using the stated

@@ -1,0 +1,3 @@
+'BellLimitVerification.moment_limit_of_uniform_approximation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BellLimitVerification.centralDifference_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BellLimitVerification.moment_limit_of_central_differences' depends on axioms: [propext, Classical.choice, Quot.sound]

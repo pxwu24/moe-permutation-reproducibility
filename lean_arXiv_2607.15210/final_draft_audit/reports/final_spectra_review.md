@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](../../README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Final-draft audit: antisymmetric spectra and entropy asymptotics
 
 Source: `upload/Pasted text(20261002-051404).txt`, lines 1077–1307 and 2140–2393. The four entropy estimates have the correct constants and error orders, for each fixed real `p > 0`, fixed `0 < t < 1`, and fixed integer `r >= 1`. The constants and the threshold in k may depend on all these parameters. Nothing in these estimates gives a bound uniform over all p > 0 or over r growing with k.

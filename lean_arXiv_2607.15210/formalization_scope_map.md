@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Formalization scope audit
 
 ## Output-dimension-182 extension
@@ -63,3 +65,4 @@ The audited proofs examined use no custom axioms or `sorry`. A kernel-axiom audi
 ## Delivery consistency
 
 The archive contains the modular project, the two revised LaTeX sections, build and audit logs, and the updated scope reports. Earlier single-file/47-theorem verification notes are superseded by this snapshot. The full Haar result is proved; the free-probability gaps above remain.
+

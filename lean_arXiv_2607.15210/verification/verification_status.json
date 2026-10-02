@@ -1,0 +1,2692 @@
+{
+  "status": "pass",
+  "lean_version": "4.19.0",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "compiled_modules": 196,
+  "audited_declarations": 2240,
+  "audited_theorem_declarations_including_generated": 1953,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "All indexed source declarations checked; consult RESULTS.json for paper coverage.",
+  "modules": [
+    {
+      "module": "PreliminariesLegendre",
+      "path": "PreliminariesLegendre.lean",
+      "sha256": "ff5b51323097311de4a91a03c877d45958ad9078536033e76dd1871a50e46705",
+      "imports": [
+        "Mathlib.Data.Real.Sqrt",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.FieldSimp"
+      ],
+      "exit_code": 0,
+      "seconds": 21.519
+    },
+    {
+      "module": "BernoulliCalculus",
+      "path": "BernoulliCalculus.lean",
+      "sha256": "1ace7a1a7c1efea0dadfcef56a6a01ae162cf9caec8d6205fbc1d4e48ba59899",
+      "imports": [
+        "PreliminariesLegendre",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Analysis.Calculus.Deriv.Inv",
+        "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+        "Mathlib.Analysis.SpecificLimits.Basic",
+        "Mathlib.Analysis.Convex.Deriv",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real"
+      ],
+      "exit_code": 0,
+      "seconds": 3.84
+    },
+    {
+      "module": "PreliminariesAnalysis",
+      "path": "PreliminariesAnalysis.lean",
+      "sha256": "7096658bd0673cf334dae410a97d22d611f2c9d4ffeb5cf3d50faa0ccdbe6547",
+      "imports": [
+        "PreliminariesLegendre",
+        "Mathlib.Topology.MetricSpace.Pseudo.Defs",
+        "Mathlib.MeasureTheory.Measure.MeasureSpaceDef"
+      ],
+      "exit_code": 0,
+      "seconds": 3.094
+    },
+    {
+      "module": "BernoulliDuality",
+      "path": "BernoulliDuality.lean",
+      "sha256": "95511b4b4ebeee51b112be977088b2074096127558daed7118c33dbbc7d57f8a",
+      "imports": [
+        "PreliminariesAnalysis",
+        "BernoulliCalculus",
+        "Mathlib.Topology.Order.IntermediateValue",
+        "Mathlib.Topology.Algebra.Order.Field",
+        "Mathlib.Tactic.FunProp"
+      ],
+      "exit_code": 0,
+      "seconds": 2.689
+    },
+    {
+      "module": "BernoulliEdgeCalculus",
+      "path": "BernoulliEdgeCalculus.lean",
+      "sha256": "b0fa7decdfad878bf9b2d13b8e1213753c5c8828b03e793c4331c48aff575504",
+      "imports": [
+        "BernoulliDuality"
+      ],
+      "exit_code": 0,
+      "seconds": 2.392
+    },
+    {
+      "module": "BernoulliCriticalPoint",
+      "path": "BernoulliCriticalPoint.lean",
+      "sha256": "45b81ce41c92533aad719362d316ace259a6cea2ca4028010ee6c1d2df8fcc64",
+      "imports": [
+        "BernoulliEdgeCalculus",
+        "Mathlib.Analysis.Calculus.LocalExtr.Basic"
+      ],
+      "exit_code": 0,
+      "seconds": 3.034
+    },
+    {
+      "module": "PreliminariesMatrix",
+      "path": "PreliminariesMatrix.lean",
+      "sha256": "ba9d81a32e2fbb981df5e5c642a64239c76b0069023566c044916ee1c22f2ad7",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.PosDef",
+        "Mathlib.Data.Matrix.Rank",
+        "Mathlib.Data.Matrix.Kronecker",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 3.834
+    },
+    {
+      "module": "CompressionSpectral",
+      "path": "CompressionSpectral.lean",
+      "sha256": "855273a845f39b3bd2493575132f8c1acd5452aaf52680c99a4fe6d60ec838ad",
+      "imports": [
+        "PreliminariesMatrix",
+        "PreliminariesAnalysis",
+        "Mathlib.LinearAlgebra.Matrix.Spectrum"
+      ],
+      "exit_code": 0,
+      "seconds": 3.289
+    },
+    {
+      "module": "PreliminariesChoi",
+      "path": "PreliminariesChoi.lean",
+      "sha256": "55fa766c9a68ff2db44a0b00be64e0ecd4acaf62d4c21b9e6e010572e738d991",
+      "imports": [
+        "PreliminariesMatrix"
+      ],
+      "exit_code": 0,
+      "seconds": 3.121
+    },
+    {
+      "module": "CompletePositivity",
+      "path": "CompletePositivity.lean",
+      "sha256": "deee9a84e92821c179c11d7c7034a551033c599d0e044baf724978ac64b48bbf",
+      "imports": [
+        "PreliminariesChoi"
+      ],
+      "exit_code": 0,
+      "seconds": 3.512
+    },
+    {
+      "module": "BlockModification",
+      "path": "BlockModification.lean",
+      "sha256": "5f4c9295d396a037b044c3c276d946c4687526c95d9d4f6a7d62d84f888067a1",
+      "imports": [
+        "CompressionSpectral",
+        "CompletePositivity"
+      ],
+      "exit_code": 0,
+      "seconds": 3.68
+    },
+    {
+      "module": "CauchyBernoulli",
+      "path": "CauchyBernoulli.lean",
+      "sha256": "d3796fa838754fa52971a74e2302bea9697d4cfbc344fca1bf3b3ef9dd65eb27",
+      "imports": [
+        "Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap",
+        "Mathlib.Data.Complex.Basic",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 2.906
+    },
+    {
+      "module": "CauchyHolomorphic",
+      "path": "CauchyHolomorphic.lean",
+      "sha256": "d1673ddc093acff3f2f5902172873684ce13b467c6ec28234113727a22000a28",
+      "imports": [
+        "Mathlib.Analysis.Complex.CauchyIntegral",
+        "Mathlib.Analysis.Calculus.FDeriv.Analytic",
+        "Mathlib.Analysis.Calculus.MeanValue",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 2.153
+    },
+    {
+      "module": "CauchyHolomorphy",
+      "path": "CauchyHolomorphy.lean",
+      "sha256": "8d297892d8c74068f348a6cb8a0295701aee9dcd05fc0f6a2ad0c842d5b66aa8",
+      "imports": [
+        "CauchyBernoulli",
+        "Mathlib.Analysis.Calculus.ParametricIntegral",
+        "Mathlib.Analysis.Calculus.Deriv.Inv"
+      ],
+      "exit_code": 0,
+      "seconds": 2.823
+    },
+    {
+      "module": "SpectralEdge",
+      "path": "SpectralEdge.lean",
+      "sha256": "3edce8f73a2830415a15c5ff911a711f4b04d7638c733447fdbc54cffb31c261",
+      "imports": [
+        "CauchyBernoulli",
+        "CauchyHolomorphic",
+        "Mathlib.MeasureTheory.Integral.Prod",
+        "Mathlib.MeasureTheory.Integral.Bochner.Set",
+        "Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
+      ],
+      "exit_code": 0,
+      "seconds": 3.194
+    },
+    {
+      "module": "CauchyLocalInverse",
+      "path": "CauchyLocalInverse.lean",
+      "sha256": "335c9d334b5d052d9818596e527f3dc161e4a393014d2f678b7fc74e6626774f",
+      "imports": [
+        "SpectralEdge",
+        "Mathlib.Analysis.Calculus.InverseFunctionTheorem.Deriv",
+        "Mathlib.Analysis.Analytic.IsolatedZeros",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ],
+      "exit_code": 0,
+      "seconds": 3.048
+    },
+    {
+      "module": "CompressionEndpointGlue",
+      "path": "CompressionEndpointGlue.lean",
+      "sha256": "ef15448356ec690f189621e4dc8677bb43aba3ddc50c2905344b03f22dd5505f",
+      "imports": [
+        "CauchyLocalInverse",
+        "CauchyHolomorphy",
+        "Mathlib.Analysis.Convex.Topology"
+      ],
+      "exit_code": 0,
+      "seconds": 3.965
+    },
+    {
+      "module": "CompressionExtension",
+      "path": "CompressionExtension.lean",
+      "sha256": "537e2367cf34c9b16c22d47c9d2fb19ffb6aff9abd36a615d936df15fc2bb2f9",
+      "imports": [
+        "CompressionSpectral",
+        "BernoulliDuality",
+        "Mathlib.Analysis.Normed.Lp.PiLp"
+      ],
+      "exit_code": 0,
+      "seconds": 2.951
+    },
+    {
+      "module": "Entropy.Defs",
+      "path": "entropy/Entropy/Defs.lean",
+      "sha256": "8a2cfb1da5b476c07faaea96d6ab469d86ea2ec9b0569c088f8a9382067674af",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Nat.Choose.Sum",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 2.347
+    },
+    {
+      "module": "Entropy.Analysis",
+      "path": "entropy/Entropy/Analysis.lean",
+      "sha256": "883667d73d7d5d05de93835f6c5b4e9d26df108b14b285a02d2ab35ed82c56ee",
+      "imports": [
+        "Entropy.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 27.225
+    },
+    {
+      "module": "Entropy.Combinatorics",
+      "path": "entropy/Entropy/Combinatorics.lean",
+      "sha256": "41e40507f7dd7a96183e41a893f071560dcf29f3c167f862a980f2114ce4817f",
+      "imports": [
+        "Entropy.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 4.771
+    },
+    {
+      "module": "Entropy.BellBounds",
+      "path": "entropy/Entropy/BellBounds.lean",
+      "sha256": "357ee3adb3d5c06f2f765746673cd459cc01363c19b10d8c77fb8d4a4642e5b3",
+      "imports": [
+        "Entropy.Combinatorics"
+      ],
+      "exit_code": 0,
+      "seconds": 6.778
+    },
+    {
+      "module": "Entropy.BellOne",
+      "path": "entropy/Entropy/BellOne.lean",
+      "sha256": "51136f690f9f9694025eeb98d0831b9480f309104c816b29bcd59e92cb64a848",
+      "imports": [
+        "Entropy.Analysis",
+        "Entropy.BellBounds"
+      ],
+      "exit_code": 0,
+      "seconds": 12.349
+    },
+    {
+      "module": "Entropy.BellGeneral",
+      "path": "entropy/Entropy/BellGeneral.lean",
+      "sha256": "79e55742e3c26bb795fd65f03258ef6787fd6a28671110b2c3343abec1863011",
+      "imports": [
+        "Entropy.Analysis",
+        "Entropy.BellBounds"
+      ],
+      "exit_code": 0,
+      "seconds": 53.711
+    },
+    {
+      "module": "Entropy.Bell",
+      "path": "entropy/Entropy/Bell.lean",
+      "sha256": "aa4efba74ad22a47be5d8f635a60b3f1621bf1c8664d721ffaa3530e8db2b20a",
+      "imports": [
+        "Entropy.BellOne",
+        "Entropy.BellGeneral"
+      ],
+      "exit_code": 0,
+      "seconds": 1.949
+    },
+    {
+      "module": "Entropy.BellFiniteDifference",
+      "path": "entropy/Entropy/BellFiniteDifference.lean",
+      "sha256": "2e4fb20d669b64d2c4780adb29dba3554c78a6e916c3e5de65ea4c7bf438032e",
+      "imports": [
+        "Entropy.Analysis"
+      ],
+      "exit_code": 0,
+      "seconds": 5.12
+    },
+    {
+      "module": "Entropy.BellLimitCoefficients",
+      "path": "entropy/Entropy/BellLimitCoefficients.lean",
+      "sha256": "bc559b1fd29380c0a038a0f6794dcf95c6bfd684b2025a5636a11c1bcbd1292c",
+      "imports": [
+        "Entropy.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 5.159
+    },
+    {
+      "module": "Entropy.BellLimitTransfer",
+      "path": "entropy/Entropy/BellLimitTransfer.lean",
+      "sha256": "d9a3db899097a89a36643740f486de127355d3d13f270604cd590bc359d12653",
+      "imports": [
+        "Entropy.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 3.364
+    },
+    {
+      "module": "Entropy.BellMatrixIdentities",
+      "path": "entropy/Entropy/BellMatrixIdentities.lean",
+      "sha256": "08f733c1402ba8eecbbec2506411c3d94888a4da0ff67edd32b3c6ec895a0a8a",
+      "imports": [
+        "Entropy.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 2.877
+    },
+    {
+      "module": "Entropy.Localization",
+      "path": "entropy/Entropy/Localization.lean",
+      "sha256": "1bcfcc78bd47aa77a677dac70a76c415f40b9bd462f7acb897e7b8a921f26c8a",
+      "imports": [
+        "Entropy.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 10.372
+    },
+    {
+      "module": "Entropy.SpikeArithmetic",
+      "path": "entropy/Entropy/SpikeArithmetic.lean",
+      "sha256": "06a355df6a39e035d53da4bc435badc0c7c806a712b44a96d6850643df6b22c4",
+      "imports": [
+        "Entropy.Localization"
+      ],
+      "exit_code": 0,
+      "seconds": 14.653
+    },
+    {
+      "module": "Entropy.Spike",
+      "path": "entropy/Entropy/Spike.lean",
+      "sha256": "d546258db45142601dac97a66b5fad1f133a0a6b83ebd6823db3b76c110aaad8",
+      "imports": [
+        "Entropy.SpikeArithmetic"
+      ],
+      "exit_code": 0,
+      "seconds": 12.83
+    },
+    {
+      "module": "Entropy.Single",
+      "path": "entropy/Entropy/Single.lean",
+      "sha256": "d1acd9b524fc83b7777aa1a77c6c61717ef4de2e7e848a6fa39b2d8566599f41",
+      "imports": [
+        "Entropy.Analysis",
+        "Entropy.Combinatorics",
+        "Entropy.Localization",
+        "Entropy.Spike"
+      ],
+      "exit_code": 0,
+      "seconds": 27.486
+    },
+    {
+      "module": "Entropy.Infimum",
+      "path": "entropy/Entropy/Infimum.lean",
+      "sha256": "a781fe6c5e66088612f51f326f2eb1f3359575be91903d0e2f46c04ce2fa6c6d",
+      "imports": [
+        "Entropy.Single"
+      ],
+      "exit_code": 0,
+      "seconds": 2.45
+    },
+    {
+      "module": "Entropy.MainCoefficient",
+      "path": "entropy/Entropy/MainCoefficient.lean",
+      "sha256": "042d4397dd282e8fde32c49bab4890f8f138f8a4ac574e10d63379f79cdaf689",
+      "imports": [
+        "Entropy.Analysis",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Deriv",
+        "Mathlib.Analysis.Calculus.Deriv.MeanValue"
+      ],
+      "exit_code": 0,
+      "seconds": 6.879
+    },
+    {
+      "module": "Entropy.MainSpectral",
+      "path": "entropy/Entropy/MainSpectral.lean",
+      "sha256": "a7ea0ed322031f086ee58e601d49563dab414b9418f5972eff60dd0df9356e68",
+      "imports": [
+        "Entropy.MainCoefficient",
+        "Entropy.Infimum",
+        "Entropy.BellGeneral"
+      ],
+      "exit_code": 0,
+      "seconds": 4.917
+    },
+    {
+      "module": "Entropy.Minimum",
+      "path": "entropy/Entropy/Minimum.lean",
+      "sha256": "29e8ddfc5b1dc4a1e21285a34532fdf65a74ef79ab95cdfe2e2daaba1d144760",
+      "imports": [
+        "Entropy.Infimum",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Continuity"
+      ],
+      "exit_code": 0,
+      "seconds": 3.679
+    },
+    {
+      "module": "Entropy.OutputSpace",
+      "path": "entropy/Entropy/OutputSpace.lean",
+      "sha256": "8d4cd74305211bf45c1dfe86acd06f86dee5b125d1020e87b7f1c887dea6be3d",
+      "imports": [
+        "Entropy.Defs",
+        "Mathlib.Topology.MetricSpace.Pseudo.Basic",
+        "Mathlib.Topology.MetricSpace.HausdorffDistance",
+        "Mathlib.Topology.Order.Compact",
+        "Mathlib.MeasureTheory.Measure.MeasureSpaceDef"
+      ],
+      "exit_code": 0,
+      "seconds": 3.107
+    },
+    {
+      "module": "Entropy.OutputSpaceBody",
+      "path": "entropy/Entropy/OutputSpaceBody.lean",
+      "sha256": "b26fde8a1554e4d4e95804edf1357f02b98babc5edeee4e4b80bf5a695ffa1a1",
+      "imports": [
+        "Entropy.OutputSpace"
+      ],
+      "exit_code": 0,
+      "seconds": 2.724
+    },
+    {
+      "module": "Entropy",
+      "path": "entropy/Entropy.lean",
+      "sha256": "461043f870bf80395ea3ee381dbe813a2aeedd68e7b2cde70e2fe222abbe5fd7",
+      "imports": [
+        "Entropy.Defs",
+        "Entropy.Analysis",
+        "Entropy.Combinatorics",
+        "Entropy.BellBounds",
+        "Entropy.BellOne",
+        "Entropy.BellGeneral",
+        "Entropy.Bell",
+        "Entropy.BellFiniteDifference",
+        "Entropy.BellLimitCoefficients",
+        "Entropy.BellLimitTransfer",
+        "Entropy.BellMatrixIdentities",
+        "Entropy.Localization",
+        "Entropy.SpikeArithmetic",
+        "Entropy.Spike",
+        "Entropy.Single",
+        "Entropy.Infimum",
+        "Entropy.MainCoefficient",
+        "Entropy.MainSpectral",
+        "Entropy.Minimum",
+        "Entropy.OutputSpace",
+        "Entropy.OutputSpaceBody"
+      ],
+      "exit_code": 0,
+      "seconds": 2.066
+    },
+    {
+      "module": "GaussianRank",
+      "path": "GaussianRank.lean",
+      "sha256": "ddc3df8929b11654a0ff105d2d7b0487774a5f3e2fe85fcad9d5dd1bb3e5409e",
+      "imports": [
+        "PreliminariesMatrix",
+        "Mathlib.Probability.Distributions.Gaussian",
+        "Mathlib.MeasureTheory.Measure.Lebesgue.Complex",
+        "Mathlib.Algebra.MvPolynomial.Equiv",
+        "Mathlib.Topology.Algebra.MvPolynomial",
+        "Mathlib.MeasureTheory.Constructions.Pi",
+        "Mathlib.Algebra.Polynomial.Roots"
+      ],
+      "exit_code": 0,
+      "seconds": 3.509
+    },
+    {
+      "module": "GaussianRadial",
+      "path": "GaussianRadial.lean",
+      "sha256": "0893f26632a88280433eeecd5ace7645e25cc997e37f59a4b0c654ffb3676947",
+      "imports": [
+        "GaussianRank",
+        "Mathlib.MeasureTheory.Measure.Haar.InnerProductSpace",
+        "Mathlib.MeasureTheory.Measure.Haar.Unique",
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Map",
+        "Mathlib.Analysis.InnerProductSpace.LinearMap"
+      ],
+      "exit_code": 0,
+      "seconds": 2.746
+    },
+    {
+      "module": "HaarProjection",
+      "path": "HaarProjection.lean",
+      "sha256": "68cfba0b008f92b5990cb65def2cbc919a7dc0aa5045fb0302df418e7f67c871",
+      "imports": [
+        "PreliminariesMatrix",
+        "Mathlib.MeasureTheory.Measure.Haar.Unique",
+        "Mathlib.LinearAlgebra.UnitaryGroup"
+      ],
+      "exit_code": 0,
+      "seconds": 3.716
+    },
+    {
+      "module": "HaarMeasure",
+      "path": "HaarMeasure.lean",
+      "sha256": "26c71647b75a80205a8bd1d23c8e9119439aa6a539d743f60a3a47ff66324618",
+      "imports": [
+        "HaarProjection",
+        "Mathlib.Topology.Instances.Matrix",
+        "Mathlib.MeasureTheory.Measure.Haar.Unique",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.MeasureTheory.Measure.Lebesgue.Complex",
+        "Mathlib.MeasureTheory.Constructions.Pi"
+      ],
+      "exit_code": 0,
+      "seconds": 14.473
+    },
+    {
+      "module": "GaussianUnitary",
+      "path": "GaussianUnitary.lean",
+      "sha256": "9d7305b3fb87c1646f6e558aaa1e08e09ddd25f3a96e9c67b9613e54204b51c3",
+      "imports": [
+        "HaarMeasure",
+        "Mathlib.Analysis.InnerProductSpace.LinearMap"
+      ],
+      "exit_code": 0,
+      "seconds": 3.065
+    },
+    {
+      "module": "GaussianMatrixLaw",
+      "path": "GaussianMatrixLaw.lean",
+      "sha256": "98ae895b0f92229dd17027effe9cb41ffd9c8f85017ed5f7a677a81641614212",
+      "imports": [
+        "GaussianRadial",
+        "GaussianUnitary",
+        "Mathlib.Analysis.InnerProductSpace.PiL2"
+      ],
+      "exit_code": 0,
+      "seconds": 3.896
+    },
+    {
+      "module": "GaussianWhitening",
+      "path": "GaussianWhitening.lean",
+      "sha256": "e4aa80629c992965d4b99b5b93b4f1767a19ebd698d0e99e280678e3cfdc51bc",
+      "imports": [
+        "GaussianRank",
+        "HaarMeasure"
+      ],
+      "exit_code": 0,
+      "seconds": 2.158
+    },
+    {
+      "module": "HaarOrbitUnique",
+      "path": "HaarOrbitUnique.lean",
+      "sha256": "3038489391c4495841bde3317bb5e6cf2af2429aa26aa5a2981eaca9b8cc3b45",
+      "imports": [
+        "HaarMeasure",
+        "Mathlib.MeasureTheory.Integral.Prod"
+      ],
+      "exit_code": 0,
+      "seconds": 2.636
+    },
+    {
+      "module": "ProjectionOrbit",
+      "path": "ProjectionOrbit.lean",
+      "sha256": "7d68bb5826ce26d3aa065f0ee8f6dab95de5af7e7d2c8117543956e5d7ace74f",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.Spectrum",
+        "Mathlib.Logic.Equiv.Fintype",
+        "Mathlib.Tactic.Linarith"
+      ],
+      "exit_code": 0,
+      "seconds": 2.721
+    },
+    {
+      "module": "MatrixRankMeasurable",
+      "path": "MatrixRankMeasurable.lean",
+      "sha256": "755588eba9f61d96c7276eae7ab24e14e45a5b394bda65f7e0ca4147e5a05613",
+      "imports": [
+        "HaarMeasure",
+        "Mathlib.Analysis.Normed.Module.FiniteDimension",
+        "Mathlib.LinearAlgebra.Dimension.LinearMap",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 2.717
+    },
+    {
+      "module": "HaarLocalSupport",
+      "path": "HaarLocalSupport.lean",
+      "sha256": "4317ea379db550a06342cc3d89a270461b77e31ecc30f1fa08f4cd917703cc70",
+      "imports": [
+        "GaussianWhitening",
+        "HaarOrbitUnique",
+        "ProjectionOrbit",
+        "MatrixRankMeasurable"
+      ],
+      "exit_code": 0,
+      "seconds": 2.544
+    },
+    {
+      "module": "HaarFullLocalSupport",
+      "path": "HaarFullLocalSupport.lean",
+      "sha256": "78a48a33c5d5f58a5e0af2d308a25593bcc167d010957030b5820e3ca267a24a",
+      "imports": [
+        "HaarLocalSupport",
+        "GaussianMatrixLaw"
+      ],
+      "exit_code": 0,
+      "seconds": 2.553
+    },
+    {
+      "module": "K182Dual",
+      "path": "K182Dual.lean",
+      "sha256": "c35701d2c54b4ca60e9a7c98b9362d03e3823998de2c2d3ed4861cf3e669e419",
+      "imports": [
+        "PreliminariesLegendre",
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "exit_code": 0,
+      "seconds": 4.08
+    },
+    {
+      "module": "K182Numerics",
+      "path": "K182Numerics.lean",
+      "sha256": "89bc9f1cbd63c9c075b5af5603a5b87addf0c4332aac6945b84c4027d8046b44",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 5.554
+    },
+    {
+      "module": "K182Entropy",
+      "path": "K182Entropy.lean",
+      "sha256": "b3af24e566e052b67c377854e12bfb62fd362dd60f05790b3f3dc0e54bb000d7",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.BinaryEntropy",
+        "Mathlib.Topology.Algebra.Order.Field",
+        "Mathlib.Tactic",
+        "K182Dual",
+        "K182Numerics"
+      ],
+      "exit_code": 0,
+      "seconds": 2.602
+    },
+    {
+      "module": "K182SecondVariation",
+      "path": "K182SecondVariation.lean",
+      "sha256": "9c2bd451b10388eff7501f49f4c8219bc0d4e384ed8a758bfd9efc6286ad650c",
+      "imports": [
+        "Mathlib.Analysis.Calculus.LocalExtr.Basic",
+        "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+        "Mathlib.Analysis.Calculus.Deriv.Slope",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 3.38
+    },
+    {
+      "module": "K182ShapeCalculus",
+      "path": "K182ShapeCalculus.lean",
+      "sha256": "b8129940508c3d0f271ea80a1ad5549a6fba7cb962d105e6f331c44f24f7decf",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 3.75
+    },
+    {
+      "module": "OutputSpaceMatrix",
+      "path": "OutputSpaceMatrix.lean",
+      "sha256": "6ad8ae50255d371c3193bffe6ef15fd02f95c051e19e3fe6da280d0e966100a1",
+      "imports": [
+        "CompressionSpectral"
+      ],
+      "exit_code": 0,
+      "seconds": 2.585
+    },
+    {
+      "module": "OutputSpaceCompressionBridge",
+      "path": "OutputSpaceCompressionBridge.lean",
+      "sha256": "2ff38706d756e77dfc454825523e7e9d7993a630da316edc7478acda5d8c616f",
+      "imports": [
+        "OutputSpaceMatrix",
+        "Entropy.OutputSpaceBody"
+      ],
+      "exit_code": 0,
+      "seconds": 2.114
+    },
+    {
+      "module": "ProjectionStrongConvergence",
+      "path": "ProjectionStrongConvergence.lean",
+      "sha256": "2c5fb12fb63c241ba24cc19024dcc7ffb36855d3c6675d26f7495dafa0f69ca8",
+      "imports": [
+        "PreliminariesMatrix",
+        "Mathlib.LinearAlgebra.Trace",
+        "Mathlib.Analysis.CStarAlgebra.Matrix",
+        "Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Basic"
+      ],
+      "exit_code": 0,
+      "seconds": 3.645
+    },
+    {
+      "module": "PaperFormalization",
+      "path": "PaperFormalization.lean",
+      "sha256": "16400211d2d3c7a18951b7b28f43bb26a8268cad645ee0def46e64b505f2e90c",
+      "imports": [
+        "PreliminariesMatrix",
+        "PreliminariesChoi",
+        "PreliminariesLegendre",
+        "PreliminariesAnalysis",
+        "CompletePositivity",
+        "BernoulliCalculus",
+        "BernoulliDuality",
+        "BernoulliEdgeCalculus",
+        "BernoulliCriticalPoint",
+        "CompressionSpectral",
+        "CompressionExtension",
+        "BlockModification",
+        "ProjectionStrongConvergence",
+        "GaussianRank",
+        "GaussianRadial",
+        "GaussianUnitary",
+        "GaussianMatrixLaw",
+        "HaarProjection",
+        "HaarMeasure",
+        "HaarOrbitUnique",
+        "GaussianWhitening",
+        "ProjectionOrbit",
+        "MatrixRankMeasurable",
+        "HaarLocalSupport",
+        "HaarFullLocalSupport",
+        "CauchyBernoulli",
+        "CauchyHolomorphic",
+        "SpectralEdge",
+        "CauchyHolomorphy",
+        "CauchyLocalInverse"
+      ],
+      "exit_code": 0,
+      "seconds": 2.08
+    },
+    {
+      "module": "Preliminaries",
+      "path": "Preliminaries.lean",
+      "sha256": "b5f3e05ebc78d6656e671c6bc6721a0a6ba934b4bed9da61309b2afd61e82aee",
+      "imports": [
+        "PaperFormalization"
+      ],
+      "exit_code": 0,
+      "seconds": 2.193
+    },
+    {
+      "module": "RevisionAntisymmetric",
+      "path": "RevisionAntisymmetric.lean",
+      "sha256": "bcdf4fc2a3ae20d59782ee527e942ae77076c16d5ab04c996718b4b14da8a139",
+      "imports": [
+        "Entropy.Combinatorics",
+        "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+        "Mathlib.Data.Matrix.Mul"
+      ],
+      "exit_code": 0,
+      "seconds": 3.094
+    },
+    {
+      "module": "RevisionAntisymmetricBasis",
+      "path": "RevisionAntisymmetricBasis.lean",
+      "sha256": "a761e11957eee552c9508771fc31751e56496798b92d2cfaac352ad2d8ff618b",
+      "imports": [
+        "RevisionAntisymmetric",
+        "Mathlib.LinearAlgebra.Basis.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 2.427
+    },
+    {
+      "module": "RevisionAntisymmetricTransport",
+      "path": "RevisionAntisymmetricTransport.lean",
+      "sha256": "8d9527c61305a3a550a024ae5eb13696b2448d973b14552e79709b8ff513e294",
+      "imports": [
+        "RevisionAntisymmetricBasis",
+        "Mathlib.LinearAlgebra.Matrix.Spectrum"
+      ],
+      "exit_code": 0,
+      "seconds": 2.571
+    },
+    {
+      "module": "RevisionAntisymmetricShuffling",
+      "path": "RevisionAntisymmetricShuffling.lean",
+      "sha256": "3b9598f6760f3a8479d827b077f364cd9923fce0db023247f3939aa1e8f0cae3",
+      "imports": [
+        "RevisionAntisymmetricTransport"
+      ],
+      "exit_code": 0,
+      "seconds": 3.452
+    },
+    {
+      "module": "RevisionAntisymmetricProjection",
+      "path": "RevisionAntisymmetricProjection.lean",
+      "sha256": "c919625eb2da79011e39a4059d9d16e71b377a042b8c69fe6b8fde55ce29971d",
+      "imports": [
+        "RevisionAntisymmetricShuffling"
+      ],
+      "exit_code": 0,
+      "seconds": 3.172
+    },
+    {
+      "module": "RevisionAntisymmetricOrthonormal",
+      "path": "RevisionAntisymmetricOrthonormal.lean",
+      "sha256": "be816dd34657de1493f4e583c232e5a58cbbc48f67b73db249619f34a480d133",
+      "imports": [
+        "RevisionAntisymmetricProjection"
+      ],
+      "exit_code": 0,
+      "seconds": 3.73
+    },
+    {
+      "module": "RevisionAntisymmetricRecursion",
+      "path": "RevisionAntisymmetricRecursion.lean",
+      "sha256": "8e26f88e3b497637f9c87f8da793a71bb888304227d3b8bf545255f88aa2bdce",
+      "imports": [
+        "RevisionAntisymmetric",
+        "Mathlib.GroupTheory.Perm.Fin"
+      ],
+      "exit_code": 0,
+      "seconds": 2.687
+    },
+    {
+      "module": "RevisionAntisymmetricBellOperators",
+      "path": "RevisionAntisymmetricBellOperators.lean",
+      "sha256": "a116724a13d2dd7977ff6db732c3159c9d0745e9e6a7f9ea1c307b5d97761031",
+      "imports": [
+        "RevisionAntisymmetricOrthonormal",
+        "RevisionAntisymmetricRecursion",
+        "PreliminariesMatrix"
+      ],
+      "exit_code": 0,
+      "seconds": 2.714
+    },
+    {
+      "module": "RevisionAntisymmetricLegMatrix",
+      "path": "RevisionAntisymmetricLegMatrix.lean",
+      "sha256": "3c02d1274347347915370845350a745ef165ae00d789c1327d5440c51b67b025",
+      "imports": [
+        "RevisionAntisymmetricBellOperators"
+      ],
+      "exit_code": 0,
+      "seconds": 2.362
+    },
+    {
+      "module": "RevisionAntisymmetricSwap",
+      "path": "RevisionAntisymmetricSwap.lean",
+      "sha256": "a73bedbc0b468fcb9362dcf40df2b5ca3aafc4cd2feb6e5299e829182374e91f",
+      "imports": [
+        "RevisionAntisymmetricLegMatrix"
+      ],
+      "exit_code": 0,
+      "seconds": 2.68
+    },
+    {
+      "module": "RevisionAntisymmetricMatrixRecursion",
+      "path": "RevisionAntisymmetricMatrixRecursion.lean",
+      "sha256": "3214497ac60dcd11df24b3dc851040c6d56853a477d83cad639160d23547193d",
+      "imports": [
+        "RevisionAntisymmetricSwap"
+      ],
+      "exit_code": 0,
+      "seconds": 2.256
+    },
+    {
+      "module": "RevisionAntisymmetricPartialTrace",
+      "path": "RevisionAntisymmetricPartialTrace.lean",
+      "sha256": "29a9c8c82e9423143fc34e786a5347dc850e237794f5444baf766dbc97b53d96",
+      "imports": [
+        "RevisionAntisymmetricMatrixRecursion"
+      ],
+      "exit_code": 0,
+      "seconds": 3.195
+    },
+    {
+      "module": "RevisionAntisymmetricNesting",
+      "path": "RevisionAntisymmetricNesting.lean",
+      "sha256": "da2c0f032639cb649b72ad2f93ac0ac1093fa5843776c92959b32e6243a0b185",
+      "imports": [
+        "RevisionAntisymmetricPartialTrace"
+      ],
+      "exit_code": 0,
+      "seconds": 2.23
+    },
+    {
+      "module": "RevisionAntisymmetricLadder",
+      "path": "RevisionAntisymmetricLadder.lean",
+      "sha256": "89a2d9f92779397594407209dd68a8d13e65c6d1fc36d2c4f09ace7c23595c1d",
+      "imports": [
+        "RevisionAntisymmetricNesting"
+      ],
+      "exit_code": 0,
+      "seconds": 3.041
+    },
+    {
+      "module": "RevisionAntisymmetricCoordinates",
+      "path": "RevisionAntisymmetricCoordinates.lean",
+      "sha256": "c96a76a4789fcc899ffd45e2fbe1d6a113e69ad7a2193f5782f5f9dcb6972f1f",
+      "imports": [
+        "RevisionAntisymmetricLadder"
+      ],
+      "exit_code": 0,
+      "seconds": 2.618
+    },
+    {
+      "module": "RevisionSlaterReduction",
+      "path": "RevisionSlaterReduction.lean",
+      "sha256": "900e6d0ea23bb906342a913ce516055d0707377d79d54614bbc2334897309c27",
+      "imports": [
+        "RevisionAntisymmetricCoordinates"
+      ],
+      "exit_code": 0,
+      "seconds": 3.807
+    },
+    {
+      "module": "RevisionOutputChannel",
+      "path": "RevisionOutputChannel.lean",
+      "sha256": "141180f2ef98eeeaddcda7d1765948ae2e59b087efb9ae7f29d52c19439fcb77",
+      "imports": [
+        "OutputSpaceMatrix",
+        "PreliminariesChoi"
+      ],
+      "exit_code": 0,
+      "seconds": 3.221
+    },
+    {
+      "module": "RevisionOutputDuality",
+      "path": "RevisionOutputDuality.lean",
+      "sha256": "c1c61b87917395c7de566351df57a0563fc3193d053c683f177318a9a788f2bf",
+      "imports": [
+        "Entropy.OutputSpace",
+        "Mathlib.Analysis.NormedSpace.HahnBanach.Separation",
+        "Mathlib.Analysis.NormedSpace.OperatorNorm.NNNorm",
+        "Mathlib.Analysis.NormedSpace.OperatorNorm.NormedSpace",
+        "Mathlib.Analysis.Normed.Module.FiniteDimension"
+      ],
+      "exit_code": 0,
+      "seconds": 4.503
+    },
+    {
+      "module": "RevisionOutputConvergence",
+      "path": "RevisionOutputConvergence.lean",
+      "sha256": "e0c92c06cb012a840039121096cb6aa28df926d44869bb3e9ae40e1d55894f9a",
+      "imports": [
+        "RevisionOutputChannel",
+        "RevisionOutputDuality",
+        "OutputSpaceCompressionBridge"
+      ],
+      "exit_code": 0,
+      "seconds": 2.997
+    },
+    {
+      "module": "RevisionOutputUnitary",
+      "path": "RevisionOutputUnitary.lean",
+      "sha256": "00abfdf2d872c02d4a5e7b72309bd2672a1fa0d9dd9b894587c69742363655dd",
+      "imports": [
+        "RevisionOutputConvergence",
+        "HaarMeasure"
+      ],
+      "exit_code": 0,
+      "seconds": 5.602
+    },
+    {
+      "module": "RevisionOutputGeometry",
+      "path": "RevisionOutputGeometry.lean",
+      "sha256": "898890aaf379292af3416008f806c46fa9c7af756f67ba4f06fa9306c1b3a0e9",
+      "imports": [
+        "RevisionOutputUnitary"
+      ],
+      "exit_code": 0,
+      "seconds": 8.82
+    },
+    {
+      "module": "RevisionAntisymmetricChannel",
+      "path": "RevisionAntisymmetricChannel.lean",
+      "sha256": "d6ade95aead692cc29326be7e53ac976a6bbc821f700ac942e077b5ae13043f4",
+      "imports": [
+        "RevisionAntisymmetricLegMatrix",
+        "RevisionAntisymmetricOrthonormal",
+        "CompletePositivity",
+        "RevisionSlaterReduction",
+        "RevisionOutputGeometry",
+        "Mathlib.LinearAlgebra.Trace"
+      ],
+      "exit_code": 0,
+      "seconds": 3.774
+    },
+    {
+      "module": "RevisionSlaterGramCoordinates",
+      "path": "RevisionSlaterGramCoordinates.lean",
+      "sha256": "843142be503547c180eb2dbc69fd5c13e4fb855958819322e7ce35970c0e1a84",
+      "imports": [
+        "RevisionSlaterReduction"
+      ],
+      "exit_code": 0,
+      "seconds": 4.189
+    },
+    {
+      "module": "RevisionKrausVectorization",
+      "path": "RevisionKrausVectorization.lean",
+      "sha256": "8c1689a38903a938be31d675356f9e26abfb2e0d51748ce84ed8aba0a420b41e",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.ToLin",
+        "Mathlib.Data.Matrix.ConjTranspose",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 2.226
+    },
+    {
+      "module": "RevisionSlaterLadderCoordinates",
+      "path": "RevisionSlaterLadderCoordinates.lean",
+      "sha256": "fcd68ae97db4931fee3e24849bc131aa70b9498d6044ad474003a24a75a519d1",
+      "imports": [
+        "RevisionSlaterGramCoordinates",
+        "RevisionKrausVectorization"
+      ],
+      "exit_code": 0,
+      "seconds": 2.776
+    },
+    {
+      "module": "RevisionBellChannel",
+      "path": "RevisionBellChannel.lean",
+      "sha256": "110d1547390d9a0436bddc439645c3e46dfaba76fa85ea4de30a592d2828bf9d",
+      "imports": [
+        "PreliminariesChoi",
+        "Entropy.BellMatrixIdentities",
+        "Entropy.BellLimitCoefficients",
+        "Mathlib.Analysis.CStarAlgebra.Matrix"
+      ],
+      "exit_code": 0,
+      "seconds": 2.88
+    },
+    {
+      "module": "RevisionAntisymmetricBellBridge",
+      "path": "RevisionAntisymmetricBellBridge.lean",
+      "sha256": "33827ed233b97e9dc95a8d4ecc2b01cac449ffb75796624cdc99db6b21da1f5b",
+      "imports": [
+        "RevisionAntisymmetricChannel",
+        "RevisionSlaterLadderCoordinates",
+        "RevisionKrausVectorization",
+        "RevisionBellChannel"
+      ],
+      "exit_code": 0,
+      "seconds": 3.524
+    },
+    {
+      "module": "RevisionGramSpectrum",
+      "path": "RevisionGramSpectrum.lean",
+      "sha256": "40dac109f119e3fe385eab35a9f1c2e59b63132475046c93702b2f1205f8009a",
+      "imports": [
+        "Mathlib.LinearAlgebra.Eigenspace.Basic",
+        "Mathlib.LinearAlgebra.Matrix.PosDef",
+        "Mathlib.LinearAlgebra.Matrix.ToLin",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 4.603
+    },
+    {
+      "module": "RevisionGramLadder",
+      "path": "RevisionGramLadder.lean",
+      "sha256": "ff042c94ad502ec9e37b0a645d5b14f60929dbbec4a355948084362d56f2b571",
+      "imports": [
+        "RevisionGramSpectrum",
+        "CompressionSpectral",
+        "CompletePositivity"
+      ],
+      "exit_code": 0,
+      "seconds": 4.209
+    },
+    {
+      "module": "RevisionSlaterWeightedLadder",
+      "path": "RevisionSlaterWeightedLadder.lean",
+      "sha256": "d280d60e11e0fb7b4e688c9d30602c7b25f7ecb31e2fcac0bb4a11ddb82fb7c6",
+      "imports": [
+        "RevisionSlaterLadderCoordinates"
+      ],
+      "exit_code": 0,
+      "seconds": 3.034
+    },
+    {
+      "module": "RevisionAntisymmetricWeightedBell",
+      "path": "RevisionAntisymmetricWeightedBell.lean",
+      "sha256": "00dacd6dbe31a7b2f12dde49ffc5584fa9e568d9ea0c9416a4c91d9120695a64",
+      "imports": [
+        "RevisionAntisymmetricBellBridge",
+        "RevisionGramLadder",
+        "RevisionSlaterWeightedLadder"
+      ],
+      "exit_code": 0,
+      "seconds": 3.235
+    },
+    {
+      "module": "RevisionHermitianMultiplicity",
+      "path": "RevisionHermitianMultiplicity.lean",
+      "sha256": "e90a1a8c36d4163a503066cbb358098dc15bc634aaf154f83f5112f51d50dfa4",
+      "imports": [
+        "RevisionGramLadder",
+        "HaarProjection"
+      ],
+      "exit_code": 0,
+      "seconds": 3.147
+    },
+    {
+      "module": "RevisionMatrixEntropy",
+      "path": "RevisionMatrixEntropy.lean",
+      "sha256": "e9c1eea0550fd4a65bbc6deb2a1fe9bd1f61654d02b07d65269200d60db14616",
+      "imports": [
+        "RevisionOutputGeometry",
+        "Mathlib.Analysis.Matrix",
+        "Mathlib.LinearAlgebra.Matrix.HermitianFunctionalCalculus",
+        "Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Pi",
+        "Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Log.NegMulLog",
+        "Mathlib.Analysis.Convex.Topology",
+        "Entropy.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 3.816
+    },
+    {
+      "module": "RevisionMatrixEntropyConjugate",
+      "path": "RevisionMatrixEntropyConjugate.lean",
+      "sha256": "9c824dc1299d16ec5cf3fd8d98be226bd12d5e6b1641df7f240ba68c9881cd74",
+      "imports": [
+        "RevisionMatrixEntropy",
+        "PreliminariesChoi"
+      ],
+      "exit_code": 0,
+      "seconds": 2.513
+    },
+    {
+      "module": "RevisionSlaterSpectrum",
+      "path": "RevisionSlaterSpectrum.lean",
+      "sha256": "db09904b37ced7bbe64698df73a5c241974561af6a4343d37fca5a644e3fe100",
+      "imports": [
+        "RevisionSlaterWeightedLadder",
+        "RevisionHermitianMultiplicity",
+        "Entropy.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 2.745
+    },
+    {
+      "module": "RevisionAntisymmetricBellEntropy",
+      "path": "RevisionAntisymmetricBellEntropy.lean",
+      "sha256": "37e6170a1af372eec56d47c176c90d3b1176d81331b6abf0f3e80dc4ecdaa0a1",
+      "imports": [
+        "RevisionAntisymmetricWeightedBell",
+        "RevisionHermitianMultiplicity",
+        "RevisionMatrixEntropyConjugate",
+        "RevisionSlaterSpectrum",
+        "Entropy.BellGeneral"
+      ],
+      "exit_code": 0,
+      "seconds": 2.853
+    },
+    {
+      "module": "RevisionAntisymmetricUnitary",
+      "path": "RevisionAntisymmetricUnitary.lean",
+      "sha256": "0160e587214c430157bff10493b87db7925853dac3f3a23f88cca99a2e59e640",
+      "imports": [
+        "RevisionAntisymmetricChannel",
+        "RevisionMatrixEntropy"
+      ],
+      "exit_code": 0,
+      "seconds": 3.767
+    },
+    {
+      "module": "RevisionOutputFunctionals",
+      "path": "RevisionOutputFunctionals.lean",
+      "sha256": "58e73a4e695ce75bc008d0016c3c8339030144f5605841299d8ea9f1193bc70d",
+      "imports": [
+        "RevisionOutputGeometry"
+      ],
+      "exit_code": 0,
+      "seconds": 2.762
+    },
+    {
+      "module": "RevisionOutputStates",
+      "path": "RevisionOutputStates.lean",
+      "sha256": "7ca9275b43acbac0494bd1a58dbb6ba91dce1272af746c11e37e3f0a22f6a475",
+      "imports": [
+        "RevisionOutputFunctionals",
+        "CompletePositivity",
+        "Mathlib.Analysis.Matrix"
+      ],
+      "exit_code": 0,
+      "seconds": 2.093
+    },
+    {
+      "module": "RevisionOutputBody",
+      "path": "RevisionOutputBody.lean",
+      "sha256": "3505c88f48b5816f10bc320846eec9fa6cce720337f26de83bc7ce98f49e49fe",
+      "imports": [
+        "RevisionOutputChannel",
+        "Entropy.Minimum",
+        "Entropy.OutputSpaceBody",
+        "BernoulliCalculus",
+        "HaarMeasure",
+        "Mathlib.Analysis.Convex.Jensen",
+        "Mathlib.Data.Matrix.DoublyStochastic"
+      ],
+      "exit_code": 0,
+      "seconds": 4.35
+    },
+    {
+      "module": "RevisionOutputLimit",
+      "path": "RevisionOutputLimit.lean",
+      "sha256": "aaa932cf07373845d547b0ce3282178d3686c98668c4a2026db428ef163e4e20",
+      "imports": [
+        "RevisionOutputStates",
+        "RevisionOutputBody"
+      ],
+      "exit_code": 0,
+      "seconds": 2.879
+    },
+    {
+      "module": "RevisionOutputTraceDistance",
+      "path": "RevisionOutputTraceDistance.lean",
+      "sha256": "7fdf8eaf490041ceabfe16181bb9197cb462816d3ed62caebafb5143370799a7",
+      "imports": [
+        "RevisionOutputLimit"
+      ],
+      "exit_code": 0,
+      "seconds": 2.935
+    },
+    {
+      "module": "RevisionBernoulliCauchy",
+      "path": "RevisionBernoulliCauchy.lean",
+      "sha256": "c019fd06a1d325b42c3786ead9381f68d5b92297128b909fd50c38afb3a2dfc3",
+      "imports": [
+        "CompressionEndpointGlue",
+        "Mathlib.Analysis.Complex.RealDeriv"
+      ],
+      "exit_code": 0,
+      "seconds": 2.776
+    },
+    {
+      "module": "RevisionBernoulliEdge",
+      "path": "RevisionBernoulliEdge.lean",
+      "sha256": "fa92102facd1a4cd25cceac96ddebd6ed699f5454c0fadf03e10de1b9d411089",
+      "imports": [
+        "RevisionBernoulliCauchy",
+        "BernoulliCriticalPoint"
+      ],
+      "exit_code": 0,
+      "seconds": 2.473
+    },
+    {
+      "module": "RevisionBernoulliLaw",
+      "path": "RevisionBernoulliLaw.lean",
+      "sha256": "df35e8b8d63964738d6af1aa251af875d309e6e71ffe36c995a218a173b5d616",
+      "imports": [
+        "CauchyBernoulli",
+        "BernoulliDuality",
+        "SpectralEdge",
+        "Mathlib.MeasureTheory.Function.EssSup"
+      ],
+      "exit_code": 0,
+      "seconds": 3.974
+    },
+    {
+      "module": "RevisionBernoulliHolomorphic",
+      "path": "RevisionBernoulliHolomorphic.lean",
+      "sha256": "5540fee1b4364b7c33948aeba3ba315a3a2e2458cce9b15f30205efaa677e402",
+      "imports": [
+        "RevisionBernoulliEdge",
+        "RevisionBernoulliLaw",
+        "Mathlib.Analysis.SpecialFunctions.Complex.Analytic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real"
+      ],
+      "exit_code": 0,
+      "seconds": 2.778
+    },
+    {
+      "module": "RevisionBernoulliTensor",
+      "path": "RevisionBernoulliTensor.lean",
+      "sha256": "8665a5dda6cdb62ff82edd05fd528ebc246483e40b8fa9d92c6f8febd10cbf54",
+      "imports": [
+        "BlockModification",
+        "ProjectionStrongConvergence",
+        "Mathlib.Analysis.CStarAlgebra.Hom"
+      ],
+      "exit_code": 0,
+      "seconds": 2.68
+    },
+    {
+      "module": "RevisionBernoulliCompression",
+      "path": "RevisionBernoulliCompression.lean",
+      "sha256": "ff16e7470db627699c44a41f6dcf91418cbfd19b130ff9cd2b72003643e46b59",
+      "imports": [
+        "RevisionBernoulliHolomorphic",
+        "RevisionBernoulliTensor",
+        "CompressionExtension",
+        "ProjectionStrongConvergence",
+        "Mathlib.LinearAlgebra.Matrix.HermitianFunctionalCalculus",
+        "Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Isometric"
+      ],
+      "exit_code": 0,
+      "seconds": 3.146
+    },
+    {
+      "module": "RevisionOutputProbability",
+      "path": "RevisionOutputProbability.lean",
+      "sha256": "94b05a1622f8d9e146e11ba2fb3d69b441809b0a13c452fe75aea3db8ebd7420",
+      "imports": [
+        "RevisionOutputTraceDistance",
+        "RevisionBernoulliCompression"
+      ],
+      "exit_code": 0,
+      "seconds": 4.023
+    },
+    {
+      "module": "RevisionOutputEventual",
+      "path": "RevisionOutputEventual.lean",
+      "sha256": "1294643ae77291dc390941e60d4aa250c20359b08a55526eac0374a7619073f4",
+      "imports": [
+        "RevisionOutputProbability"
+      ],
+      "exit_code": 0,
+      "seconds": 2.871
+    },
+    {
+      "module": "RevisionFullBlockInput",
+      "path": "RevisionFullBlockInput.lean",
+      "sha256": "235198b36e27268a83a3fd82abc93f44207acc8185ef712eeba043bed353baf6",
+      "imports": [
+        "RevisionBernoulliCompression",
+        "RevisionOutputUnitary"
+      ],
+      "exit_code": 0,
+      "seconds": 2.393
+    },
+    {
+      "module": "RevisionOutputTheorem",
+      "path": "RevisionOutputTheorem.lean",
+      "sha256": "1274060f677e5f1915aa45d15331604cbafe9596dde4daad0988d9981445da08",
+      "imports": [
+        "RevisionOutputEventual",
+        "RevisionFullBlockInput"
+      ],
+      "exit_code": 0,
+      "seconds": 2.253
+    },
+    {
+      "module": "RevisionOutputTraceGeometry",
+      "path": "RevisionOutputTraceGeometry.lean",
+      "sha256": "e6e54705c157b18d113674af88b8aaa553fd82f2ae83c830aa9b9a62bd19ae5a",
+      "imports": [
+        "RevisionOutputTraceDistance"
+      ],
+      "exit_code": 0,
+      "seconds": 2.574
+    },
+    {
+      "module": "RevisionOutputMetricComparison",
+      "path": "RevisionOutputMetricComparison.lean",
+      "sha256": "e1502925f243789016d6a32577f72f1bc2f767c846d80adbc37dd881e89ca134",
+      "imports": [
+        "RevisionOutputTheorem",
+        "RevisionOutputTraceGeometry"
+      ],
+      "exit_code": 0,
+      "seconds": 2.442
+    },
+    {
+      "module": "RevisionEntropyHausdorff",
+      "path": "RevisionEntropyHausdorff.lean",
+      "sha256": "1b38041694468081015ef3914696d7b974328a8722545996f07b04fef4ffc051",
+      "imports": [
+        "Entropy.OutputSpace"
+      ],
+      "exit_code": 0,
+      "seconds": 2.223
+    },
+    {
+      "module": "RevisionOutputContinuousMinimum",
+      "path": "RevisionOutputContinuousMinimum.lean",
+      "sha256": "f320caf02ffc9da9df879e937617f91472643a2cba61484bb47fabb6e8b6bfc9",
+      "imports": [
+        "RevisionOutputMetricComparison",
+        "RevisionEntropyHausdorff"
+      ],
+      "exit_code": 0,
+      "seconds": 4.743
+    },
+    {
+      "module": "RevisionAntisymmetricEntropy",
+      "path": "RevisionAntisymmetricEntropy.lean",
+      "sha256": "be40bd9a7c8693c7f313bfd66577f1141eee713256d44f689c0779b42c43a004",
+      "imports": [
+        "RevisionAntisymmetricUnitary",
+        "RevisionMatrixEntropyConjugate",
+        "RevisionOutputContinuousMinimum",
+        "Entropy.Infimum"
+      ],
+      "exit_code": 0,
+      "seconds": 2.801
+    },
+    {
+      "module": "RevisionBellPolarization",
+      "path": "RevisionBellPolarization.lean",
+      "sha256": "7b26668a8c714eb1bee3a45ad199cc41849d08abbfbc702eef5522e91c150806",
+      "imports": [
+        "RevisionBellChannel"
+      ],
+      "exit_code": 0,
+      "seconds": 4.705
+    },
+    {
+      "module": "RevisionBellAEPPolarization",
+      "path": "RevisionBellAEPPolarization.lean",
+      "sha256": "b143d57f22e2cc4d2756e32d07d78d0687f8ba1568083d4cacd12654628f4f9e",
+      "imports": [
+        "RevisionBellPolarization",
+        "Mathlib.MeasureTheory.Measure.MeasureSpace"
+      ],
+      "exit_code": 0,
+      "seconds": 3.216
+    },
+    {
+      "module": "RevisionBellCentralDerivative",
+      "path": "RevisionBellCentralDerivative.lean",
+      "sha256": "e4f809e3dce1ad1a43c5ea9d37e884f51fd74bb5e66197a928174d16f2882160",
+      "imports": [
+        "Entropy.BellLimitTransfer",
+        "Mathlib.Analysis.Calculus.LHopital"
+      ],
+      "exit_code": 0,
+      "seconds": 2.828
+    },
+    {
+      "module": "RevisionBellContraction",
+      "path": "RevisionBellContraction.lean",
+      "sha256": "f70ac4c42ff40ee0a0168b7be2b51ccdcb5115ae356d86b1be70636d98c1c1cd",
+      "imports": [
+        "RevisionOutputStates",
+        "Mathlib.Analysis.CStarAlgebra.Matrix",
+        "Mathlib.Analysis.CStarAlgebra.Hom",
+        "Mathlib.Analysis.Normed.Algebra.Spectrum",
+        "Mathlib.LinearAlgebra.Matrix.HermitianFunctionalCalculus",
+        "Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Isometric"
+      ],
+      "exit_code": 0,
+      "seconds": 2.428
+    },
+    {
+      "module": "RevisionBellSpectralGap",
+      "path": "RevisionBellSpectralGap.lean",
+      "sha256": "2a2960b2245a73fa2e6df273b2f75053dcb92edd98593145c0310890265d14c9",
+      "imports": [
+        "RevisionFullBlockInput",
+        "RevisionOutputProbability"
+      ],
+      "exit_code": 0,
+      "seconds": 3.428
+    },
+    {
+      "module": "RevisionBellPositiveLaw",
+      "path": "RevisionBellPositiveLaw.lean",
+      "sha256": "f2877745245f19af6f4c43a0138abc7ffe430d0629d46250f819f1901fcc38ff",
+      "imports": [
+        "RevisionBernoulliHolomorphic"
+      ],
+      "exit_code": 0,
+      "seconds": 2.485
+    },
+    {
+      "module": "RevisionBellLogPotential",
+      "path": "RevisionBellLogPotential.lean",
+      "sha256": "5aed575fbbff4d7b9bdb61cf3c007dbbb293f173183abbe9cecd50237c8408e6",
+      "imports": [
+        "CauchyHolomorphy",
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv"
+      ],
+      "exit_code": 0,
+      "seconds": 3.254
+    },
+    {
+      "module": "RevisionBellTraceConvergence",
+      "path": "RevisionBellTraceConvergence.lean",
+      "sha256": "28a328ad0128fec93cbb8b71f8fd1d16dba652cd3bbd1166d8cd1c7d31ecebf1",
+      "imports": [
+        "RevisionBellLogPotential",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic"
+      ],
+      "exit_code": 0,
+      "seconds": 2.756
+    },
+    {
+      "module": "RevisionBellMatrixLog",
+      "path": "RevisionBellMatrixLog.lean",
+      "sha256": "c228555f44d87b1bf3d0c2c781a52c11745135b5326a8085de1c8b8805d62459",
+      "imports": [
+        "RevisionBellChannel",
+        "Entropy.BellFiniteDifference",
+        "Mathlib.LinearAlgebra.Matrix.Spectrum",
+        "Mathlib.Analysis.Normed.Algebra.Spectrum"
+      ],
+      "exit_code": 0,
+      "seconds": 3.768
+    },
+    {
+      "module": "RevisionBellFiniteMoments",
+      "path": "RevisionBellFiniteMoments.lean",
+      "sha256": "796be1ea6093ce850b01c8c14149ace7be9d34e9fa8c87805ae714211cfd6a82",
+      "imports": [
+        "RevisionBellMatrixLog",
+        "RevisionBellContraction",
+        "RevisionBellPolarization",
+        "Entropy.BellLimitTransfer"
+      ],
+      "exit_code": 0,
+      "seconds": 2.869
+    },
+    {
+      "module": "RevisionBellLogConvergence",
+      "path": "RevisionBellLogConvergence.lean",
+      "sha256": "f565a3f47e2cc5c012ae5893a2ddd78270b7f74879894c51f8e1f6fd7b591830",
+      "imports": [
+        "RevisionBellSpectralGap",
+        "RevisionBellPositiveLaw",
+        "RevisionBellTraceConvergence",
+        "RevisionBellMatrixLog",
+        "RevisionBellFiniteMoments"
+      ],
+      "exit_code": 0,
+      "seconds": 2.766
+    },
+    {
+      "module": "RevisionBellNegativeBranch",
+      "path": "RevisionBellNegativeBranch.lean",
+      "sha256": "a8f6392175099eb2e9574eb8eea2ab5a1659fb0bc8e2f0c995022bb139fc886d",
+      "imports": [
+        "RevisionBernoulliHolomorphic",
+        "RevisionBellLogPotential"
+      ],
+      "exit_code": 0,
+      "seconds": 2.761
+    },
+    {
+      "module": "RevisionBellPrimitive",
+      "path": "RevisionBellPrimitive.lean",
+      "sha256": "6fba46073e30b0a45588a235f119d14cceaf216a524e85929ec63696b32c3bd1",
+      "imports": [
+        "RevisionBellNegativeBranch",
+        "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus"
+      ],
+      "exit_code": 0,
+      "seconds": 3.167
+    },
+    {
+      "module": "RevisionBellLogIdentity",
+      "path": "RevisionBellLogIdentity.lean",
+      "sha256": "fce16bff995d59dbfbee745d75d150dcf237564e850708de632ea5ecef40b634",
+      "imports": [
+        "RevisionBellPrimitive"
+      ],
+      "exit_code": 0,
+      "seconds": 2.803
+    },
+    {
+      "module": "RevisionBellHessian",
+      "path": "RevisionBellHessian.lean",
+      "sha256": "be97c573e4e3838812831c3041c9d0e1d801cc23cb34a73283a0015334039ee0",
+      "imports": [
+        "RevisionBellLogIdentity",
+        "Entropy.BellLimitCoefficients"
+      ],
+      "exit_code": 0,
+      "seconds": 5.106
+    },
+    {
+      "module": "RevisionBellImplicit",
+      "path": "RevisionBellImplicit.lean",
+      "sha256": "bd498f3d00a386e21940ed0c6f0e7eb51faff95378f409970ee3b456ae328ad4",
+      "imports": [
+        "RevisionBellHessian",
+        "Mathlib.Analysis.Calculus.InverseFunctionTheorem.ContDiff"
+      ],
+      "exit_code": 0,
+      "seconds": 3.941
+    },
+    {
+      "module": "RevisionBellHessianResult",
+      "path": "RevisionBellHessianResult.lean",
+      "sha256": "b13b97156021552c55e763368cb1c0076569dbc2ca444765a25dcdc4aece786b",
+      "imports": [
+        "RevisionBellImplicit",
+        "RevisionBellPositiveLaw"
+      ],
+      "exit_code": 0,
+      "seconds": 2.983
+    },
+    {
+      "module": "RevisionBellNormalizedChoi",
+      "path": "RevisionBellNormalizedChoi.lean",
+      "sha256": "c65ba7c696e97c6f10222fb64b362181ac233d79b08df8d44cb7578577c193ed",
+      "imports": [
+        "RevisionBellFiniteMoments"
+      ],
+      "exit_code": 0,
+      "seconds": 2.489
+    },
+    {
+      "module": "RevisionBellLimitFromMoments",
+      "path": "RevisionBellLimitFromMoments.lean",
+      "sha256": "a38e437cbf42af0126e19c33d7504dfeb7552562d86d577b614c701127ad1cc6",
+      "imports": [
+        "RevisionBellNormalizedChoi"
+      ],
+      "exit_code": 0,
+      "seconds": 2.466
+    },
+    {
+      "module": "RevisionBellQuadraticLimit",
+      "path": "RevisionBellQuadraticLimit.lean",
+      "sha256": "0c9d6578fbd6b798187464d8a705c7fb7161f2ad4a76cc14c63730fa550b6eee",
+      "imports": [
+        "RevisionBellLogConvergence",
+        "RevisionBellHessianResult",
+        "RevisionBellCentralDerivative",
+        "RevisionBellLimitFromMoments",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ],
+      "exit_code": 0,
+      "seconds": 2.646
+    },
+    {
+      "module": "RevisionBellTheorem",
+      "path": "RevisionBellTheorem.lean",
+      "sha256": "b6a13dd03c0945e33166599b5e20fd3adc2614dd630e644d3b7acd35624e593f",
+      "imports": [
+        "RevisionBellQuadraticLimit",
+        "RevisionBellAEPPolarization",
+        "RevisionOutputTheorem"
+      ],
+      "exit_code": 0,
+      "seconds": 2.839
+    },
+    {
+      "module": "RevisionTensorChannels",
+      "path": "RevisionTensorChannels.lean",
+      "sha256": "706e5e23cdc9af73c1e5dcfacddb3c8c43e00133c8b679c5d37c994a54bb3a2d",
+      "imports": [
+        "RevisionBellNormalizedChoi",
+        "CompletePositivity"
+      ],
+      "exit_code": 0,
+      "seconds": 3.098
+    },
+    {
+      "module": "RevisionBellEntropyTransport",
+      "path": "RevisionBellEntropyTransport.lean",
+      "sha256": "899a22c16d30f8655d6dfccf2188d2deafd38ca2fc7a34a931adb55b7fa85b3a",
+      "imports": [
+        "RevisionBellTheorem",
+        "RevisionTensorChannels",
+        "RevisionMatrixEntropyConjugate"
+      ],
+      "exit_code": 0,
+      "seconds": 4.878
+    },
+    {
+      "module": "RevisionCanonicalEnsemble",
+      "path": "RevisionCanonicalEnsemble.lean",
+      "sha256": "74d495571459dcc78d49f21dd787b6a836a35f9174b280258849c6b5816d670f",
+      "imports": [
+        "RevisionFullBlockInput",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ],
+      "exit_code": 0,
+      "seconds": 4.203
+    },
+    {
+      "module": "RevisionCoordinateCap",
+      "path": "RevisionCoordinateCap.lean",
+      "sha256": "542003c00e8bc7623abd274c246c9f79c788f46f6f406d71b85a7df1a18917a2",
+      "imports": [
+        "PreliminariesLegendre"
+      ],
+      "exit_code": 0,
+      "seconds": 16.372
+    },
+    {
+      "module": "RevisionMatrixEntropyWitness",
+      "path": "RevisionMatrixEntropyWitness.lean",
+      "sha256": "808a68ae3453608e182c212e7635a5bfd18da97969d5fac296e5d85cebb45c39",
+      "imports": [
+        "RevisionMatrixEntropyConjugate",
+        "RevisionTensorChannels"
+      ],
+      "exit_code": 0,
+      "seconds": 4.498
+    },
+    {
+      "module": "RevisionMatrixEntropyProjection",
+      "path": "RevisionMatrixEntropyProjection.lean",
+      "sha256": "2609062428a22f2365cda0f580b3b569d2bc25401698fbdda9b2335f0cce0878",
+      "imports": [
+        "RevisionMatrixEntropyConjugate",
+        "ProjectionOrbit"
+      ],
+      "exit_code": 0,
+      "seconds": 2.547
+    },
+    {
+      "module": "RevisionMatrixEntropyBell",
+      "path": "RevisionMatrixEntropyBell.lean",
+      "sha256": "f343a2cc61c792573a07d1b4adff59d6a1527589e5d58cb1193954a8402d1f1f",
+      "imports": [
+        "RevisionMatrixEntropyProjection",
+        "RevisionTensorChannels"
+      ],
+      "exit_code": 0,
+      "seconds": 2.34
+    },
+    {
+      "module": "RevisionCorollaryIV",
+      "path": "RevisionCorollaryIV.lean",
+      "sha256": "09131f35ee6ffba7b5655b8611c56c3c1c49dc2326e65dbc1d4e813c3dc5fca3",
+      "imports": [
+        "RevisionBellEntropyTransport",
+        "RevisionMatrixEntropyWitness",
+        "RevisionMatrixEntropyBell",
+        "Entropy.BellOne",
+        "Mathlib.Topology.Algebra.Order.LiminfLimsup"
+      ],
+      "exit_code": 0,
+      "seconds": 7.123
+    },
+    {
+      "module": "RevisionK182Stationarity",
+      "path": "RevisionK182Stationarity.lean",
+      "sha256": "d06b26a7b08eefe08fc342590eadaa4174b8812a588947cb4056b047dde9e3b9",
+      "imports": [
+        "BernoulliCalculus",
+        "K182ShapeCalculus",
+        "Mathlib.Analysis.Calculus.LocalExtr.Rolle",
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv"
+      ],
+      "exit_code": 0,
+      "seconds": 7.967
+    },
+    {
+      "module": "RevisionK182Multiplier",
+      "path": "RevisionK182Multiplier.lean",
+      "sha256": "5f884829ff79522518e11fbda603e3a16e01eb3d9919f5d6f48422bce57bf104",
+      "imports": [
+        "RevisionK182Stationarity",
+        "K182Entropy",
+        "Mathlib.Analysis.Calculus.LagrangeMultipliers"
+      ],
+      "exit_code": 0,
+      "seconds": 10.411
+    },
+    {
+      "module": "RevisionK182BoundaryTools",
+      "path": "RevisionK182BoundaryTools.lean",
+      "sha256": "f6e1b2199c01d25f45d6ab0aa233877704b488bbad8bfbe1c254acec82f1728b",
+      "imports": [
+        "PreliminariesLegendre",
+        "Mathlib.Analysis.SpecialFunctions.Log.NegMulLog",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Analysis.Calculus.Deriv.Slope",
+        "Mathlib.Tactic"
+      ],
+      "exit_code": 0,
+      "seconds": 3.99
+    },
+    {
+      "module": "RevisionK182Nonuniform",
+      "path": "RevisionK182Nonuniform.lean",
+      "sha256": "31e548108246da00eafa5e8fa29da3aec91011b39615277a234b2739fccc3480",
+      "imports": [
+        "RevisionK182Multiplier",
+        "RevisionK182BoundaryTools",
+        "Mathlib.Analysis.Convex.Jensen"
+      ],
+      "exit_code": 0,
+      "seconds": 2.989
+    },
+    {
+      "module": "RevisionK182Compact",
+      "path": "RevisionK182Compact.lean",
+      "sha256": "00e5e8da3024d623c62e58eab92604c63767d5a8ea4ca1c4262a52c7bdbc0eb4",
+      "imports": [
+        "RevisionK182Nonuniform",
+        "K182Dual"
+      ],
+      "exit_code": 0,
+      "seconds": 2.679
+    },
+    {
+      "module": "RevisionK182Curve",
+      "path": "RevisionK182Curve.lean",
+      "sha256": "87a9540d4f1fbf756399a64f09cf41fd647d3ee7def93fc3e612c1a2db31e065",
+      "imports": [
+        "RevisionK182Multiplier",
+        "K182SecondVariation"
+      ],
+      "exit_code": 0,
+      "seconds": 4.304
+    },
+    {
+      "module": "RevisionK182Descent",
+      "path": "RevisionK182Descent.lean",
+      "sha256": "49d87631df29a3b0c0aeb3ce9bbd19242bd9237fcd915a258f3af06cbcd39440",
+      "imports": [
+        "K182SecondVariation"
+      ],
+      "exit_code": 0,
+      "seconds": 3.562
+    },
+    {
+      "module": "RevisionK182RepeatedHigh",
+      "path": "RevisionK182RepeatedHigh.lean",
+      "sha256": "f64fb2b0b95287e9ebc8658055e31ceba2cd2e009de62aaff61096db16611f93",
+      "imports": [
+        "RevisionK182Curve",
+        "RevisionK182Descent"
+      ],
+      "exit_code": 0,
+      "seconds": 7.076
+    },
+    {
+      "module": "RevisionK182Normalization",
+      "path": "RevisionK182Normalization.lean",
+      "sha256": "73e7c06569f8b407bea304995bfd072acdbf3dd682c00bcb3e7326ef18919c55",
+      "imports": [
+        "RevisionK182Compact",
+        "RevisionK182RepeatedHigh"
+      ],
+      "exit_code": 0,
+      "seconds": 3.014
+    },
+    {
+      "module": "RevisionK182BirthCurve",
+      "path": "RevisionK182BirthCurve.lean",
+      "sha256": "a5222cd6786f32d9669a6d8796bf250e91e3af894dc7460a3f0dff2430e7ad8b",
+      "imports": [
+        "RevisionK182Multiplier",
+        "RevisionK182BoundaryTools"
+      ],
+      "exit_code": 0,
+      "seconds": 2.731
+    },
+    {
+      "module": "RevisionK182BoundaryExclusion",
+      "path": "RevisionK182BoundaryExclusion.lean",
+      "sha256": "6e7458b2fab6c5f8433f5c18814e2e89b2de6a97f382c182f4e9014082a936d4",
+      "imports": [
+        "RevisionK182BirthCurve",
+        "RevisionK182Descent"
+      ],
+      "exit_code": 0,
+      "seconds": 4.055
+    },
+    {
+      "module": "RevisionK182BoundaryEqual",
+      "path": "RevisionK182BoundaryEqual.lean",
+      "sha256": "c9f2d161a6135b7aacd43712c7474b7025270b83a3a4f18dcfb2fd95a754f71b",
+      "imports": [
+        "RevisionK182BirthCurve",
+        "RevisionK182Descent",
+        "RevisionK182Curve"
+      ],
+      "exit_code": 0,
+      "seconds": 6.457
+    },
+    {
+      "module": "RevisionK182Minimizer",
+      "path": "RevisionK182Minimizer.lean",
+      "sha256": "7294c3d1b4ce512923b49bc7f46d0b537b79e3482465c240a4f3302efb4e4532",
+      "imports": [
+        "RevisionK182Normalization",
+        "RevisionK182BoundaryExclusion",
+        "RevisionK182BoundaryEqual"
+      ],
+      "exit_code": 0,
+      "seconds": 10.441
+    },
+    {
+      "module": "RevisionK182EntropyMaximum",
+      "path": "RevisionK182EntropyMaximum.lean",
+      "sha256": "d31ff8a3b1b68bc8eb3f27651854fbcace5c9e7badb1ea2bcd9f27addc926de2",
+      "imports": [
+        "RevisionK182Minimizer",
+        "Mathlib.Analysis.Convex.Jensen"
+      ],
+      "exit_code": 0,
+      "seconds": 6.082
+    },
+    {
+      "module": "RevisionLemmaC1",
+      "path": "RevisionLemmaC1.lean",
+      "sha256": "afc2d5380d7cb98c8001ab9b732310292d5a16d9ca47c58ac766953e45a922a5",
+      "imports": [
+        "RevisionK182EntropyMaximum",
+        "RevisionCoordinateCap",
+        "Entropy.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 7.657
+    },
+    {
+      "module": "RevisionMatrixEntropyBody",
+      "path": "RevisionMatrixEntropyBody.lean",
+      "sha256": "63f60fc9200a2d9816693f2ec4c129207affaf1ec3d2519a17446bf5cde19e68",
+      "imports": [
+        "RevisionMatrixEntropy",
+        "RevisionOutputContinuousMinimum",
+        "RevisionLemmaC1"
+      ],
+      "exit_code": 0,
+      "seconds": 10.001
+    },
+    {
+      "module": "RevisionPostprocessingTransport",
+      "path": "RevisionPostprocessingTransport.lean",
+      "sha256": "b02ead63e78a32c834ba992ec1667b6c5dd0686706cd19b95ac2a5febd47833d",
+      "imports": [
+        "RevisionBellEntropyTransport",
+        "RevisionMatrixEntropyBody",
+        "RevisionMatrixEntropyWitness",
+        "RevisionAntisymmetricBellBridge"
+      ],
+      "exit_code": 0,
+      "seconds": 2.717
+    },
+    {
+      "module": "RevisionTensorComposition",
+      "path": "RevisionTensorComposition.lean",
+      "sha256": "8f06c9f6c1aa71c22c609317ed3f2f20134ecd1f82872ec8ec84456ea6579757",
+      "imports": [
+        "RevisionTensorChannels"
+      ],
+      "exit_code": 0,
+      "seconds": 3.563
+    },
+    {
+      "module": "RevisionPostprocessTensor",
+      "path": "RevisionPostprocessTensor.lean",
+      "sha256": "b94d52986d0662b850806023f9a252dd922f648fa08189ac7cdb17927ab7d7d4",
+      "imports": [
+        "RevisionPostprocessingTransport",
+        "RevisionTensorComposition"
+      ],
+      "exit_code": 0,
+      "seconds": 3.3
+    },
+    {
+      "module": "RevisionMainNonadditivity",
+      "path": "RevisionMainNonadditivity.lean",
+      "sha256": "a7e3d331a1e34cfd4cd55e23b5cf83cac346c99840812cdb553d7d42aa45d417",
+      "imports": [
+        "RevisionPostprocessingTransport",
+        "Entropy.MainSpectral"
+      ],
+      "exit_code": 0,
+      "seconds": 2.35
+    },
+    {
+      "module": "RevisionPostprocessedBellLimit",
+      "path": "RevisionPostprocessedBellLimit.lean",
+      "sha256": "f8bb63541dcd23cb26688b0bfd039cad4eee0e783dd1681da5ccbfd09fa549c6",
+      "imports": [
+        "RevisionPostprocessTensor",
+        "RevisionMainNonadditivity"
+      ],
+      "exit_code": 0,
+      "seconds": 2.682
+    },
+    {
+      "module": "RevisionEntropyTheoremV",
+      "path": "RevisionEntropyTheoremV.lean",
+      "sha256": "05d2501b5e12d38e533a71a96721c8083e77623358ae0fcee4c978782b392a40",
+      "imports": [
+        "RevisionPostprocessedBellLimit",
+        "RevisionAntisymmetricEntropy",
+        "Entropy.BellGeneral",
+        "RevisionAntisymmetricBellEntropy"
+      ],
+      "exit_code": 0,
+      "seconds": 2.334
+    },
+    {
+      "module": "RevisionMainExistence",
+      "path": "RevisionMainExistence.lean",
+      "sha256": "cd8b6836c2fc63389e28d612dd04446e26f8b3b37ecf6d53a6a85b1f88ba62c1",
+      "imports": [
+        "RevisionPostprocessedBellLimit",
+        "RevisionCanonicalEnsemble"
+      ],
+      "exit_code": 0,
+      "seconds": 2.378
+    },
+    {
+      "module": "RevisionMainTheorem",
+      "path": "RevisionMainTheorem.lean",
+      "sha256": "fb85a031d9aed527941bdb75db21059dbe84cbc8a8ebaf89b3a1eefbcb4c386a",
+      "imports": [
+        "RevisionEntropyTheoremV",
+        "RevisionMainExistence"
+      ],
+      "exit_code": 0,
+      "seconds": 5.718
+    },
+    {
+      "module": "RevisionTraceDuality",
+      "path": "RevisionTraceDuality.lean",
+      "sha256": "e4edd55ad7d609a2df7ad22e021f688b59d0ce9a1a0634ecc3f22803677753c4",
+      "imports": [
+        "RevisionBellContraction",
+        "RevisionOutputBody"
+      ],
+      "exit_code": 0,
+      "seconds": 3.013
+    },
+    {
+      "module": "RevisionOutputTraceBalls",
+      "path": "RevisionOutputTraceBalls.lean",
+      "sha256": "e232b4ffa628a6d35335076deaae998229098ba143347869fbd20bab971f805a",
+      "imports": [
+        "RevisionOutputTraceGeometry",
+        "RevisionTraceDuality"
+      ],
+      "exit_code": 0,
+      "seconds": 2.616
+    },
+    {
+      "module": "RevisionOutputHausdorff",
+      "path": "RevisionOutputHausdorff.lean",
+      "sha256": "1574e882447ef4851a16abb12ca92a157b4f489f68a6cadb338fc382e2f11de5",
+      "imports": [
+        "RevisionOutputTraceBalls",
+        "RevisionOutputMetricComparison"
+      ],
+      "exit_code": 0,
+      "seconds": 3.504
+    },
+    {
+      "module": "RevisionPropositionVI",
+      "path": "RevisionPropositionVI.lean",
+      "sha256": "d7dfd8fa8f79372bc119c0c2d4adba2b4cd34f794ca106628e58e1effd4e07db",
+      "imports": [
+        "RevisionMatrixEntropyBody",
+        "RevisionBellEntropyTransport",
+        "RevisionMatrixEntropyWitness",
+        "RevisionMatrixEntropyBell"
+      ],
+      "exit_code": 0,
+      "seconds": 11.063
+    },
+    {
+      "module": "RevisionScalarCertificate",
+      "path": "RevisionScalarCertificate.lean",
+      "sha256": "b88c62dd5285a426dc75d5eb4f1ca862155a68f01da4d05555a6a5f47bea5a79",
+      "imports": [
+        "K182Dual",
+        "Entropy.OutputSpaceBody"
+      ],
+      "exit_code": 0,
+      "seconds": 3.097
+    },
+    {
+      "module": "SuppliedBernoulliEdge",
+      "path": "SuppliedBernoulliEdge.lean",
+      "sha256": "fb863491cd2d9b74049040d66bacfed5566f9b043ed7ea46ce91e4d86f984383",
+      "imports": [
+        "CompressionEndpointGlue",
+        "CompressionSpectral",
+        "CompressionExtension",
+        "BernoulliCriticalPoint",
+        "Entropy.OutputSpace"
+      ],
+      "exit_code": 0,
+      "seconds": 7.727
+    },
+    {
+      "module": "AllProofs",
+      "path": "AllProofs.lean",
+      "sha256": "e75a753c0fd8f0baffd949e7adcaab04f19494538821780ce142109b06164f85",
+      "imports": [
+        "BernoulliCalculus",
+        "BernoulliCriticalPoint",
+        "BernoulliDuality",
+        "BernoulliEdgeCalculus",
+        "BlockModification",
+        "CauchyBernoulli",
+        "CauchyHolomorphic",
+        "CauchyHolomorphy",
+        "CauchyLocalInverse",
+        "CompletePositivity",
+        "CompressionEndpointGlue",
+        "CompressionExtension",
+        "CompressionSpectral",
+        "Entropy",
+        "Entropy.Analysis",
+        "Entropy.Bell",
+        "Entropy.BellBounds",
+        "Entropy.BellFiniteDifference",
+        "Entropy.BellGeneral",
+        "Entropy.BellLimitCoefficients",
+        "Entropy.BellLimitTransfer",
+        "Entropy.BellMatrixIdentities",
+        "Entropy.BellOne",
+        "Entropy.Combinatorics",
+        "Entropy.Defs",
+        "Entropy.Infimum",
+        "Entropy.Localization",
+        "Entropy.MainCoefficient",
+        "Entropy.MainSpectral",
+        "Entropy.Minimum",
+        "Entropy.OutputSpace",
+        "Entropy.OutputSpaceBody",
+        "Entropy.Single",
+        "Entropy.Spike",
+        "Entropy.SpikeArithmetic",
+        "GaussianMatrixLaw",
+        "GaussianRadial",
+        "GaussianRank",
+        "GaussianUnitary",
+        "GaussianWhitening",
+        "HaarFullLocalSupport",
+        "HaarLocalSupport",
+        "HaarMeasure",
+        "HaarOrbitUnique",
+        "HaarProjection",
+        "K182Dual",
+        "K182Entropy",
+        "K182Numerics",
+        "K182SecondVariation",
+        "K182ShapeCalculus",
+        "MatrixRankMeasurable",
+        "OutputSpaceCompressionBridge",
+        "OutputSpaceMatrix",
+        "PaperFormalization",
+        "Preliminaries",
+        "PreliminariesAnalysis",
+        "PreliminariesChoi",
+        "PreliminariesLegendre",
+        "PreliminariesMatrix",
+        "ProjectionOrbit",
+        "ProjectionStrongConvergence",
+        "RevisionAntisymmetric",
+        "RevisionAntisymmetricBasis",
+        "RevisionAntisymmetricBellBridge",
+        "RevisionAntisymmetricBellEntropy",
+        "RevisionAntisymmetricBellOperators",
+        "RevisionAntisymmetricChannel",
+        "RevisionAntisymmetricCoordinates",
+        "RevisionAntisymmetricEntropy",
+        "RevisionAntisymmetricLadder",
+        "RevisionAntisymmetricLegMatrix",
+        "RevisionAntisymmetricMatrixRecursion",
+        "RevisionAntisymmetricNesting",
+        "RevisionAntisymmetricOrthonormal",
+        "RevisionAntisymmetricPartialTrace",
+        "RevisionAntisymmetricProjection",
+        "RevisionAntisymmetricRecursion",
+        "RevisionAntisymmetricShuffling",
+        "RevisionAntisymmetricSwap",
+        "RevisionAntisymmetricTransport",
+        "RevisionAntisymmetricUnitary",
+        "RevisionAntisymmetricWeightedBell",
+        "RevisionBellAEPPolarization",
+        "RevisionBellCentralDerivative",
+        "RevisionBellChannel",
+        "RevisionBellContraction",
+        "RevisionBellEntropyTransport",
+        "RevisionBellFiniteMoments",
+        "RevisionBellHessian",
+        "RevisionBellHessianResult",
+        "RevisionBellImplicit",
+        "RevisionBellLimitFromMoments",
+        "RevisionBellLogConvergence",
+        "RevisionBellLogIdentity",
+        "RevisionBellLogPotential",
+        "RevisionBellMatrixLog",
+        "RevisionBellNegativeBranch",
+        "RevisionBellNormalizedChoi",
+        "RevisionBellPolarization",
+        "RevisionBellPositiveLaw",
+        "RevisionBellPrimitive",
+        "RevisionBellQuadraticLimit",
+        "RevisionBellSpectralGap",
+        "RevisionBellTheorem",
+        "RevisionBellTraceConvergence",
+        "RevisionBernoulliCauchy",
+        "RevisionBernoulliCompression",
+        "RevisionBernoulliEdge",
+        "RevisionBernoulliHolomorphic",
+        "RevisionBernoulliLaw",
+        "RevisionBernoulliTensor",
+        "RevisionCanonicalEnsemble",
+        "RevisionCoordinateCap",
+        "RevisionCorollaryIV",
+        "RevisionEntropyHausdorff",
+        "RevisionEntropyTheoremV",
+        "RevisionFullBlockInput",
+        "RevisionGramLadder",
+        "RevisionGramSpectrum",
+        "RevisionHermitianMultiplicity",
+        "RevisionK182BirthCurve",
+        "RevisionK182BoundaryEqual",
+        "RevisionK182BoundaryExclusion",
+        "RevisionK182BoundaryTools",
+        "RevisionK182Compact",
+        "RevisionK182Curve",
+        "RevisionK182Descent",
+        "RevisionK182EntropyMaximum",
+        "RevisionK182Minimizer",
+        "RevisionK182Multiplier",
+        "RevisionK182Nonuniform",
+        "RevisionK182Normalization",
+        "RevisionK182RepeatedHigh",
+        "RevisionK182Stationarity",
+        "RevisionKrausVectorization",
+        "RevisionLemmaC1",
+        "RevisionMainExistence",
+        "RevisionMainNonadditivity",
+        "RevisionMainTheorem",
+        "RevisionMatrixEntropy",
+        "RevisionMatrixEntropyBell",
+        "RevisionMatrixEntropyBody",
+        "RevisionMatrixEntropyConjugate",
+        "RevisionMatrixEntropyProjection",
+        "RevisionMatrixEntropyWitness",
+        "RevisionOutputBody",
+        "RevisionOutputChannel",
+        "RevisionOutputContinuousMinimum",
+        "RevisionOutputConvergence",
+        "RevisionOutputDuality",
+        "RevisionOutputEventual",
+        "RevisionOutputFunctionals",
+        "RevisionOutputGeometry",
+        "RevisionOutputHausdorff",
+        "RevisionOutputLimit",
+        "RevisionOutputMetricComparison",
+        "RevisionOutputProbability",
+        "RevisionOutputStates",
+        "RevisionOutputTheorem",
+        "RevisionOutputTraceBalls",
+        "RevisionOutputTraceDistance",
+        "RevisionOutputTraceGeometry",
+        "RevisionOutputUnitary",
+        "RevisionPostprocessTensor",
+        "RevisionPostprocessedBellLimit",
+        "RevisionPostprocessingTransport",
+        "RevisionPropositionVI",
+        "RevisionScalarCertificate",
+        "RevisionSlaterGramCoordinates",
+        "RevisionSlaterLadderCoordinates",
+        "RevisionSlaterReduction",
+        "RevisionSlaterSpectrum",
+        "RevisionSlaterWeightedLadder",
+        "RevisionTensorChannels",
+        "RevisionTensorComposition",
+        "RevisionTraceDuality",
+        "SpectralEdge",
+        "SuppliedBernoulliEdge"
+      ],
+      "exit_code": 0,
+      "seconds": 2.035
+    },
+    {
+      "module": "CompressionEndpointAudit",
+      "path": "CompressionEndpointAudit.lean",
+      "sha256": "b9e307349e6ea4b2bce9c756ee02624e5ff9b19def1a2dcfd06466b3b737b2f9",
+      "imports": [
+        "CompressionEndpointGlue"
+      ],
+      "exit_code": 0,
+      "seconds": 7.03
+    },
+    {
+      "module": "FinalAudit",
+      "path": "FinalAudit.lean",
+      "sha256": "203c8725733f183c1d6f6d07af3b48703948d201425ca172944fdd0791d7beff",
+      "imports": [
+        "PaperFormalization",
+        "K182Entropy",
+        "CompressionEndpointGlue",
+        "K182ShapeCalculus",
+        "K182SecondVariation",
+        "OutputSpaceCompressionBridge",
+        "Entropy",
+        "Lean.Util.CollectAxioms"
+      ],
+      "exit_code": 0,
+      "seconds": 9.184
+    },
+    {
+      "module": "FullAudit",
+      "path": "FullAudit.lean",
+      "sha256": "a159987cf06fd053c3e9ae0fd7170a2e5fa568015b12287657739e28691ab306",
+      "imports": [
+        "PaperFormalization",
+        "Lean.Util.CollectAxioms"
+      ],
+      "exit_code": 0,
+      "seconds": 7.988
+    },
+    {
+      "module": "K182Audit",
+      "path": "K182Audit.lean",
+      "sha256": "a81f64cece2d543a311d414c482fd8a361236a286a2b4cd0ec22afe849da14ee",
+      "imports": [
+        "K182Dual",
+        "K182Numerics",
+        "K182Entropy",
+        "Lean.Util.CollectAxioms"
+      ],
+      "exit_code": 0,
+      "seconds": 5.692
+    },
+    {
+      "module": "OutputSpaceCompressionBridgeAudit",
+      "path": "OutputSpaceCompressionBridgeAudit.lean",
+      "sha256": "5a82e518bcfd4b86744ae9c07c819309b2ca11a884e2d456797374cf740c07f3",
+      "imports": [
+        "OutputSpaceCompressionBridge"
+      ],
+      "exit_code": 0,
+      "seconds": 3.001
+    },
+    {
+      "module": "OutputSpaceMatrixAudit",
+      "path": "OutputSpaceMatrixAudit.lean",
+      "sha256": "e11c7430724964ed87c97c166b82e6be782adf605b7468bce7b59cf62a745d8a",
+      "imports": [
+        "OutputSpaceMatrix"
+      ],
+      "exit_code": 0,
+      "seconds": 9.542
+    },
+    {
+      "module": "ResultChecks",
+      "path": "ResultChecks.lean",
+      "sha256": "d2da66adf2bf6acbb9211453b66b8a3cd00466691eb701180e6877af573ab7f8",
+      "imports": [
+        "AllProofs"
+      ],
+      "exit_code": 0,
+      "seconds": 2.444
+    },
+    {
+      "module": "RevisionAntisymmetricAudit",
+      "path": "RevisionAntisymmetricAudit.lean",
+      "sha256": "48f4977a97864529be253d60108ca30bafa9fd780f4d6d5dbde40f8d10273d31",
+      "imports": [
+        "RevisionAntisymmetricEntropy",
+        "RevisionAntisymmetricBellEntropy"
+      ],
+      "exit_code": 0,
+      "seconds": 113.135
+    },
+    {
+      "module": "RevisionAntisymmetricEntropyAudit",
+      "path": "RevisionAntisymmetricEntropyAudit.lean",
+      "sha256": "497f826f81c65e49de63e516c2e019badbed3f493157dad1109f89b4968c4c33",
+      "imports": [
+        "RevisionAntisymmetricEntropy"
+      ],
+      "exit_code": 0,
+      "seconds": 11.377
+    },
+    {
+      "module": "RevisionBellAudit",
+      "path": "RevisionBellAudit.lean",
+      "sha256": "4a528fe80ae5b3ef0e2b3693765ced32de6ae556f84c9020e84cd962caaa9ab6",
+      "imports": [
+        "RevisionBellTheorem"
+      ],
+      "exit_code": 0,
+      "seconds": 23.075
+    },
+    {
+      "module": "RevisionBellHessianAudit",
+      "path": "RevisionBellHessianAudit.lean",
+      "sha256": "2457a8ba7350ae69d668f2a615f1516911b1ef54ef50b1cf2747cd4135c5459f",
+      "imports": [
+        "RevisionBellHessianResult"
+      ],
+      "exit_code": 0,
+      "seconds": 9.672
+    },
+    {
+      "module": "RevisionBernoulliAudit",
+      "path": "RevisionBernoulliAudit.lean",
+      "sha256": "1c94e0ca0a2ccd853c6adb80f87af5fb73533b8e744f918d39046a880df751a7",
+      "imports": [
+        "RevisionBernoulliCompression"
+      ],
+      "exit_code": 0,
+      "seconds": 12.647
+    },
+    {
+      "module": "RevisionMainAudit",
+      "path": "RevisionMainAudit.lean",
+      "sha256": "da78a96023fd8055bba602ac1b36d0cf9843ca08fee8c8d69fdf02a07236c2f5",
+      "imports": [
+        "RevisionMainTheorem"
+      ],
+      "exit_code": 0,
+      "seconds": 21.353
+    },
+    {
+      "module": "RevisionMatrixEntropyAudit",
+      "path": "RevisionMatrixEntropyAudit.lean",
+      "sha256": "d15aac7d0231ded22cc20122e487ec8c6cef9050884b02a3bc5a820b69ef45f8",
+      "imports": [
+        "RevisionMatrixEntropyBell"
+      ],
+      "exit_code": 0,
+      "seconds": 12.085
+    },
+    {
+      "module": "RevisionOutputAudit",
+      "path": "RevisionOutputAudit.lean",
+      "sha256": "3d6b84c786e2aff613f6747de3bcb538a396bef15cd3bd7f0e071553617760a4",
+      "imports": [
+        "RevisionOutputHausdorff"
+      ],
+      "exit_code": 0,
+      "seconds": 16.617
+    },
+    {
+      "module": "UnprovedTargets",
+      "path": "UnprovedTargets.lean",
+      "sha256": "72529f7e07b24cfb3b01c4cd553e91fc8f2cc60ff6816d0bcef7384460376402",
+      "imports": [
+        "CompressionExtension",
+        "HaarMeasure"
+      ],
+      "exit_code": 0,
+      "seconds": 2.109
+    },
+    {
+      "module": "AggregateAudit",
+      "path": "AggregateAudit.lean",
+      "sha256": "95ab3bfcc35e378b1bfe1187946a6093507e3a4c5f3349ab126dd6b12b58281b",
+      "imports": [
+        "AllProofs",
+        "BernoulliCalculus",
+        "BernoulliCriticalPoint",
+        "BernoulliDuality",
+        "BernoulliEdgeCalculus",
+        "BlockModification",
+        "CauchyBernoulli",
+        "CauchyHolomorphic",
+        "CauchyHolomorphy",
+        "CauchyLocalInverse",
+        "CompletePositivity",
+        "CompressionEndpointAudit",
+        "CompressionEndpointGlue",
+        "CompressionExtension",
+        "CompressionSpectral",
+        "Entropy",
+        "Entropy.Analysis",
+        "Entropy.Bell",
+        "Entropy.BellBounds",
+        "Entropy.BellFiniteDifference",
+        "Entropy.BellGeneral",
+        "Entropy.BellLimitCoefficients",
+        "Entropy.BellLimitTransfer",
+        "Entropy.BellMatrixIdentities",
+        "Entropy.BellOne",
+        "Entropy.Combinatorics",
+        "Entropy.Defs",
+        "Entropy.Infimum",
+        "Entropy.Localization",
+        "Entropy.MainCoefficient",
+        "Entropy.MainSpectral",
+        "Entropy.Minimum",
+        "Entropy.OutputSpace",
+        "Entropy.OutputSpaceBody",
+        "Entropy.Single",
+        "Entropy.Spike",
+        "Entropy.SpikeArithmetic",
+        "FinalAudit",
+        "FullAudit",
+        "GaussianMatrixLaw",
+        "GaussianRadial",
+        "GaussianRank",
+        "GaussianUnitary",
+        "GaussianWhitening",
+        "HaarFullLocalSupport",
+        "HaarLocalSupport",
+        "HaarMeasure",
+        "HaarOrbitUnique",
+        "HaarProjection",
+        "K182Audit",
+        "K182Dual",
+        "K182Entropy",
+        "K182Numerics",
+        "K182SecondVariation",
+        "K182ShapeCalculus",
+        "MatrixRankMeasurable",
+        "OutputSpaceCompressionBridge",
+        "OutputSpaceCompressionBridgeAudit",
+        "OutputSpaceMatrix",
+        "OutputSpaceMatrixAudit",
+        "PaperFormalization",
+        "Preliminaries",
+        "PreliminariesAnalysis",
+        "PreliminariesChoi",
+        "PreliminariesLegendre",
+        "PreliminariesMatrix",
+        "ProjectionOrbit",
+        "ProjectionStrongConvergence",
+        "ResultChecks",
+        "RevisionAntisymmetric",
+        "RevisionAntisymmetricAudit",
+        "RevisionAntisymmetricBasis",
+        "RevisionAntisymmetricBellBridge",
+        "RevisionAntisymmetricBellEntropy",
+        "RevisionAntisymmetricBellOperators",
+        "RevisionAntisymmetricChannel",
+        "RevisionAntisymmetricCoordinates",
+        "RevisionAntisymmetricEntropy",
+        "RevisionAntisymmetricEntropyAudit",
+        "RevisionAntisymmetricLadder",
+        "RevisionAntisymmetricLegMatrix",
+        "RevisionAntisymmetricMatrixRecursion",
+        "RevisionAntisymmetricNesting",
+        "RevisionAntisymmetricOrthonormal",
+        "RevisionAntisymmetricPartialTrace",
+        "RevisionAntisymmetricProjection",
+        "RevisionAntisymmetricRecursion",
+        "RevisionAntisymmetricShuffling",
+        "RevisionAntisymmetricSwap",
+        "RevisionAntisymmetricTransport",
+        "RevisionAntisymmetricUnitary",
+        "RevisionAntisymmetricWeightedBell",
+        "RevisionBellAEPPolarization",
+        "RevisionBellAudit",
+        "RevisionBellCentralDerivative",
+        "RevisionBellChannel",
+        "RevisionBellContraction",
+        "RevisionBellEntropyTransport",
+        "RevisionBellFiniteMoments",
+        "RevisionBellHessian",
+        "RevisionBellHessianAudit",
+        "RevisionBellHessianResult",
+        "RevisionBellImplicit",
+        "RevisionBellLimitFromMoments",
+        "RevisionBellLogConvergence",
+        "RevisionBellLogIdentity",
+        "RevisionBellLogPotential",
+        "RevisionBellMatrixLog",
+        "RevisionBellNegativeBranch",
+        "RevisionBellNormalizedChoi",
+        "RevisionBellPolarization",
+        "RevisionBellPositiveLaw",
+        "RevisionBellPrimitive",
+        "RevisionBellQuadraticLimit",
+        "RevisionBellSpectralGap",
+        "RevisionBellTheorem",
+        "RevisionBellTraceConvergence",
+        "RevisionBernoulliAudit",
+        "RevisionBernoulliCauchy",
+        "RevisionBernoulliCompression",
+        "RevisionBernoulliEdge",
+        "RevisionBernoulliHolomorphic",
+        "RevisionBernoulliLaw",
+        "RevisionBernoulliTensor",
+        "RevisionCanonicalEnsemble",
+        "RevisionCoordinateCap",
+        "RevisionCorollaryIV",
+        "RevisionEntropyHausdorff",
+        "RevisionEntropyTheoremV",
+        "RevisionFullBlockInput",
+        "RevisionGramLadder",
+        "RevisionGramSpectrum",
+        "RevisionHermitianMultiplicity",
+        "RevisionK182BirthCurve",
+        "RevisionK182BoundaryEqual",
+        "RevisionK182BoundaryExclusion",
+        "RevisionK182BoundaryTools",
+        "RevisionK182Compact",
+        "RevisionK182Curve",
+        "RevisionK182Descent",
+        "RevisionK182EntropyMaximum",
+        "RevisionK182Minimizer",
+        "RevisionK182Multiplier",
+        "RevisionK182Nonuniform",
+        "RevisionK182Normalization",
+        "RevisionK182RepeatedHigh",
+        "RevisionK182Stationarity",
+        "RevisionKrausVectorization",
+        "RevisionLemmaC1",
+        "RevisionMainAudit",
+        "RevisionMainExistence",
+        "RevisionMainNonadditivity",
+        "RevisionMainTheorem",
+        "RevisionMatrixEntropy",
+        "RevisionMatrixEntropyAudit",
+        "RevisionMatrixEntropyBell",
+        "RevisionMatrixEntropyBody",
+        "RevisionMatrixEntropyConjugate",
+        "RevisionMatrixEntropyProjection",
+        "RevisionMatrixEntropyWitness",
+        "RevisionOutputAudit",
+        "RevisionOutputBody",
+        "RevisionOutputChannel",
+        "RevisionOutputContinuousMinimum",
+        "RevisionOutputConvergence",
+        "RevisionOutputDuality",
+        "RevisionOutputEventual",
+        "RevisionOutputFunctionals",
+        "RevisionOutputGeometry",
+        "RevisionOutputHausdorff",
+        "RevisionOutputLimit",
+        "RevisionOutputMetricComparison",
+        "RevisionOutputProbability",
+        "RevisionOutputStates",
+        "RevisionOutputTheorem",
+        "RevisionOutputTraceBalls",
+        "RevisionOutputTraceDistance",
+        "RevisionOutputTraceGeometry",
+        "RevisionOutputUnitary",
+        "RevisionPostprocessTensor",
+        "RevisionPostprocessedBellLimit",
+        "RevisionPostprocessingTransport",
+        "RevisionPropositionVI",
+        "RevisionScalarCertificate",
+        "RevisionSlaterGramCoordinates",
+        "RevisionSlaterLadderCoordinates",
+        "RevisionSlaterReduction",
+        "RevisionSlaterSpectrum",
+        "RevisionSlaterWeightedLadder",
+        "RevisionTensorChannels",
+        "RevisionTensorComposition",
+        "RevisionTraceDuality",
+        "SpectralEdge",
+        "SuppliedBernoulliEdge",
+        "UnprovedTargets",
+        "Lean.Util.CollectAxioms"
+      ],
+      "exit_code": 0,
+      "seconds": 9.22
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](../../README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Random compression formula: final-draft audit
 
 Audited source: `upload/Pasted text(20261002-051404).txt`, lines 612–690

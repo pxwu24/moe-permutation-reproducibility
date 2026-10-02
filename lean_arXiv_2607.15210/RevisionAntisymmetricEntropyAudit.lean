@@ -1,0 +1,7 @@
+import RevisionAntisymmetricEntropy
+#print axioms AntisymmetricVerification.exteriorUnitary
+#print axioms AntisymmetricVerification.antisymmetricChannel_of_unitaryDiagonal
+#print axioms AntisymmetricVerification.antisymmetricChannel_entropy
+#print axioms AntisymmetricVerification.antisymmetric_spectralBody_entropy_image
+#print axioms AntisymmetricVerification.antisymmetric_body_infimum
+#print axioms AntisymmetricVerification.actual_antisymmetric_minimum_output_entropy_limit

@@ -82,7 +82,7 @@ lake env lean AppendixB_verified.lean
 
 The two single-output estimates include uniform lower bounds over the whole explicit eigenvalue body, a feasible matching witness, and bounds for the actual infimum. The added `Entropy/Minimum.lean` now proves compactness and eventual attainment, with `single_output_minimum` and `single_output_r1_minimum` giving the optimized error bounds directly. The two Bell results prove the entropy expansions for the exact explicit spectra.
 
-**Scope:** Lean proves the scalar spectral estimates and their intermediate analytic, combinatorial, and localization results. The identification of the antisymmetric channel with the explicit `shuffle` and `bellNu` spectra is proved in the LaTeX and independently checked in small Python matrix examples; it is not formalized in this Lean development. The probabilistic channel limits are also outside this development. See [LEAN_SCOPE.md](LEAN_SCOPE.md) for precise theorem mappings and boundaries.
+**Scope of this subdirectory:** the scalar spectral estimates and their intermediate analytic, combinatorial, and localization results. The parent project additionally contains the actual channel constructions, spectral identifications, random limits, and matrix-entropy bridges. Use [the current numbered result index](../README.md) for the complete proofs and all related files. The older `LEAN_SCOPE.md` records the earlier standalone export.
 
 ## Files
 
@@ -97,4 +97,4 @@ The two single-output estimates include uniform lower bounds over the whole expl
 
 ## Final-draft extensions
 
-The modular aggregate additionally includes minimum attainment, concrete support-body geometry, deterministic limit transfer, Bell finite-matrix identities and a universal all-positive-order spectral nonadditivity theorem. `AuditAll.lean` checks all modular theorem declarations, including generated/private helpers. The original standalone export remains an export of the entropy estimates and infimum wrappers. See [the seven-part audit](../final_draft_audit/README.md) for exact new theorem coverage, remaining operator/free-probability gaps, and the combined reproducible build.
+The modular aggregate additionally includes minimum attainment, concrete support-body geometry, deterministic limit transfer, Bell finite-matrix identities and a universal all-positive-order spectral nonadditivity theorem. `AuditAll.lean` checks all modular theorem declarations, including generated/private helpers. The original standalone export remains an export of the entropy estimates and infimum wrappers. See [the current numbered index](../README.md) for the operator/free-probability proofs and combined reproducible build; the older seven-part audit is retained as a historical record.

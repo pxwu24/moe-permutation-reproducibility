@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](../../README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Bell-output verification against the final draft
 
 Source: final draft uploaded 2026-10-02, lines 945–1076 and 1978–2139.

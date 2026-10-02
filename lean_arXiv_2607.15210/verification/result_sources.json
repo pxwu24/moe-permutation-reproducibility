@@ -1,0 +1,5219 @@
+[
+  {
+    "number": "II.2",
+    "status": "complete",
+    "declarations": [
+      "HaarProjection.haar_projection_partialTrace_rank_fin",
+      "HaarProjection.haar_projection_full_local_support_iff_fin"
+    ],
+    "local_import_closure": [
+      {
+        "module": "GaussianMatrixLaw",
+        "path": "GaussianMatrixLaw.lean"
+      },
+      {
+        "module": "GaussianRadial",
+        "path": "GaussianRadial.lean"
+      },
+      {
+        "module": "GaussianRank",
+        "path": "GaussianRank.lean"
+      },
+      {
+        "module": "GaussianUnitary",
+        "path": "GaussianUnitary.lean"
+      },
+      {
+        "module": "GaussianWhitening",
+        "path": "GaussianWhitening.lean"
+      },
+      {
+        "module": "HaarFullLocalSupport",
+        "path": "HaarFullLocalSupport.lean"
+      },
+      {
+        "module": "HaarLocalSupport",
+        "path": "HaarLocalSupport.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarOrbitUnique",
+        "path": "HaarOrbitUnique.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "MatrixRankMeasurable",
+        "path": "MatrixRankMeasurable.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionOrbit",
+        "path": "ProjectionOrbit.lean"
+      }
+    ]
+  },
+  {
+    "number": "II.3",
+    "status": "complete_under_permitted_black_box",
+    "declarations": [
+      "ProjectionChannels.random_compression_from_amplified_block_strong",
+      "ProjectionChannels.fixed_random_compression_from_block_strong",
+      "ProjectionStrongConvergence.projections_strongly_converge_to_bernoulli",
+      "ProjectionChannels.amplified_diagonalTrace",
+      "ProjectionChannels.FullBlockModifiedStrongInput.to_amplified"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "A.1",
+    "status": "complete",
+    "declarations": [
+      "ProjectionChannels.bernoulli_free_sum_right_edge",
+      "ProjectionChannels.bernoulli_edge_from_cauchy_characterization"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "III.1",
+    "status": "complete_under_permitted_black_box",
+    "declarations": [
+      "RevisionOutput.output_space_limit",
+      "RevisionOutput.trace_distance_density_formula",
+      "RevisionOutput.raw_normalizedOutput_posSemidef"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "III.2",
+    "status": "complete_under_permitted_black_box",
+    "declarations": [
+      "RevisionMatrixEntropy.actual_minimum_output_entropy_limit",
+      "RevisionMatrixEntropy.spectralBody_entropy_image",
+      "AppendixB.single_output_r1_minimum"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "K182Dual",
+        "path": "K182Dual.lean"
+      },
+      {
+        "module": "K182Entropy",
+        "path": "K182Entropy.lean"
+      },
+      {
+        "module": "K182Numerics",
+        "path": "K182Numerics.lean"
+      },
+      {
+        "module": "K182SecondVariation",
+        "path": "K182SecondVariation.lean"
+      },
+      {
+        "module": "K182ShapeCalculus",
+        "path": "K182ShapeCalculus.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionCoordinateCap",
+        "path": "RevisionCoordinateCap.lean"
+      },
+      {
+        "module": "RevisionEntropyHausdorff",
+        "path": "RevisionEntropyHausdorff.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionK182BirthCurve",
+        "path": "RevisionK182BirthCurve.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryEqual",
+        "path": "RevisionK182BoundaryEqual.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryExclusion",
+        "path": "RevisionK182BoundaryExclusion.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryTools",
+        "path": "RevisionK182BoundaryTools.lean"
+      },
+      {
+        "module": "RevisionK182Compact",
+        "path": "RevisionK182Compact.lean"
+      },
+      {
+        "module": "RevisionK182Curve",
+        "path": "RevisionK182Curve.lean"
+      },
+      {
+        "module": "RevisionK182Descent",
+        "path": "RevisionK182Descent.lean"
+      },
+      {
+        "module": "RevisionK182EntropyMaximum",
+        "path": "RevisionK182EntropyMaximum.lean"
+      },
+      {
+        "module": "RevisionK182Minimizer",
+        "path": "RevisionK182Minimizer.lean"
+      },
+      {
+        "module": "RevisionK182Multiplier",
+        "path": "RevisionK182Multiplier.lean"
+      },
+      {
+        "module": "RevisionK182Nonuniform",
+        "path": "RevisionK182Nonuniform.lean"
+      },
+      {
+        "module": "RevisionK182Normalization",
+        "path": "RevisionK182Normalization.lean"
+      },
+      {
+        "module": "RevisionK182RepeatedHigh",
+        "path": "RevisionK182RepeatedHigh.lean"
+      },
+      {
+        "module": "RevisionK182Stationarity",
+        "path": "RevisionK182Stationarity.lean"
+      },
+      {
+        "module": "RevisionLemmaC1",
+        "path": "RevisionLemmaC1.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropy",
+        "path": "RevisionMatrixEntropy.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyBody",
+        "path": "RevisionMatrixEntropyBody.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputContinuousMinimum",
+        "path": "RevisionOutputContinuousMinimum.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputMetricComparison",
+        "path": "RevisionOutputMetricComparison.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputTraceGeometry",
+        "path": "RevisionOutputTraceGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "III.3",
+    "status": "complete",
+    "declarations": [
+      "RevisionOutput.traceHausdorff_eq_matrixSupportDistance",
+      "RevisionOutput.trace_operator_duality_named",
+      "RevisionOutput.density_opNorm_witness"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionBellContraction",
+        "path": "RevisionBellContraction.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputHausdorff",
+        "path": "RevisionOutputHausdorff.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputMetricComparison",
+        "path": "RevisionOutputMetricComparison.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceBalls",
+        "path": "RevisionOutputTraceBalls.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputTraceGeometry",
+        "path": "RevisionOutputTraceGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "RevisionTraceDuality",
+        "path": "RevisionTraceDuality.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "III.4",
+    "status": "complete",
+    "declarations": [
+      "RevisionOutput.normalized_output_support",
+      "RevisionOutput.local_channel_support_threshold",
+      "RevisionOutput.density_expectation_isGreatest",
+      "RevisionOutput.normalizedOutput_pairing"
+    ],
+    "local_import_closure": [
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      }
+    ]
+  },
+  {
+    "number": "IV.1",
+    "status": "complete_under_permitted_black_box",
+    "declarations": [
+      "RevisionBell.bell_output_limit",
+      "RevisionBell.bell_output_and_purity_limit",
+      "RevisionBell.tensor_conjugate_bell_entry",
+      "BellLimitVerification.bell_spectrum_identities",
+      "BellLimitVerification.bell_spectrum_positive"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.BellFiniteDifference",
+        "path": "entropy/Entropy/BellFiniteDifference.lean"
+      },
+      {
+        "module": "Entropy.BellLimitCoefficients",
+        "path": "entropy/Entropy/BellLimitCoefficients.lean"
+      },
+      {
+        "module": "Entropy.BellLimitTransfer",
+        "path": "entropy/Entropy/BellLimitTransfer.lean"
+      },
+      {
+        "module": "Entropy.BellMatrixIdentities",
+        "path": "entropy/Entropy/BellMatrixIdentities.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionBellAEPPolarization",
+        "path": "RevisionBellAEPPolarization.lean"
+      },
+      {
+        "module": "RevisionBellCentralDerivative",
+        "path": "RevisionBellCentralDerivative.lean"
+      },
+      {
+        "module": "RevisionBellChannel",
+        "path": "RevisionBellChannel.lean"
+      },
+      {
+        "module": "RevisionBellContraction",
+        "path": "RevisionBellContraction.lean"
+      },
+      {
+        "module": "RevisionBellFiniteMoments",
+        "path": "RevisionBellFiniteMoments.lean"
+      },
+      {
+        "module": "RevisionBellHessian",
+        "path": "RevisionBellHessian.lean"
+      },
+      {
+        "module": "RevisionBellHessianResult",
+        "path": "RevisionBellHessianResult.lean"
+      },
+      {
+        "module": "RevisionBellImplicit",
+        "path": "RevisionBellImplicit.lean"
+      },
+      {
+        "module": "RevisionBellLimitFromMoments",
+        "path": "RevisionBellLimitFromMoments.lean"
+      },
+      {
+        "module": "RevisionBellLogConvergence",
+        "path": "RevisionBellLogConvergence.lean"
+      },
+      {
+        "module": "RevisionBellLogIdentity",
+        "path": "RevisionBellLogIdentity.lean"
+      },
+      {
+        "module": "RevisionBellLogPotential",
+        "path": "RevisionBellLogPotential.lean"
+      },
+      {
+        "module": "RevisionBellMatrixLog",
+        "path": "RevisionBellMatrixLog.lean"
+      },
+      {
+        "module": "RevisionBellNegativeBranch",
+        "path": "RevisionBellNegativeBranch.lean"
+      },
+      {
+        "module": "RevisionBellNormalizedChoi",
+        "path": "RevisionBellNormalizedChoi.lean"
+      },
+      {
+        "module": "RevisionBellPolarization",
+        "path": "RevisionBellPolarization.lean"
+      },
+      {
+        "module": "RevisionBellPositiveLaw",
+        "path": "RevisionBellPositiveLaw.lean"
+      },
+      {
+        "module": "RevisionBellPrimitive",
+        "path": "RevisionBellPrimitive.lean"
+      },
+      {
+        "module": "RevisionBellQuadraticLimit",
+        "path": "RevisionBellQuadraticLimit.lean"
+      },
+      {
+        "module": "RevisionBellSpectralGap",
+        "path": "RevisionBellSpectralGap.lean"
+      },
+      {
+        "module": "RevisionBellTheorem",
+        "path": "RevisionBellTheorem.lean"
+      },
+      {
+        "module": "RevisionBellTraceConvergence",
+        "path": "RevisionBellTraceConvergence.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "IV.2",
+    "status": "complete_under_permitted_black_box",
+    "declarations": [
+      "RevisionMatrixEntropy.corollary_IV_2_fixed_k",
+      "RevisionMatrixEntropy.isotropic_entropy_eq_bell_spectrum",
+      "RevisionMatrixEntropy.corollary_IV_2_asymptotics"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.BellBounds",
+        "path": "entropy/Entropy/BellBounds.lean"
+      },
+      {
+        "module": "Entropy.BellFiniteDifference",
+        "path": "entropy/Entropy/BellFiniteDifference.lean"
+      },
+      {
+        "module": "Entropy.BellLimitCoefficients",
+        "path": "entropy/Entropy/BellLimitCoefficients.lean"
+      },
+      {
+        "module": "Entropy.BellLimitTransfer",
+        "path": "entropy/Entropy/BellLimitTransfer.lean"
+      },
+      {
+        "module": "Entropy.BellMatrixIdentities",
+        "path": "entropy/Entropy/BellMatrixIdentities.lean"
+      },
+      {
+        "module": "Entropy.BellOne",
+        "path": "entropy/Entropy/BellOne.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionOrbit",
+        "path": "ProjectionOrbit.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionBellAEPPolarization",
+        "path": "RevisionBellAEPPolarization.lean"
+      },
+      {
+        "module": "RevisionBellCentralDerivative",
+        "path": "RevisionBellCentralDerivative.lean"
+      },
+      {
+        "module": "RevisionBellChannel",
+        "path": "RevisionBellChannel.lean"
+      },
+      {
+        "module": "RevisionBellContraction",
+        "path": "RevisionBellContraction.lean"
+      },
+      {
+        "module": "RevisionBellEntropyTransport",
+        "path": "RevisionBellEntropyTransport.lean"
+      },
+      {
+        "module": "RevisionBellFiniteMoments",
+        "path": "RevisionBellFiniteMoments.lean"
+      },
+      {
+        "module": "RevisionBellHessian",
+        "path": "RevisionBellHessian.lean"
+      },
+      {
+        "module": "RevisionBellHessianResult",
+        "path": "RevisionBellHessianResult.lean"
+      },
+      {
+        "module": "RevisionBellImplicit",
+        "path": "RevisionBellImplicit.lean"
+      },
+      {
+        "module": "RevisionBellLimitFromMoments",
+        "path": "RevisionBellLimitFromMoments.lean"
+      },
+      {
+        "module": "RevisionBellLogConvergence",
+        "path": "RevisionBellLogConvergence.lean"
+      },
+      {
+        "module": "RevisionBellLogIdentity",
+        "path": "RevisionBellLogIdentity.lean"
+      },
+      {
+        "module": "RevisionBellLogPotential",
+        "path": "RevisionBellLogPotential.lean"
+      },
+      {
+        "module": "RevisionBellMatrixLog",
+        "path": "RevisionBellMatrixLog.lean"
+      },
+      {
+        "module": "RevisionBellNegativeBranch",
+        "path": "RevisionBellNegativeBranch.lean"
+      },
+      {
+        "module": "RevisionBellNormalizedChoi",
+        "path": "RevisionBellNormalizedChoi.lean"
+      },
+      {
+        "module": "RevisionBellPolarization",
+        "path": "RevisionBellPolarization.lean"
+      },
+      {
+        "module": "RevisionBellPositiveLaw",
+        "path": "RevisionBellPositiveLaw.lean"
+      },
+      {
+        "module": "RevisionBellPrimitive",
+        "path": "RevisionBellPrimitive.lean"
+      },
+      {
+        "module": "RevisionBellQuadraticLimit",
+        "path": "RevisionBellQuadraticLimit.lean"
+      },
+      {
+        "module": "RevisionBellSpectralGap",
+        "path": "RevisionBellSpectralGap.lean"
+      },
+      {
+        "module": "RevisionBellTheorem",
+        "path": "RevisionBellTheorem.lean"
+      },
+      {
+        "module": "RevisionBellTraceConvergence",
+        "path": "RevisionBellTraceConvergence.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionCorollaryIV",
+        "path": "RevisionCorollaryIV.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropy",
+        "path": "RevisionMatrixEntropy.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyBell",
+        "path": "RevisionMatrixEntropyBell.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyConjugate",
+        "path": "RevisionMatrixEntropyConjugate.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyProjection",
+        "path": "RevisionMatrixEntropyProjection.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyWitness",
+        "path": "RevisionMatrixEntropyWitness.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "RevisionTensorChannels",
+        "path": "RevisionTensorChannels.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "A.2",
+    "status": "complete",
+    "declarations": [
+      "RevisionBell.bernoulli_logPotential_hessian",
+      "RevisionBell.bernoulli_law_logPotential_identity"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "Entropy.BellLimitCoefficients",
+        "path": "entropy/Entropy/BellLimitCoefficients.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "RevisionBellHessian",
+        "path": "RevisionBellHessian.lean"
+      },
+      {
+        "module": "RevisionBellHessianResult",
+        "path": "RevisionBellHessianResult.lean"
+      },
+      {
+        "module": "RevisionBellImplicit",
+        "path": "RevisionBellImplicit.lean"
+      },
+      {
+        "module": "RevisionBellLogIdentity",
+        "path": "RevisionBellLogIdentity.lean"
+      },
+      {
+        "module": "RevisionBellLogPotential",
+        "path": "RevisionBellLogPotential.lean"
+      },
+      {
+        "module": "RevisionBellNegativeBranch",
+        "path": "RevisionBellNegativeBranch.lean"
+      },
+      {
+        "module": "RevisionBellPositiveLaw",
+        "path": "RevisionBellPositiveLaw.lean"
+      },
+      {
+        "module": "RevisionBellPrimitive",
+        "path": "RevisionBellPrimitive.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "A.3",
+    "status": "complete_under_permitted_black_box",
+    "declarations": [
+      "RevisionBell.normalized_choi_mixed_moment_limit",
+      "RevisionBell.ae_normalized_choi_mixed_moments",
+      "RevisionBell.ae_normalized_square_moment_limit"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.BellFiniteDifference",
+        "path": "entropy/Entropy/BellFiniteDifference.lean"
+      },
+      {
+        "module": "Entropy.BellLimitCoefficients",
+        "path": "entropy/Entropy/BellLimitCoefficients.lean"
+      },
+      {
+        "module": "Entropy.BellLimitTransfer",
+        "path": "entropy/Entropy/BellLimitTransfer.lean"
+      },
+      {
+        "module": "Entropy.BellMatrixIdentities",
+        "path": "entropy/Entropy/BellMatrixIdentities.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionBellAEPPolarization",
+        "path": "RevisionBellAEPPolarization.lean"
+      },
+      {
+        "module": "RevisionBellCentralDerivative",
+        "path": "RevisionBellCentralDerivative.lean"
+      },
+      {
+        "module": "RevisionBellChannel",
+        "path": "RevisionBellChannel.lean"
+      },
+      {
+        "module": "RevisionBellContraction",
+        "path": "RevisionBellContraction.lean"
+      },
+      {
+        "module": "RevisionBellFiniteMoments",
+        "path": "RevisionBellFiniteMoments.lean"
+      },
+      {
+        "module": "RevisionBellHessian",
+        "path": "RevisionBellHessian.lean"
+      },
+      {
+        "module": "RevisionBellHessianResult",
+        "path": "RevisionBellHessianResult.lean"
+      },
+      {
+        "module": "RevisionBellImplicit",
+        "path": "RevisionBellImplicit.lean"
+      },
+      {
+        "module": "RevisionBellLimitFromMoments",
+        "path": "RevisionBellLimitFromMoments.lean"
+      },
+      {
+        "module": "RevisionBellLogConvergence",
+        "path": "RevisionBellLogConvergence.lean"
+      },
+      {
+        "module": "RevisionBellLogIdentity",
+        "path": "RevisionBellLogIdentity.lean"
+      },
+      {
+        "module": "RevisionBellLogPotential",
+        "path": "RevisionBellLogPotential.lean"
+      },
+      {
+        "module": "RevisionBellMatrixLog",
+        "path": "RevisionBellMatrixLog.lean"
+      },
+      {
+        "module": "RevisionBellNegativeBranch",
+        "path": "RevisionBellNegativeBranch.lean"
+      },
+      {
+        "module": "RevisionBellNormalizedChoi",
+        "path": "RevisionBellNormalizedChoi.lean"
+      },
+      {
+        "module": "RevisionBellPolarization",
+        "path": "RevisionBellPolarization.lean"
+      },
+      {
+        "module": "RevisionBellPositiveLaw",
+        "path": "RevisionBellPositiveLaw.lean"
+      },
+      {
+        "module": "RevisionBellPrimitive",
+        "path": "RevisionBellPrimitive.lean"
+      },
+      {
+        "module": "RevisionBellQuadraticLimit",
+        "path": "RevisionBellQuadraticLimit.lean"
+      },
+      {
+        "module": "RevisionBellSpectralGap",
+        "path": "RevisionBellSpectralGap.lean"
+      },
+      {
+        "module": "RevisionBellTheorem",
+        "path": "RevisionBellTheorem.lean"
+      },
+      {
+        "module": "RevisionBellTraceConvergence",
+        "path": "RevisionBellTraceConvergence.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "A.4",
+    "status": "complete_under_permitted_black_box",
+    "declarations": [
+      "RevisionBell.asymptotic_choi_purity",
+      "RevisionBell.bell_output_and_purity_limit"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.BellFiniteDifference",
+        "path": "entropy/Entropy/BellFiniteDifference.lean"
+      },
+      {
+        "module": "Entropy.BellLimitCoefficients",
+        "path": "entropy/Entropy/BellLimitCoefficients.lean"
+      },
+      {
+        "module": "Entropy.BellLimitTransfer",
+        "path": "entropy/Entropy/BellLimitTransfer.lean"
+      },
+      {
+        "module": "Entropy.BellMatrixIdentities",
+        "path": "entropy/Entropy/BellMatrixIdentities.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionBellAEPPolarization",
+        "path": "RevisionBellAEPPolarization.lean"
+      },
+      {
+        "module": "RevisionBellCentralDerivative",
+        "path": "RevisionBellCentralDerivative.lean"
+      },
+      {
+        "module": "RevisionBellChannel",
+        "path": "RevisionBellChannel.lean"
+      },
+      {
+        "module": "RevisionBellContraction",
+        "path": "RevisionBellContraction.lean"
+      },
+      {
+        "module": "RevisionBellFiniteMoments",
+        "path": "RevisionBellFiniteMoments.lean"
+      },
+      {
+        "module": "RevisionBellHessian",
+        "path": "RevisionBellHessian.lean"
+      },
+      {
+        "module": "RevisionBellHessianResult",
+        "path": "RevisionBellHessianResult.lean"
+      },
+      {
+        "module": "RevisionBellImplicit",
+        "path": "RevisionBellImplicit.lean"
+      },
+      {
+        "module": "RevisionBellLimitFromMoments",
+        "path": "RevisionBellLimitFromMoments.lean"
+      },
+      {
+        "module": "RevisionBellLogConvergence",
+        "path": "RevisionBellLogConvergence.lean"
+      },
+      {
+        "module": "RevisionBellLogIdentity",
+        "path": "RevisionBellLogIdentity.lean"
+      },
+      {
+        "module": "RevisionBellLogPotential",
+        "path": "RevisionBellLogPotential.lean"
+      },
+      {
+        "module": "RevisionBellMatrixLog",
+        "path": "RevisionBellMatrixLog.lean"
+      },
+      {
+        "module": "RevisionBellNegativeBranch",
+        "path": "RevisionBellNegativeBranch.lean"
+      },
+      {
+        "module": "RevisionBellNormalizedChoi",
+        "path": "RevisionBellNormalizedChoi.lean"
+      },
+      {
+        "module": "RevisionBellPolarization",
+        "path": "RevisionBellPolarization.lean"
+      },
+      {
+        "module": "RevisionBellPositiveLaw",
+        "path": "RevisionBellPositiveLaw.lean"
+      },
+      {
+        "module": "RevisionBellPrimitive",
+        "path": "RevisionBellPrimitive.lean"
+      },
+      {
+        "module": "RevisionBellQuadraticLimit",
+        "path": "RevisionBellQuadraticLimit.lean"
+      },
+      {
+        "module": "RevisionBellSpectralGap",
+        "path": "RevisionBellSpectralGap.lean"
+      },
+      {
+        "module": "RevisionBellTheorem",
+        "path": "RevisionBellTheorem.lean"
+      },
+      {
+        "module": "RevisionBellTraceConvergence",
+        "path": "RevisionBellTraceConvergence.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "V.1",
+    "status": "complete_under_permitted_black_box",
+    "declarations": [
+      "RevisionMain.theorem_V_1_fixed_k",
+      "RevisionMain.theorem_V_1_single_asymptotics",
+      "RevisionMain.theorem_V_1_bell_asymptotics",
+      "RevisionMain.antisymmetricBellLimit_entropy"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.BellBounds",
+        "path": "entropy/Entropy/BellBounds.lean"
+      },
+      {
+        "module": "Entropy.BellFiniteDifference",
+        "path": "entropy/Entropy/BellFiniteDifference.lean"
+      },
+      {
+        "module": "Entropy.BellGeneral",
+        "path": "entropy/Entropy/BellGeneral.lean"
+      },
+      {
+        "module": "Entropy.BellLimitCoefficients",
+        "path": "entropy/Entropy/BellLimitCoefficients.lean"
+      },
+      {
+        "module": "Entropy.BellLimitTransfer",
+        "path": "entropy/Entropy/BellLimitTransfer.lean"
+      },
+      {
+        "module": "Entropy.BellMatrixIdentities",
+        "path": "entropy/Entropy/BellMatrixIdentities.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.MainCoefficient",
+        "path": "entropy/Entropy/MainCoefficient.lean"
+      },
+      {
+        "module": "Entropy.MainSpectral",
+        "path": "entropy/Entropy/MainSpectral.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "K182Dual",
+        "path": "K182Dual.lean"
+      },
+      {
+        "module": "K182Entropy",
+        "path": "K182Entropy.lean"
+      },
+      {
+        "module": "K182Numerics",
+        "path": "K182Numerics.lean"
+      },
+      {
+        "module": "K182SecondVariation",
+        "path": "K182SecondVariation.lean"
+      },
+      {
+        "module": "K182ShapeCalculus",
+        "path": "K182ShapeCalculus.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionAntisymmetric",
+        "path": "RevisionAntisymmetric.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBasis",
+        "path": "RevisionAntisymmetricBasis.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellBridge",
+        "path": "RevisionAntisymmetricBellBridge.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellEntropy",
+        "path": "RevisionAntisymmetricBellEntropy.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellOperators",
+        "path": "RevisionAntisymmetricBellOperators.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricChannel",
+        "path": "RevisionAntisymmetricChannel.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricCoordinates",
+        "path": "RevisionAntisymmetricCoordinates.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricEntropy",
+        "path": "RevisionAntisymmetricEntropy.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricLadder",
+        "path": "RevisionAntisymmetricLadder.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricLegMatrix",
+        "path": "RevisionAntisymmetricLegMatrix.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricMatrixRecursion",
+        "path": "RevisionAntisymmetricMatrixRecursion.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricNesting",
+        "path": "RevisionAntisymmetricNesting.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricOrthonormal",
+        "path": "RevisionAntisymmetricOrthonormal.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricPartialTrace",
+        "path": "RevisionAntisymmetricPartialTrace.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricProjection",
+        "path": "RevisionAntisymmetricProjection.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricRecursion",
+        "path": "RevisionAntisymmetricRecursion.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricShuffling",
+        "path": "RevisionAntisymmetricShuffling.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricSwap",
+        "path": "RevisionAntisymmetricSwap.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricTransport",
+        "path": "RevisionAntisymmetricTransport.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricUnitary",
+        "path": "RevisionAntisymmetricUnitary.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricWeightedBell",
+        "path": "RevisionAntisymmetricWeightedBell.lean"
+      },
+      {
+        "module": "RevisionBellAEPPolarization",
+        "path": "RevisionBellAEPPolarization.lean"
+      },
+      {
+        "module": "RevisionBellCentralDerivative",
+        "path": "RevisionBellCentralDerivative.lean"
+      },
+      {
+        "module": "RevisionBellChannel",
+        "path": "RevisionBellChannel.lean"
+      },
+      {
+        "module": "RevisionBellContraction",
+        "path": "RevisionBellContraction.lean"
+      },
+      {
+        "module": "RevisionBellEntropyTransport",
+        "path": "RevisionBellEntropyTransport.lean"
+      },
+      {
+        "module": "RevisionBellFiniteMoments",
+        "path": "RevisionBellFiniteMoments.lean"
+      },
+      {
+        "module": "RevisionBellHessian",
+        "path": "RevisionBellHessian.lean"
+      },
+      {
+        "module": "RevisionBellHessianResult",
+        "path": "RevisionBellHessianResult.lean"
+      },
+      {
+        "module": "RevisionBellImplicit",
+        "path": "RevisionBellImplicit.lean"
+      },
+      {
+        "module": "RevisionBellLimitFromMoments",
+        "path": "RevisionBellLimitFromMoments.lean"
+      },
+      {
+        "module": "RevisionBellLogConvergence",
+        "path": "RevisionBellLogConvergence.lean"
+      },
+      {
+        "module": "RevisionBellLogIdentity",
+        "path": "RevisionBellLogIdentity.lean"
+      },
+      {
+        "module": "RevisionBellLogPotential",
+        "path": "RevisionBellLogPotential.lean"
+      },
+      {
+        "module": "RevisionBellMatrixLog",
+        "path": "RevisionBellMatrixLog.lean"
+      },
+      {
+        "module": "RevisionBellNegativeBranch",
+        "path": "RevisionBellNegativeBranch.lean"
+      },
+      {
+        "module": "RevisionBellNormalizedChoi",
+        "path": "RevisionBellNormalizedChoi.lean"
+      },
+      {
+        "module": "RevisionBellPolarization",
+        "path": "RevisionBellPolarization.lean"
+      },
+      {
+        "module": "RevisionBellPositiveLaw",
+        "path": "RevisionBellPositiveLaw.lean"
+      },
+      {
+        "module": "RevisionBellPrimitive",
+        "path": "RevisionBellPrimitive.lean"
+      },
+      {
+        "module": "RevisionBellQuadraticLimit",
+        "path": "RevisionBellQuadraticLimit.lean"
+      },
+      {
+        "module": "RevisionBellSpectralGap",
+        "path": "RevisionBellSpectralGap.lean"
+      },
+      {
+        "module": "RevisionBellTheorem",
+        "path": "RevisionBellTheorem.lean"
+      },
+      {
+        "module": "RevisionBellTraceConvergence",
+        "path": "RevisionBellTraceConvergence.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionCoordinateCap",
+        "path": "RevisionCoordinateCap.lean"
+      },
+      {
+        "module": "RevisionEntropyHausdorff",
+        "path": "RevisionEntropyHausdorff.lean"
+      },
+      {
+        "module": "RevisionEntropyTheoremV",
+        "path": "RevisionEntropyTheoremV.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionGramLadder",
+        "path": "RevisionGramLadder.lean"
+      },
+      {
+        "module": "RevisionGramSpectrum",
+        "path": "RevisionGramSpectrum.lean"
+      },
+      {
+        "module": "RevisionHermitianMultiplicity",
+        "path": "RevisionHermitianMultiplicity.lean"
+      },
+      {
+        "module": "RevisionK182BirthCurve",
+        "path": "RevisionK182BirthCurve.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryEqual",
+        "path": "RevisionK182BoundaryEqual.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryExclusion",
+        "path": "RevisionK182BoundaryExclusion.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryTools",
+        "path": "RevisionK182BoundaryTools.lean"
+      },
+      {
+        "module": "RevisionK182Compact",
+        "path": "RevisionK182Compact.lean"
+      },
+      {
+        "module": "RevisionK182Curve",
+        "path": "RevisionK182Curve.lean"
+      },
+      {
+        "module": "RevisionK182Descent",
+        "path": "RevisionK182Descent.lean"
+      },
+      {
+        "module": "RevisionK182EntropyMaximum",
+        "path": "RevisionK182EntropyMaximum.lean"
+      },
+      {
+        "module": "RevisionK182Minimizer",
+        "path": "RevisionK182Minimizer.lean"
+      },
+      {
+        "module": "RevisionK182Multiplier",
+        "path": "RevisionK182Multiplier.lean"
+      },
+      {
+        "module": "RevisionK182Nonuniform",
+        "path": "RevisionK182Nonuniform.lean"
+      },
+      {
+        "module": "RevisionK182Normalization",
+        "path": "RevisionK182Normalization.lean"
+      },
+      {
+        "module": "RevisionK182RepeatedHigh",
+        "path": "RevisionK182RepeatedHigh.lean"
+      },
+      {
+        "module": "RevisionK182Stationarity",
+        "path": "RevisionK182Stationarity.lean"
+      },
+      {
+        "module": "RevisionKrausVectorization",
+        "path": "RevisionKrausVectorization.lean"
+      },
+      {
+        "module": "RevisionLemmaC1",
+        "path": "RevisionLemmaC1.lean"
+      },
+      {
+        "module": "RevisionMainNonadditivity",
+        "path": "RevisionMainNonadditivity.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropy",
+        "path": "RevisionMatrixEntropy.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyBody",
+        "path": "RevisionMatrixEntropyBody.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyConjugate",
+        "path": "RevisionMatrixEntropyConjugate.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyWitness",
+        "path": "RevisionMatrixEntropyWitness.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputContinuousMinimum",
+        "path": "RevisionOutputContinuousMinimum.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputMetricComparison",
+        "path": "RevisionOutputMetricComparison.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputTraceGeometry",
+        "path": "RevisionOutputTraceGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "RevisionPostprocessTensor",
+        "path": "RevisionPostprocessTensor.lean"
+      },
+      {
+        "module": "RevisionPostprocessedBellLimit",
+        "path": "RevisionPostprocessedBellLimit.lean"
+      },
+      {
+        "module": "RevisionPostprocessingTransport",
+        "path": "RevisionPostprocessingTransport.lean"
+      },
+      {
+        "module": "RevisionSlaterGramCoordinates",
+        "path": "RevisionSlaterGramCoordinates.lean"
+      },
+      {
+        "module": "RevisionSlaterLadderCoordinates",
+        "path": "RevisionSlaterLadderCoordinates.lean"
+      },
+      {
+        "module": "RevisionSlaterReduction",
+        "path": "RevisionSlaterReduction.lean"
+      },
+      {
+        "module": "RevisionSlaterSpectrum",
+        "path": "RevisionSlaterSpectrum.lean"
+      },
+      {
+        "module": "RevisionSlaterWeightedLadder",
+        "path": "RevisionSlaterWeightedLadder.lean"
+      },
+      {
+        "module": "RevisionTensorChannels",
+        "path": "RevisionTensorChannels.lean"
+      },
+      {
+        "module": "RevisionTensorComposition",
+        "path": "RevisionTensorComposition.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "V.2",
+    "status": "complete",
+    "declarations": [
+      "AntisymmetricVerification.postprocess_matrix_diagonal",
+      "AntisymmetricVerification.shuffling_eigenbasis",
+      "AntisymmetricVerification.finrank_alternatingSpace",
+      "AntisymmetricVerification.antisymmetricChannel_quantumChannel",
+      "AntisymmetricVerification.antisymmetricChannel_restriction_conjugate"
+    ],
+    "local_import_closure": [
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "RevisionAntisymmetric",
+        "path": "RevisionAntisymmetric.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBasis",
+        "path": "RevisionAntisymmetricBasis.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellOperators",
+        "path": "RevisionAntisymmetricBellOperators.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricChannel",
+        "path": "RevisionAntisymmetricChannel.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricCoordinates",
+        "path": "RevisionAntisymmetricCoordinates.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricLadder",
+        "path": "RevisionAntisymmetricLadder.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricLegMatrix",
+        "path": "RevisionAntisymmetricLegMatrix.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricMatrixRecursion",
+        "path": "RevisionAntisymmetricMatrixRecursion.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricNesting",
+        "path": "RevisionAntisymmetricNesting.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricOrthonormal",
+        "path": "RevisionAntisymmetricOrthonormal.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricPartialTrace",
+        "path": "RevisionAntisymmetricPartialTrace.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricProjection",
+        "path": "RevisionAntisymmetricProjection.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricRecursion",
+        "path": "RevisionAntisymmetricRecursion.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricShuffling",
+        "path": "RevisionAntisymmetricShuffling.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricSwap",
+        "path": "RevisionAntisymmetricSwap.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricTransport",
+        "path": "RevisionAntisymmetricTransport.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "RevisionSlaterReduction",
+        "path": "RevisionSlaterReduction.lean"
+      }
+    ]
+  },
+  {
+    "number": "B.1",
+    "status": "complete",
+    "declarations": [
+      "AntisymmetricVerification.antisymmetric_spectralBody_entropy_image",
+      "AntisymmetricVerification.antisymmetric_body_infimum",
+      "AppendixB.shuffled_entropy_attains_minimum",
+      "AppendixB.single_output_minimum",
+      "AppendixB.single_output_r1_minimum"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionAntisymmetric",
+        "path": "RevisionAntisymmetric.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBasis",
+        "path": "RevisionAntisymmetricBasis.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellOperators",
+        "path": "RevisionAntisymmetricBellOperators.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricChannel",
+        "path": "RevisionAntisymmetricChannel.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricCoordinates",
+        "path": "RevisionAntisymmetricCoordinates.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricEntropy",
+        "path": "RevisionAntisymmetricEntropy.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricLadder",
+        "path": "RevisionAntisymmetricLadder.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricLegMatrix",
+        "path": "RevisionAntisymmetricLegMatrix.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricMatrixRecursion",
+        "path": "RevisionAntisymmetricMatrixRecursion.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricNesting",
+        "path": "RevisionAntisymmetricNesting.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricOrthonormal",
+        "path": "RevisionAntisymmetricOrthonormal.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricPartialTrace",
+        "path": "RevisionAntisymmetricPartialTrace.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricProjection",
+        "path": "RevisionAntisymmetricProjection.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricRecursion",
+        "path": "RevisionAntisymmetricRecursion.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricShuffling",
+        "path": "RevisionAntisymmetricShuffling.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricSwap",
+        "path": "RevisionAntisymmetricSwap.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricTransport",
+        "path": "RevisionAntisymmetricTransport.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricUnitary",
+        "path": "RevisionAntisymmetricUnitary.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionEntropyHausdorff",
+        "path": "RevisionEntropyHausdorff.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropy",
+        "path": "RevisionMatrixEntropy.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyConjugate",
+        "path": "RevisionMatrixEntropyConjugate.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputContinuousMinimum",
+        "path": "RevisionOutputContinuousMinimum.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputMetricComparison",
+        "path": "RevisionOutputMetricComparison.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputTraceGeometry",
+        "path": "RevisionOutputTraceGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "RevisionSlaterReduction",
+        "path": "RevisionSlaterReduction.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "B.2",
+    "status": "complete",
+    "declarations": [
+      "AntisymmetricVerification.antisymmetricChannel_bell_entropy",
+      "AntisymmetricVerification.antisymmetricChannel_bell_entropy_asymptotics",
+      "AppendixB.bell_output",
+      "AppendixB.bell_output_r1"
+    ],
+    "local_import_closure": [
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.BellBounds",
+        "path": "entropy/Entropy/BellBounds.lean"
+      },
+      {
+        "module": "Entropy.BellGeneral",
+        "path": "entropy/Entropy/BellGeneral.lean"
+      },
+      {
+        "module": "Entropy.BellLimitCoefficients",
+        "path": "entropy/Entropy/BellLimitCoefficients.lean"
+      },
+      {
+        "module": "Entropy.BellMatrixIdentities",
+        "path": "entropy/Entropy/BellMatrixIdentities.lean"
+      },
+      {
+        "module": "Entropy.BellOne",
+        "path": "entropy/Entropy/BellOne.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "RevisionAntisymmetric",
+        "path": "RevisionAntisymmetric.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBasis",
+        "path": "RevisionAntisymmetricBasis.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellBridge",
+        "path": "RevisionAntisymmetricBellBridge.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellEntropy",
+        "path": "RevisionAntisymmetricBellEntropy.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellOperators",
+        "path": "RevisionAntisymmetricBellOperators.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricChannel",
+        "path": "RevisionAntisymmetricChannel.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricCoordinates",
+        "path": "RevisionAntisymmetricCoordinates.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricLadder",
+        "path": "RevisionAntisymmetricLadder.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricLegMatrix",
+        "path": "RevisionAntisymmetricLegMatrix.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricMatrixRecursion",
+        "path": "RevisionAntisymmetricMatrixRecursion.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricNesting",
+        "path": "RevisionAntisymmetricNesting.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricOrthonormal",
+        "path": "RevisionAntisymmetricOrthonormal.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricPartialTrace",
+        "path": "RevisionAntisymmetricPartialTrace.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricProjection",
+        "path": "RevisionAntisymmetricProjection.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricRecursion",
+        "path": "RevisionAntisymmetricRecursion.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricShuffling",
+        "path": "RevisionAntisymmetricShuffling.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricSwap",
+        "path": "RevisionAntisymmetricSwap.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricTransport",
+        "path": "RevisionAntisymmetricTransport.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricWeightedBell",
+        "path": "RevisionAntisymmetricWeightedBell.lean"
+      },
+      {
+        "module": "RevisionBellChannel",
+        "path": "RevisionBellChannel.lean"
+      },
+      {
+        "module": "RevisionGramLadder",
+        "path": "RevisionGramLadder.lean"
+      },
+      {
+        "module": "RevisionGramSpectrum",
+        "path": "RevisionGramSpectrum.lean"
+      },
+      {
+        "module": "RevisionHermitianMultiplicity",
+        "path": "RevisionHermitianMultiplicity.lean"
+      },
+      {
+        "module": "RevisionKrausVectorization",
+        "path": "RevisionKrausVectorization.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropy",
+        "path": "RevisionMatrixEntropy.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyConjugate",
+        "path": "RevisionMatrixEntropyConjugate.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "RevisionSlaterGramCoordinates",
+        "path": "RevisionSlaterGramCoordinates.lean"
+      },
+      {
+        "module": "RevisionSlaterLadderCoordinates",
+        "path": "RevisionSlaterLadderCoordinates.lean"
+      },
+      {
+        "module": "RevisionSlaterReduction",
+        "path": "RevisionSlaterReduction.lean"
+      },
+      {
+        "module": "RevisionSlaterSpectrum",
+        "path": "RevisionSlaterSpectrum.lean"
+      },
+      {
+        "module": "RevisionSlaterWeightedLadder",
+        "path": "RevisionSlaterWeightedLadder.lean"
+      }
+    ]
+  },
+  {
+    "number": "I.1",
+    "status": "complete_under_permitted_black_box",
+    "declarations": [
+      "RevisionMain.theorem_I_1",
+      "AppendixB.main_coefficient_strict",
+      "ProjectionChannels.Canonical.finiteEvaluation_measurePreserving",
+      "ProjectionChannels.Canonical.projection_haar_law",
+      "ProjectionChannels.Canonical.projection_rank",
+      "ProjectionChannels.Canonical.rank_density_tendsto"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.BellBounds",
+        "path": "entropy/Entropy/BellBounds.lean"
+      },
+      {
+        "module": "Entropy.BellFiniteDifference",
+        "path": "entropy/Entropy/BellFiniteDifference.lean"
+      },
+      {
+        "module": "Entropy.BellGeneral",
+        "path": "entropy/Entropy/BellGeneral.lean"
+      },
+      {
+        "module": "Entropy.BellLimitCoefficients",
+        "path": "entropy/Entropy/BellLimitCoefficients.lean"
+      },
+      {
+        "module": "Entropy.BellLimitTransfer",
+        "path": "entropy/Entropy/BellLimitTransfer.lean"
+      },
+      {
+        "module": "Entropy.BellMatrixIdentities",
+        "path": "entropy/Entropy/BellMatrixIdentities.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.MainCoefficient",
+        "path": "entropy/Entropy/MainCoefficient.lean"
+      },
+      {
+        "module": "Entropy.MainSpectral",
+        "path": "entropy/Entropy/MainSpectral.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "K182Dual",
+        "path": "K182Dual.lean"
+      },
+      {
+        "module": "K182Entropy",
+        "path": "K182Entropy.lean"
+      },
+      {
+        "module": "K182Numerics",
+        "path": "K182Numerics.lean"
+      },
+      {
+        "module": "K182SecondVariation",
+        "path": "K182SecondVariation.lean"
+      },
+      {
+        "module": "K182ShapeCalculus",
+        "path": "K182ShapeCalculus.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionAntisymmetric",
+        "path": "RevisionAntisymmetric.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBasis",
+        "path": "RevisionAntisymmetricBasis.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellBridge",
+        "path": "RevisionAntisymmetricBellBridge.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellEntropy",
+        "path": "RevisionAntisymmetricBellEntropy.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricBellOperators",
+        "path": "RevisionAntisymmetricBellOperators.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricChannel",
+        "path": "RevisionAntisymmetricChannel.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricCoordinates",
+        "path": "RevisionAntisymmetricCoordinates.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricEntropy",
+        "path": "RevisionAntisymmetricEntropy.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricLadder",
+        "path": "RevisionAntisymmetricLadder.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricLegMatrix",
+        "path": "RevisionAntisymmetricLegMatrix.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricMatrixRecursion",
+        "path": "RevisionAntisymmetricMatrixRecursion.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricNesting",
+        "path": "RevisionAntisymmetricNesting.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricOrthonormal",
+        "path": "RevisionAntisymmetricOrthonormal.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricPartialTrace",
+        "path": "RevisionAntisymmetricPartialTrace.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricProjection",
+        "path": "RevisionAntisymmetricProjection.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricRecursion",
+        "path": "RevisionAntisymmetricRecursion.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricShuffling",
+        "path": "RevisionAntisymmetricShuffling.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricSwap",
+        "path": "RevisionAntisymmetricSwap.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricTransport",
+        "path": "RevisionAntisymmetricTransport.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricUnitary",
+        "path": "RevisionAntisymmetricUnitary.lean"
+      },
+      {
+        "module": "RevisionAntisymmetricWeightedBell",
+        "path": "RevisionAntisymmetricWeightedBell.lean"
+      },
+      {
+        "module": "RevisionBellAEPPolarization",
+        "path": "RevisionBellAEPPolarization.lean"
+      },
+      {
+        "module": "RevisionBellCentralDerivative",
+        "path": "RevisionBellCentralDerivative.lean"
+      },
+      {
+        "module": "RevisionBellChannel",
+        "path": "RevisionBellChannel.lean"
+      },
+      {
+        "module": "RevisionBellContraction",
+        "path": "RevisionBellContraction.lean"
+      },
+      {
+        "module": "RevisionBellEntropyTransport",
+        "path": "RevisionBellEntropyTransport.lean"
+      },
+      {
+        "module": "RevisionBellFiniteMoments",
+        "path": "RevisionBellFiniteMoments.lean"
+      },
+      {
+        "module": "RevisionBellHessian",
+        "path": "RevisionBellHessian.lean"
+      },
+      {
+        "module": "RevisionBellHessianResult",
+        "path": "RevisionBellHessianResult.lean"
+      },
+      {
+        "module": "RevisionBellImplicit",
+        "path": "RevisionBellImplicit.lean"
+      },
+      {
+        "module": "RevisionBellLimitFromMoments",
+        "path": "RevisionBellLimitFromMoments.lean"
+      },
+      {
+        "module": "RevisionBellLogConvergence",
+        "path": "RevisionBellLogConvergence.lean"
+      },
+      {
+        "module": "RevisionBellLogIdentity",
+        "path": "RevisionBellLogIdentity.lean"
+      },
+      {
+        "module": "RevisionBellLogPotential",
+        "path": "RevisionBellLogPotential.lean"
+      },
+      {
+        "module": "RevisionBellMatrixLog",
+        "path": "RevisionBellMatrixLog.lean"
+      },
+      {
+        "module": "RevisionBellNegativeBranch",
+        "path": "RevisionBellNegativeBranch.lean"
+      },
+      {
+        "module": "RevisionBellNormalizedChoi",
+        "path": "RevisionBellNormalizedChoi.lean"
+      },
+      {
+        "module": "RevisionBellPolarization",
+        "path": "RevisionBellPolarization.lean"
+      },
+      {
+        "module": "RevisionBellPositiveLaw",
+        "path": "RevisionBellPositiveLaw.lean"
+      },
+      {
+        "module": "RevisionBellPrimitive",
+        "path": "RevisionBellPrimitive.lean"
+      },
+      {
+        "module": "RevisionBellQuadraticLimit",
+        "path": "RevisionBellQuadraticLimit.lean"
+      },
+      {
+        "module": "RevisionBellSpectralGap",
+        "path": "RevisionBellSpectralGap.lean"
+      },
+      {
+        "module": "RevisionBellTheorem",
+        "path": "RevisionBellTheorem.lean"
+      },
+      {
+        "module": "RevisionBellTraceConvergence",
+        "path": "RevisionBellTraceConvergence.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionCanonicalEnsemble",
+        "path": "RevisionCanonicalEnsemble.lean"
+      },
+      {
+        "module": "RevisionCoordinateCap",
+        "path": "RevisionCoordinateCap.lean"
+      },
+      {
+        "module": "RevisionEntropyHausdorff",
+        "path": "RevisionEntropyHausdorff.lean"
+      },
+      {
+        "module": "RevisionEntropyTheoremV",
+        "path": "RevisionEntropyTheoremV.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionGramLadder",
+        "path": "RevisionGramLadder.lean"
+      },
+      {
+        "module": "RevisionGramSpectrum",
+        "path": "RevisionGramSpectrum.lean"
+      },
+      {
+        "module": "RevisionHermitianMultiplicity",
+        "path": "RevisionHermitianMultiplicity.lean"
+      },
+      {
+        "module": "RevisionK182BirthCurve",
+        "path": "RevisionK182BirthCurve.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryEqual",
+        "path": "RevisionK182BoundaryEqual.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryExclusion",
+        "path": "RevisionK182BoundaryExclusion.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryTools",
+        "path": "RevisionK182BoundaryTools.lean"
+      },
+      {
+        "module": "RevisionK182Compact",
+        "path": "RevisionK182Compact.lean"
+      },
+      {
+        "module": "RevisionK182Curve",
+        "path": "RevisionK182Curve.lean"
+      },
+      {
+        "module": "RevisionK182Descent",
+        "path": "RevisionK182Descent.lean"
+      },
+      {
+        "module": "RevisionK182EntropyMaximum",
+        "path": "RevisionK182EntropyMaximum.lean"
+      },
+      {
+        "module": "RevisionK182Minimizer",
+        "path": "RevisionK182Minimizer.lean"
+      },
+      {
+        "module": "RevisionK182Multiplier",
+        "path": "RevisionK182Multiplier.lean"
+      },
+      {
+        "module": "RevisionK182Nonuniform",
+        "path": "RevisionK182Nonuniform.lean"
+      },
+      {
+        "module": "RevisionK182Normalization",
+        "path": "RevisionK182Normalization.lean"
+      },
+      {
+        "module": "RevisionK182RepeatedHigh",
+        "path": "RevisionK182RepeatedHigh.lean"
+      },
+      {
+        "module": "RevisionK182Stationarity",
+        "path": "RevisionK182Stationarity.lean"
+      },
+      {
+        "module": "RevisionKrausVectorization",
+        "path": "RevisionKrausVectorization.lean"
+      },
+      {
+        "module": "RevisionLemmaC1",
+        "path": "RevisionLemmaC1.lean"
+      },
+      {
+        "module": "RevisionMainExistence",
+        "path": "RevisionMainExistence.lean"
+      },
+      {
+        "module": "RevisionMainNonadditivity",
+        "path": "RevisionMainNonadditivity.lean"
+      },
+      {
+        "module": "RevisionMainTheorem",
+        "path": "RevisionMainTheorem.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropy",
+        "path": "RevisionMatrixEntropy.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyBody",
+        "path": "RevisionMatrixEntropyBody.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyConjugate",
+        "path": "RevisionMatrixEntropyConjugate.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyWitness",
+        "path": "RevisionMatrixEntropyWitness.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputContinuousMinimum",
+        "path": "RevisionOutputContinuousMinimum.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputMetricComparison",
+        "path": "RevisionOutputMetricComparison.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputTraceGeometry",
+        "path": "RevisionOutputTraceGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "RevisionPostprocessTensor",
+        "path": "RevisionPostprocessTensor.lean"
+      },
+      {
+        "module": "RevisionPostprocessedBellLimit",
+        "path": "RevisionPostprocessedBellLimit.lean"
+      },
+      {
+        "module": "RevisionPostprocessingTransport",
+        "path": "RevisionPostprocessingTransport.lean"
+      },
+      {
+        "module": "RevisionSlaterGramCoordinates",
+        "path": "RevisionSlaterGramCoordinates.lean"
+      },
+      {
+        "module": "RevisionSlaterLadderCoordinates",
+        "path": "RevisionSlaterLadderCoordinates.lean"
+      },
+      {
+        "module": "RevisionSlaterReduction",
+        "path": "RevisionSlaterReduction.lean"
+      },
+      {
+        "module": "RevisionSlaterSpectrum",
+        "path": "RevisionSlaterSpectrum.lean"
+      },
+      {
+        "module": "RevisionSlaterWeightedLadder",
+        "path": "RevisionSlaterWeightedLadder.lean"
+      },
+      {
+        "module": "RevisionTensorChannels",
+        "path": "RevisionTensorChannels.lean"
+      },
+      {
+        "module": "RevisionTensorComposition",
+        "path": "RevisionTensorComposition.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "VI.1",
+    "status": "complete",
+    "declarations": [
+      "RevisionMatrixEntropy.proposition_VI_1",
+      "RevisionMatrixEntropy.proposition_VI_1_body",
+      "RevisionMatrixEntropy.eventual_nonadditivity_182",
+      "ProjectionChannels.RevisionK182.certified_entropy_gap_182",
+      "ProjectionChannels.K182.certified_entropy_gap"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "BernoulliCriticalPoint",
+        "path": "BernoulliCriticalPoint.lean"
+      },
+      {
+        "module": "BernoulliDuality",
+        "path": "BernoulliDuality.lean"
+      },
+      {
+        "module": "BernoulliEdgeCalculus",
+        "path": "BernoulliEdgeCalculus.lean"
+      },
+      {
+        "module": "BlockModification",
+        "path": "BlockModification.lean"
+      },
+      {
+        "module": "CauchyBernoulli",
+        "path": "CauchyBernoulli.lean"
+      },
+      {
+        "module": "CauchyHolomorphic",
+        "path": "CauchyHolomorphic.lean"
+      },
+      {
+        "module": "CauchyHolomorphy",
+        "path": "CauchyHolomorphy.lean"
+      },
+      {
+        "module": "CauchyLocalInverse",
+        "path": "CauchyLocalInverse.lean"
+      },
+      {
+        "module": "CompletePositivity",
+        "path": "CompletePositivity.lean"
+      },
+      {
+        "module": "CompressionEndpointGlue",
+        "path": "CompressionEndpointGlue.lean"
+      },
+      {
+        "module": "CompressionExtension",
+        "path": "CompressionExtension.lean"
+      },
+      {
+        "module": "CompressionSpectral",
+        "path": "CompressionSpectral.lean"
+      },
+      {
+        "module": "Entropy.Analysis",
+        "path": "entropy/Entropy/Analysis.lean"
+      },
+      {
+        "module": "Entropy.BellFiniteDifference",
+        "path": "entropy/Entropy/BellFiniteDifference.lean"
+      },
+      {
+        "module": "Entropy.BellLimitCoefficients",
+        "path": "entropy/Entropy/BellLimitCoefficients.lean"
+      },
+      {
+        "module": "Entropy.BellLimitTransfer",
+        "path": "entropy/Entropy/BellLimitTransfer.lean"
+      },
+      {
+        "module": "Entropy.BellMatrixIdentities",
+        "path": "entropy/Entropy/BellMatrixIdentities.lean"
+      },
+      {
+        "module": "Entropy.Combinatorics",
+        "path": "entropy/Entropy/Combinatorics.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.Infimum",
+        "path": "entropy/Entropy/Infimum.lean"
+      },
+      {
+        "module": "Entropy.Localization",
+        "path": "entropy/Entropy/Localization.lean"
+      },
+      {
+        "module": "Entropy.Minimum",
+        "path": "entropy/Entropy/Minimum.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "Entropy.Single",
+        "path": "entropy/Entropy/Single.lean"
+      },
+      {
+        "module": "Entropy.Spike",
+        "path": "entropy/Entropy/Spike.lean"
+      },
+      {
+        "module": "Entropy.SpikeArithmetic",
+        "path": "entropy/Entropy/SpikeArithmetic.lean"
+      },
+      {
+        "module": "HaarMeasure",
+        "path": "HaarMeasure.lean"
+      },
+      {
+        "module": "HaarProjection",
+        "path": "HaarProjection.lean"
+      },
+      {
+        "module": "K182Dual",
+        "path": "K182Dual.lean"
+      },
+      {
+        "module": "K182Entropy",
+        "path": "K182Entropy.lean"
+      },
+      {
+        "module": "K182Numerics",
+        "path": "K182Numerics.lean"
+      },
+      {
+        "module": "K182SecondVariation",
+        "path": "K182SecondVariation.lean"
+      },
+      {
+        "module": "K182ShapeCalculus",
+        "path": "K182ShapeCalculus.lean"
+      },
+      {
+        "module": "OutputSpaceCompressionBridge",
+        "path": "OutputSpaceCompressionBridge.lean"
+      },
+      {
+        "module": "OutputSpaceMatrix",
+        "path": "OutputSpaceMatrix.lean"
+      },
+      {
+        "module": "PreliminariesAnalysis",
+        "path": "PreliminariesAnalysis.lean"
+      },
+      {
+        "module": "PreliminariesChoi",
+        "path": "PreliminariesChoi.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "PreliminariesMatrix",
+        "path": "PreliminariesMatrix.lean"
+      },
+      {
+        "module": "ProjectionOrbit",
+        "path": "ProjectionOrbit.lean"
+      },
+      {
+        "module": "ProjectionStrongConvergence",
+        "path": "ProjectionStrongConvergence.lean"
+      },
+      {
+        "module": "RevisionBellAEPPolarization",
+        "path": "RevisionBellAEPPolarization.lean"
+      },
+      {
+        "module": "RevisionBellCentralDerivative",
+        "path": "RevisionBellCentralDerivative.lean"
+      },
+      {
+        "module": "RevisionBellChannel",
+        "path": "RevisionBellChannel.lean"
+      },
+      {
+        "module": "RevisionBellContraction",
+        "path": "RevisionBellContraction.lean"
+      },
+      {
+        "module": "RevisionBellEntropyTransport",
+        "path": "RevisionBellEntropyTransport.lean"
+      },
+      {
+        "module": "RevisionBellFiniteMoments",
+        "path": "RevisionBellFiniteMoments.lean"
+      },
+      {
+        "module": "RevisionBellHessian",
+        "path": "RevisionBellHessian.lean"
+      },
+      {
+        "module": "RevisionBellHessianResult",
+        "path": "RevisionBellHessianResult.lean"
+      },
+      {
+        "module": "RevisionBellImplicit",
+        "path": "RevisionBellImplicit.lean"
+      },
+      {
+        "module": "RevisionBellLimitFromMoments",
+        "path": "RevisionBellLimitFromMoments.lean"
+      },
+      {
+        "module": "RevisionBellLogConvergence",
+        "path": "RevisionBellLogConvergence.lean"
+      },
+      {
+        "module": "RevisionBellLogIdentity",
+        "path": "RevisionBellLogIdentity.lean"
+      },
+      {
+        "module": "RevisionBellLogPotential",
+        "path": "RevisionBellLogPotential.lean"
+      },
+      {
+        "module": "RevisionBellMatrixLog",
+        "path": "RevisionBellMatrixLog.lean"
+      },
+      {
+        "module": "RevisionBellNegativeBranch",
+        "path": "RevisionBellNegativeBranch.lean"
+      },
+      {
+        "module": "RevisionBellNormalizedChoi",
+        "path": "RevisionBellNormalizedChoi.lean"
+      },
+      {
+        "module": "RevisionBellPolarization",
+        "path": "RevisionBellPolarization.lean"
+      },
+      {
+        "module": "RevisionBellPositiveLaw",
+        "path": "RevisionBellPositiveLaw.lean"
+      },
+      {
+        "module": "RevisionBellPrimitive",
+        "path": "RevisionBellPrimitive.lean"
+      },
+      {
+        "module": "RevisionBellQuadraticLimit",
+        "path": "RevisionBellQuadraticLimit.lean"
+      },
+      {
+        "module": "RevisionBellSpectralGap",
+        "path": "RevisionBellSpectralGap.lean"
+      },
+      {
+        "module": "RevisionBellTheorem",
+        "path": "RevisionBellTheorem.lean"
+      },
+      {
+        "module": "RevisionBellTraceConvergence",
+        "path": "RevisionBellTraceConvergence.lean"
+      },
+      {
+        "module": "RevisionBernoulliCauchy",
+        "path": "RevisionBernoulliCauchy.lean"
+      },
+      {
+        "module": "RevisionBernoulliCompression",
+        "path": "RevisionBernoulliCompression.lean"
+      },
+      {
+        "module": "RevisionBernoulliEdge",
+        "path": "RevisionBernoulliEdge.lean"
+      },
+      {
+        "module": "RevisionBernoulliHolomorphic",
+        "path": "RevisionBernoulliHolomorphic.lean"
+      },
+      {
+        "module": "RevisionBernoulliLaw",
+        "path": "RevisionBernoulliLaw.lean"
+      },
+      {
+        "module": "RevisionBernoulliTensor",
+        "path": "RevisionBernoulliTensor.lean"
+      },
+      {
+        "module": "RevisionCoordinateCap",
+        "path": "RevisionCoordinateCap.lean"
+      },
+      {
+        "module": "RevisionEntropyHausdorff",
+        "path": "RevisionEntropyHausdorff.lean"
+      },
+      {
+        "module": "RevisionFullBlockInput",
+        "path": "RevisionFullBlockInput.lean"
+      },
+      {
+        "module": "RevisionK182BirthCurve",
+        "path": "RevisionK182BirthCurve.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryEqual",
+        "path": "RevisionK182BoundaryEqual.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryExclusion",
+        "path": "RevisionK182BoundaryExclusion.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryTools",
+        "path": "RevisionK182BoundaryTools.lean"
+      },
+      {
+        "module": "RevisionK182Compact",
+        "path": "RevisionK182Compact.lean"
+      },
+      {
+        "module": "RevisionK182Curve",
+        "path": "RevisionK182Curve.lean"
+      },
+      {
+        "module": "RevisionK182Descent",
+        "path": "RevisionK182Descent.lean"
+      },
+      {
+        "module": "RevisionK182EntropyMaximum",
+        "path": "RevisionK182EntropyMaximum.lean"
+      },
+      {
+        "module": "RevisionK182Minimizer",
+        "path": "RevisionK182Minimizer.lean"
+      },
+      {
+        "module": "RevisionK182Multiplier",
+        "path": "RevisionK182Multiplier.lean"
+      },
+      {
+        "module": "RevisionK182Nonuniform",
+        "path": "RevisionK182Nonuniform.lean"
+      },
+      {
+        "module": "RevisionK182Normalization",
+        "path": "RevisionK182Normalization.lean"
+      },
+      {
+        "module": "RevisionK182RepeatedHigh",
+        "path": "RevisionK182RepeatedHigh.lean"
+      },
+      {
+        "module": "RevisionK182Stationarity",
+        "path": "RevisionK182Stationarity.lean"
+      },
+      {
+        "module": "RevisionLemmaC1",
+        "path": "RevisionLemmaC1.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropy",
+        "path": "RevisionMatrixEntropy.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyBell",
+        "path": "RevisionMatrixEntropyBell.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyBody",
+        "path": "RevisionMatrixEntropyBody.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyConjugate",
+        "path": "RevisionMatrixEntropyConjugate.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyProjection",
+        "path": "RevisionMatrixEntropyProjection.lean"
+      },
+      {
+        "module": "RevisionMatrixEntropyWitness",
+        "path": "RevisionMatrixEntropyWitness.lean"
+      },
+      {
+        "module": "RevisionOutputBody",
+        "path": "RevisionOutputBody.lean"
+      },
+      {
+        "module": "RevisionOutputChannel",
+        "path": "RevisionOutputChannel.lean"
+      },
+      {
+        "module": "RevisionOutputContinuousMinimum",
+        "path": "RevisionOutputContinuousMinimum.lean"
+      },
+      {
+        "module": "RevisionOutputConvergence",
+        "path": "RevisionOutputConvergence.lean"
+      },
+      {
+        "module": "RevisionOutputDuality",
+        "path": "RevisionOutputDuality.lean"
+      },
+      {
+        "module": "RevisionOutputEventual",
+        "path": "RevisionOutputEventual.lean"
+      },
+      {
+        "module": "RevisionOutputFunctionals",
+        "path": "RevisionOutputFunctionals.lean"
+      },
+      {
+        "module": "RevisionOutputGeometry",
+        "path": "RevisionOutputGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputLimit",
+        "path": "RevisionOutputLimit.lean"
+      },
+      {
+        "module": "RevisionOutputMetricComparison",
+        "path": "RevisionOutputMetricComparison.lean"
+      },
+      {
+        "module": "RevisionOutputProbability",
+        "path": "RevisionOutputProbability.lean"
+      },
+      {
+        "module": "RevisionOutputStates",
+        "path": "RevisionOutputStates.lean"
+      },
+      {
+        "module": "RevisionOutputTheorem",
+        "path": "RevisionOutputTheorem.lean"
+      },
+      {
+        "module": "RevisionOutputTraceDistance",
+        "path": "RevisionOutputTraceDistance.lean"
+      },
+      {
+        "module": "RevisionOutputTraceGeometry",
+        "path": "RevisionOutputTraceGeometry.lean"
+      },
+      {
+        "module": "RevisionOutputUnitary",
+        "path": "RevisionOutputUnitary.lean"
+      },
+      {
+        "module": "RevisionPropositionVI",
+        "path": "RevisionPropositionVI.lean"
+      },
+      {
+        "module": "RevisionTensorChannels",
+        "path": "RevisionTensorChannels.lean"
+      },
+      {
+        "module": "SpectralEdge",
+        "path": "SpectralEdge.lean"
+      }
+    ]
+  },
+  {
+    "number": "C.1",
+    "status": "complete",
+    "declarations": [
+      "ProjectionChannels.RevisionK182.lemma_C1_minimizer_shape",
+      "ProjectionChannels.RevisionK182.lemma_C1_entropy_minimum",
+      "ProjectionChannels.RevisionK182.hasOneHighEntropyMinimizer_182"
+    ],
+    "local_import_closure": [
+      {
+        "module": "BernoulliCalculus",
+        "path": "BernoulliCalculus.lean"
+      },
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "K182Dual",
+        "path": "K182Dual.lean"
+      },
+      {
+        "module": "K182Entropy",
+        "path": "K182Entropy.lean"
+      },
+      {
+        "module": "K182Numerics",
+        "path": "K182Numerics.lean"
+      },
+      {
+        "module": "K182SecondVariation",
+        "path": "K182SecondVariation.lean"
+      },
+      {
+        "module": "K182ShapeCalculus",
+        "path": "K182ShapeCalculus.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "RevisionCoordinateCap",
+        "path": "RevisionCoordinateCap.lean"
+      },
+      {
+        "module": "RevisionK182BirthCurve",
+        "path": "RevisionK182BirthCurve.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryEqual",
+        "path": "RevisionK182BoundaryEqual.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryExclusion",
+        "path": "RevisionK182BoundaryExclusion.lean"
+      },
+      {
+        "module": "RevisionK182BoundaryTools",
+        "path": "RevisionK182BoundaryTools.lean"
+      },
+      {
+        "module": "RevisionK182Compact",
+        "path": "RevisionK182Compact.lean"
+      },
+      {
+        "module": "RevisionK182Curve",
+        "path": "RevisionK182Curve.lean"
+      },
+      {
+        "module": "RevisionK182Descent",
+        "path": "RevisionK182Descent.lean"
+      },
+      {
+        "module": "RevisionK182EntropyMaximum",
+        "path": "RevisionK182EntropyMaximum.lean"
+      },
+      {
+        "module": "RevisionK182Minimizer",
+        "path": "RevisionK182Minimizer.lean"
+      },
+      {
+        "module": "RevisionK182Multiplier",
+        "path": "RevisionK182Multiplier.lean"
+      },
+      {
+        "module": "RevisionK182Nonuniform",
+        "path": "RevisionK182Nonuniform.lean"
+      },
+      {
+        "module": "RevisionK182Normalization",
+        "path": "RevisionK182Normalization.lean"
+      },
+      {
+        "module": "RevisionK182RepeatedHigh",
+        "path": "RevisionK182RepeatedHigh.lean"
+      },
+      {
+        "module": "RevisionK182Stationarity",
+        "path": "RevisionK182Stationarity.lean"
+      },
+      {
+        "module": "RevisionLemmaC1",
+        "path": "RevisionLemmaC1.lean"
+      }
+    ]
+  },
+  {
+    "number": "C.2",
+    "status": "complete",
+    "declarations": [
+      "ProjectionChannels.ScalarCertificate.q_paper_formula",
+      "ProjectionChannels.ScalarCertificate.coordinate_le_mul_sum",
+      "ProjectionChannels.ScalarCertificate.lemma_C2",
+      "ProjectionChannels.ScalarCertificate.lemma_C2_largestEigenvalue"
+    ],
+    "local_import_closure": [
+      {
+        "module": "Entropy.Defs",
+        "path": "entropy/Entropy/Defs.lean"
+      },
+      {
+        "module": "Entropy.OutputSpace",
+        "path": "entropy/Entropy/OutputSpace.lean"
+      },
+      {
+        "module": "Entropy.OutputSpaceBody",
+        "path": "entropy/Entropy/OutputSpaceBody.lean"
+      },
+      {
+        "module": "K182Dual",
+        "path": "K182Dual.lean"
+      },
+      {
+        "module": "PreliminariesLegendre",
+        "path": "PreliminariesLegendre.lean"
+      },
+      {
+        "module": "RevisionScalarCertificate",
+        "path": "RevisionScalarCertificate.lean"
+      }
+    ]
+  }
+]

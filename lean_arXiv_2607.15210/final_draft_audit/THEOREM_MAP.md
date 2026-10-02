@@ -1,3 +1,5 @@
+> Historical scope/report. The current numbered results and complete Lean dependencies are listed in [the project README](../README.md). Statements below about missing proofs describe the earlier snapshot.
+
 # Theorem-by-theorem coverage
 
 This table covers all 20 theorem/lemma/proposition/corollary environments in the attached draft. “Complete” always refers to the explicit scope in the last column; it does not turn a spectral theorem into a channel theorem.

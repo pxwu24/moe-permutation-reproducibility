@@ -3,17 +3,22 @@ This repository provides Lean verification of the following arXiv papers, alongs
 
 | Paper | Available files |
 | --- | --- |
-| arXiv:2607.15210 | [Final-draft audit, Lean proofs, and Python certificates](./lean_arXiv_2607.15210/README.md) |
+| arXiv:2607.15210 | [Lean proofs, installation guide, and Python certificates](./lean_arXiv_2607.15210/README.md) |
 | arXiv:2608.25961 | [Numerical reproducibility code](reproduce_numerics.py) |
 | arXiv:2609.26743 | [`lean_arXiv:2609.26743/`](./lean_arXiv:2609.26743/README.md) |
 
-For arXiv:2607.15210, the [final-draft audit](lean_arXiv_2607.15210/final_draft_audit/README.md) covers the seven requested proof stages. New Lean results prove the spectral entropy estimates, attained minima and all-positive-order spectral nonadditivity. Formalization of the full random-channel theorem remains incomplete; the report lists the exact gaps. The `k182` certificate establishes the upper bound
-`k_high(1) <= 182`, with a strict limiting von Neumann entropy gap greater
-than `0.000477` nats. It includes reproducible Python interval arithmetic,
-the analytic proof, and Lean checks of the scalar and numerical bounds.
-The Lean entropy conclusion has an explicit minimizer-shape hypothesis;
-that analytic reduction is not yet formalized. See the paper folder for
-the exact verification scope.
+For arXiv:2607.15210, the [verification guide](lean_arXiv_2607.15210/README.md)
+starts with installation instructions and indexes all 20 requested numbered
+results, with exact Lean declarations and every related local proof file.
+The channel-limit and existence results use only the stated block-modified
+strong-convergence theorem. The remaining spectral, entropy, operator, and
+optimization steps are proved in Lean. The dimension-182 result includes the
+global minimizer reduction and an exact rational Python certificate for a gap
+greater than 0.000477 nats; its conclusion is `k_high(1) <= 182).
+
+```sh
+bash lean_arXiv_2607.15210/verify-all.sh
+```
 
 The Lean project for arXiv:2609.26743 formalizes the Supplement and the main
 theorem of *Explicit channels with unbounded gains in classical communication
@@ -50,4 +55,3 @@ For the Lean verification of arXiv:2609.26743, use:
 Load `\usepackage{hyperref}` in your LaTeX preamble. The bibliography displays
 only the clickable label “Github Repository”; the link identifies a fixed
 code snapshot without printing its URL or commit hash.
-
