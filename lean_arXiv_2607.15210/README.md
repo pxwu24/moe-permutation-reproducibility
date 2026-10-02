@@ -2,8 +2,7 @@
 
 Proof sources and numerical certificates for *Counterexamples to additivity of
 minimum output p-Rényi entropy of quantum channels for all p ≥ 0*, by Debbie
-Leung, Benjamin Lovitz, Ion Nechita, and Peixue Wu. Numbering follows the
-attached final draft, identified by its SHA-256 in [RESULTS.json](RESULTS.json).
+Leung, Benjamin Lovitz, Ion Nechita, and Peixue Wu. 
 
 ## Install and verify
 
