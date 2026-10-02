@@ -1,5 +1,5 @@
 # Superadditivity of classical communication
-This repository groups numerical code and formal proofs by arXiv paper.
+This repository provides Lean verification of the following arXiv papers, alongside Python codes for numerical calculations if needed.
 
 | Paper | Available files |
 | --- | --- |
