@@ -48,3 +48,4 @@ run_elab do
     throwError "No certificate theorems found"
   if !projectAxioms.isEmpty || axioms.any (fun a => !allowed.contains a) then
     throwError "Axiom audit failed"
+

@@ -191,3 +191,4 @@ theorem eventual_gap_of_one_high_minimizer
 end K182
 
 end ProjectionChannels
+

@@ -36,3 +36,4 @@ run_elab do
   logInfo m!"TOTAL audited theorem declarations: {names.size}"
   if !projectAxioms.isEmpty || axioms.any (fun a => !allowed.contains a) then
     throwError "Axiom audit failed"
+

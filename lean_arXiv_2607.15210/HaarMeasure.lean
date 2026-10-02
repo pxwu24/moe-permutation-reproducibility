@@ -202,3 +202,4 @@ theorem continuous_flatten :
 
 end
 end HaarProjection
+

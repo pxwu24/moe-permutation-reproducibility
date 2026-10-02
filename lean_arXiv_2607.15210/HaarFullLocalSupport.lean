@@ -84,3 +84,4 @@ theorem haar_projection_full_local_support_iff_fin {n k d : ℕ} (hd : d ≤ n *
 
 end
 end HaarProjection
+

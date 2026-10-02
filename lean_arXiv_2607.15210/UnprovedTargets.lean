@@ -38,3 +38,4 @@ def randomCompressionStatement : Prop :=
         atTop (𝓝 (bernoulliSupport t (k : ℝ) a))
 
 end ProjectionChannels
+

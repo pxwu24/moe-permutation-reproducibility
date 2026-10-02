@@ -76,3 +76,4 @@ theorem exists_real_holomorphic_local_inverse
   · exact he.eventually_left_inverse
 
 end ProjectionChannels
+

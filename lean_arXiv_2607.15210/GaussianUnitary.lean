@@ -61,3 +61,4 @@ theorem gaussianLeftUnitaryIsometry_apply (U : Matrix.unitaryGroup E ℂ)
 
 end
 end HaarProjection
+

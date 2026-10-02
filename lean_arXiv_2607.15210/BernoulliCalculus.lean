@@ -356,3 +356,4 @@ theorem hasDerivAt_deriv_bernoulliDual {t : ℝ}
 
 end
 end ProjectionChannels
+

@@ -204,3 +204,4 @@ theorem projection_diagonalBlock_contraction (P : Matrix (n × k) (n × k) ℂ)
 
 end
 end ProjectionChannels
+

@@ -133,3 +133,4 @@ theorem certified_entropy_gap : (477 : ℝ) / 1000000 < 2 * entropyLower - bellE
 #print axioms certified_entropy_gap
 
 end ProjectionChannels.K182
+

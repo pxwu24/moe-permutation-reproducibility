@@ -242,3 +242,4 @@ theorem cauchyTransform_bernoulli_quadratic {t : ℝ}
 
 end
 end ProjectionChannels
+

@@ -66,3 +66,4 @@ theorem haar_local_support_from_invariant_matrix_law
 
 end
 end HaarProjection
+

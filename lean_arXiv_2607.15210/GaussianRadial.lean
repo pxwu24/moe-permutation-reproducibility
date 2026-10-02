@@ -66,3 +66,4 @@ theorem radialGaussian_absolutelyContinuous : radialGaussian V ≪ volume :=
   withDensity_absolutelyContinuous _ _
 
 end GaussianRank
+

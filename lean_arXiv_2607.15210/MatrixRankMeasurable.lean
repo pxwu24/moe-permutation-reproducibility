@@ -81,3 +81,4 @@ theorem measurableSet_traceB_rank_eq {A B : Type*} [Fintype A] [Fintype B] (r : 
   measurable_traceB_rank (measurableSet_singleton r)
 
 end ProjectionChannels
+

@@ -218,3 +218,4 @@ theorem ae_gaussian_whitening_rank_inputs
       Equiv.prodAssoc_symm_apply] using hz2
 
 end GaussianRank
+

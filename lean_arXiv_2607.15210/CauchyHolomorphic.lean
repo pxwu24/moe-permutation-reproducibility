@@ -51,3 +51,4 @@ theorem holomorphic_imaginary_bound_on_compact
   exact (hf.analyticOnNhd hU).mono hsU
 
 end ProjectionChannels
+

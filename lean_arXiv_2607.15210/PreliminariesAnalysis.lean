@@ -189,3 +189,4 @@ theorem bernoulli_endpoint_support
       exact mul_nonpos_of_nonpos_of_nonneg (le_of_not_ge ha) (hv.1 i)
 
 end ProjectionChannels
+

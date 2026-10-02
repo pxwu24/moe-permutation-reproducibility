@@ -223,3 +223,4 @@ theorem bernoulli_legendre_maximum {t : ℝ}
 end
 
 end ProjectionChannels
+

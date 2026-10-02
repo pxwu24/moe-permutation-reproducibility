@@ -68,3 +68,4 @@ theorem blockModification_polynomial (P : Matrix (n × k) (n × k) ℂ) (a : k �
 
 end
 end ProjectionChannels
+

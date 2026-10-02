@@ -208,3 +208,4 @@ theorem projections_strongly_converge_to_bernoulli
     exact hn.symm
 
 end ProjectionStrongConvergence
+

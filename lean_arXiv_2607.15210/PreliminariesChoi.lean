@@ -175,3 +175,4 @@ theorem spectralProjection_partialTrace [DecidableEq B] (a : A → ℝ) (x : ℝ
   rw [outputFirst_partialTrace, levelProjection_trace]
 
 end ProjectionChannels
+

@@ -115,3 +115,4 @@ theorem matrixGaussian_unitary_invariant [DecidableEq E] [DecidableEq D]
     radialGaussian_isometry_invariant]
 
 end GaussianRank
+

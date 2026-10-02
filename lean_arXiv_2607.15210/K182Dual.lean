@@ -148,3 +148,4 @@ theorem normalized_coordinate_le_L {u : Fin 182 → ℝ}
 
 end
 end ProjectionChannels.K182
+

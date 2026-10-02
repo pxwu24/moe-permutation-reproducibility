@@ -3,11 +3,11 @@ This repository groups numerical code and formal proofs by arXiv paper.
 
 | Paper | Available files |
 | --- | --- |
-| arXiv:2607.15210 | [Lean verification and output-dimension-182 certificate](./lean_arXiv_2607.15210/README.md) |
+| arXiv:2607.15210 | [Final-draft audit, Lean proofs, and Python certificates](./lean_arXiv_2607.15210/README.md) |
 | arXiv:2608.25961 | [Numerical reproducibility code](reproduce_numerics.py) |
 | arXiv:2609.26743 | [`lean_arXiv:2609.26743/`](./lean_arXiv:2609.26743/README.md) |
 
-For arXiv:2607.15210, the new `k182` certificate establishes the upper bound
+For arXiv:2607.15210, the [final-draft audit](lean_arXiv_2607.15210/final_draft_audit/README.md) covers the seven requested proof stages. New Lean results prove the spectral entropy estimates, attained minima and all-positive-order spectral nonadditivity. Formalization of the full random-channel theorem remains incomplete; the report lists the exact gaps. The `k182` certificate establishes the upper bound
 `k_high(1) <= 182`, with a strict limiting von Neumann entropy gap greater
 than `0.000477` nats. It includes reproducible Python interval arithmetic,
 the analytic proof, and Lean checks of the scalar and numerical bounds.
@@ -50,3 +50,4 @@ For the Lean verification of arXiv:2609.26743, use:
 Load `\usepackage{hyperref}` in your LaTeX preamble. The bibliography displays
 only the clickable label “Github Repository”; the link identifies a fixed
 code snapshot without printing its URL or commit hash.
+

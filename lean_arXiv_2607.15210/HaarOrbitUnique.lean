@@ -132,3 +132,4 @@ theorem ae_haar_iff_ae_whitened_of_law_eq
 
 end
 end HaarProjection
+

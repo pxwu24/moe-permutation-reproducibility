@@ -1,8 +1,19 @@
 # Lean verification for arXiv:2607.15210
 
-This Lean 4.19.0 project formalizes results from the preliminaries, the deterministic Bernoulli convex-duality argument, and the scalar certificate for output dimension 182.
+This Lean 4.19.0 project formalizes results from the preliminaries, the deterministic Bernoulli convex-duality argument, the scalar certificate for output dimension 182, and the spectral entropy and main coefficient results from the final draft.
 
 **Verification is partial.** The full Haar local-support lemma, the Choi characterization and normalization, and the deterministic support/infimum duality are proved. The random-compression limit, the free-convolution law, and its actual spectral-edge identification remain unproved.
+
+## Final draft: seven-part audit
+
+The [2026-10-02 report](final_draft_audit/README.md) maps every requested step to its mathematical proof, Lean coverage, and Python checks. The new [entropy project](entropy/README.md) verifies all four spectral entropy estimates, eventual attained minima, and an all-p>0 spectral nonadditivity theorem. The abstract must retain the theorem's per-p quantifiers: the proof does not provide one finite pair simultaneously for every p. Full operator/free-convolution formalization remains incomplete.
+
+```sh
+python -m pip install -r final_draft_audit/requirements.txt
+lake update
+lake exe cache get
+bash verify_final.sh
+```
 
 ## Output dimension 182
 
@@ -10,7 +21,7 @@ The [certificate and proof](k182/README.md) establish `k_high(1) <= 182`
 at the exact parameter `t = 27/100000`, with limiting Bell-witness gap
 greater than `477/1000000` nats. They do not prove minimality of 182.
 
-`k182/certify_k182.py` uses rigorous Arb interval arithmetic.
+`k182/certify_k182.py` uses rigorous Arb interval arithmetic. The new `final_draft_audit/certify_k182_exact.py` reproduces the certificate using only exact rational intervals and the Python standard library.
 `K182Dual.lean` and `K182Numerics.lean` independently prove the scalar
 eigenvalue certificate and the actual real-logarithm gap in Lean.
 `K182Entropy.lean` derives the entropy comparison under an explicit
@@ -46,3 +57,4 @@ lake env lean FullAudit.lean
 ```
 
 Mathlib is pinned to `c44e0c8ee63ca166450922a373c7409c5d26b00b`. Start with `Preliminaries.lean`. See `formalization_scope_map.md` for exact coverage and `full_axiom_audit.log` for the recorded audit.
+

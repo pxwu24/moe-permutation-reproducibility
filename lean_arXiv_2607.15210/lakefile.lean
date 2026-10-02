@@ -47,4 +47,18 @@ lean_lib Preliminaries where
     `K182Numerics,
     `K182Entropy,
     `K182Audit,
-    `UnprovedTargets]
+    `UnprovedTargets,
+    `CompressionEndpointGlue,
+    `CompressionEndpointAudit,
+    `K182ShapeCalculus,
+    `K182SecondVariation,
+    `OutputSpaceMatrix,
+    `OutputSpaceMatrixAudit,
+    `OutputSpaceCompressionBridge,
+    `OutputSpaceCompressionBridgeAudit,
+    `FinalAudit]
+
+
+lean_lib Entropy where
+  srcDir := "entropy"
+  roots := #[`Entropy]

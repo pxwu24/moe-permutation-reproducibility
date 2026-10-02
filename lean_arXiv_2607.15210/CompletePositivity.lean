@@ -277,3 +277,4 @@ theorem generalizedChoi_positive_rescaling [DecidableEq A] [DecidableEq B]
   rw [← mul_assoc, hscalar, one_smul]
 
 end ProjectionChannelsCP
+

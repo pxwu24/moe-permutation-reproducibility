@@ -176,3 +176,4 @@ theorem bernoulliK_deriv_sign_around_critical
 
 end
 end ProjectionChannels
+

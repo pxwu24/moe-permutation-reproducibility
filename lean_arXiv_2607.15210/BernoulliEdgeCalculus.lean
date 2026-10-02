@@ -143,3 +143,4 @@ theorem bernoulliK_critical_dichotomy {ι : Type*} [Fintype ι]
 
 end
 end ProjectionChannels
+

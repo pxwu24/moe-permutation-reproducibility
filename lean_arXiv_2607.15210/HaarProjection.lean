@@ -214,3 +214,4 @@ theorem unitary_conjugation_rank [DecidableEq A]
 
 end
 end HaarProjection
+

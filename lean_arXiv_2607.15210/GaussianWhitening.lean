@@ -44,3 +44,4 @@ theorem ae_complexGaussian_whitenedProjection_posDef_iff
 
 end
 end HaarProjection
+
