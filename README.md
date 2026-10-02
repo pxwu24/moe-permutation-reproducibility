@@ -13,13 +13,9 @@ using entangled inputs*.
 
 For arXiv:2608.25961, the linked file currently provides a Python numerical reproducibility code.
 
-For arXiv:2607.15210, start with the [verification summary](lean_arXiv_2607.15210/README.md).
-It lists the checked results, provides installation instructions, and states the
-remaining block-modified strong-convergence theorem in full. Proofs are grouped
-by topic, with [partial convergence work](lean_arXiv_2607.15210/partial_progress/)
-listed separately. The dimension-182 spectral certificate is exact; its
-finite-channel consequence depends on that convergence theorem. The certified
-bound is `k_high(1) <= 182`.
+For arXiv:2607.15210, all the results are verified in Lean fully or conditionally. For the conditionally verified results,
+they only assume the block-modified strong-convergence theorem: Theorem 5.2 in https://arxiv.org/pdf/1802.00067. We leave 
+the Lean formalization of strong convergence theorem in the future, due to limited computational resources.
 
 ```sh
 bash lean_arXiv_2607.15210/verify-all.sh
