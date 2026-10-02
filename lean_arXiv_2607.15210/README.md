@@ -6,7 +6,7 @@ minimum output p-Rényi entropy of quantum channels for all p ≥ 0*.
 **Verification summary.** The finite-dimensional, analytic, entropy, and
 dimension-182 spectral estimates have Lean proofs. The random-channel limits
 and channel-existence conclusions have Lean proofs **assuming one remaining
-theorem: block-modified strong convergence for Haar projections when k ≥ 2**.
+theorem: block-modified strong convergence for bipartite Haar projections**.
 Its full statement appears [below](#remaining-unverified-theorem), with a
 [folder documenting the partial formalization](partial_progress/).
 
