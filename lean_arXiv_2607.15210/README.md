@@ -39,7 +39,7 @@ the Python checks. Only the standard Lean axioms `propext`, `Classical.choice`,
 and `Quot.sound` are allowed. A successful build checks the stated hypotheses;
 it does not prove the remaining convergence theorem.
 
-## Results verified without the remaining theorem
+## Results fully verified
 
 <!-- RESULT_TABLE_START -->
 | Paper result | Verified statement |
@@ -52,20 +52,18 @@ it does not prove the remaining convergence theorem.
 | [Proposition V.2](results/V_2.md) | Eigenvalue shuffling |
 | [Proposition B.1](results/B_1.md) | Entropy of the one-channel output body after antisymmetric postprocessing |
 | [Proposition B.2](results/B_2.md) | Entropy of the limiting Bell output after antisymmetric postprocessing |
-| [Proposition VI.1](results/VI_1.md) | Dimension-182 spectral/body certificate (exact entropy gap) |
+| [Proposition VI.1](results/VI_1.md) | Dimension-182 certificate (exact entropy gap) |
 | [Lemma C.1](results/C_1.md) | Reduction of the entropy minimum |
 | [Lemma C.2](results/C_2.md) | Scalar certificate for the largest eigenvalue |
 <!-- RESULT_TABLE_END -->
 
 The dimension-182 certificate proves the strict limiting spectral inequality.
 The finite-channel consequence uses the convergence theorem below, and the
-bound is **k_high(1) ≤ 182**; minimality of 182 is not asserted.
+bound is **k_high(1) ≤ 182**.
 
-## Verified deductions from the remaining theorem
+## Verified results assuming block-modified strong convergence theorem
 
-The following proofs are complete as deductions from the single stated
-convergence input. Their random-channel conclusions are therefore conditional
-until that input is formalized.
+The following proofs are complete if we assume the block-modified strong convergence theorem.
 
 <!-- CONDITIONAL_TABLE_START -->
 | Paper result | Verified statement |
