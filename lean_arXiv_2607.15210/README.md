@@ -78,7 +78,6 @@ identification with a channel output is a separate operator statement.
 
 The spectral entropy estimates include p = 1. The main channel theorem has
 quantifiers **for every p > 0, there exist sufficiently large dimensions**.
-It does not assert one finite channel pair that works simultaneously for all p.
 
 ## Mathematical input and conventions
 
