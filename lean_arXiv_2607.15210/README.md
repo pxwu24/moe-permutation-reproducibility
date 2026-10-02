@@ -86,7 +86,7 @@ until that input is formalized.
 
 The remaining input is **block-modified strong convergence for Haar projections, for fixed output dimension $k\ge2$**. The precise part used in the paper is the following.
 
-Fix $k\ge2$, $t\in(0,1)$, and integers $0\le d_n\le nk$ such that $d_n/(nk)\to t$. Let $P_n$ be independent Haar-distributed rank-$d_n$ orthogonal projections on $\mathbb C^n\otimes\mathbb C^k$. For a fixed $V\in\mathcal U(k)$ and $a\in\mathbb R^k$, write
+Fix $k\ge2$, $t\in(0,1)$, and integers $0\le d_n\le nk$ such that $d_n/(nk)\to t$. Let $P_n$ be independent Haar-distributed orthogonal projections of rank $d_n$ on $\mathbb C^n\otimes\mathbb C^k$. For a fixed $V\in\mathcal U(k)$ and $a\in\mathbb R^k$, write
 
 $$
 Q_n^V=(I_n\otimes V^*)P_n(I_n\otimes V)
@@ -95,7 +95,7 @@ Q_n^V=(I_n\otimes V^*)P_n(I_n\otimes V)
 S_n^V(a)=\sum_{i=1}^k a_iQ_{ii}^{(n,V)}.
 $$
 
-For $\varphi_a(X)=\operatorname{Tr}(\operatorname{diag}(a)X)I_k$, the block-modified matrix is $(\mathrm{id}_n\otimes\varphi_a)(Q_n^V)=S_n^V(a)\otimes I_k$.
+For $\varphi_a(X)=\mathrm{Tr}(\mathrm{diag}(a)X)I_k$, the block-modified matrix is $(\mathrm{id}_n\otimes\varphi_a)(Q_n^V)=S_n^V(a)\otimes I_k$.
 
 Put $b_t=(1-t)\delta_0+t\delta_1$, and let $D_c$ denote dilation by $c$. There is a compactly supported probability measure
 
@@ -108,7 +108,7 @@ such that, for every fixed $c\in\mathbb R$, almost surely,
 
 $$
 \lim_{n\to\infty}\|cI_n+S_n^V(a)\|_\infty
-=\max_{x\in\operatorname{supp}\mu_{a,t}}|c+x|.
+=\max_{x\in\mathrm{supp}\,\mu_{a,t}}|c+x|.
 $$
 
 For every fixed bounded continuous $f:\mathbb R\to\mathbb R$, almost surely,

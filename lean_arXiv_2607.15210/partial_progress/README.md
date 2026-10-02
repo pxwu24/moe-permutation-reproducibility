@@ -37,7 +37,7 @@ The unmodified projection limits hold for every unitary sample. The first
 Haar compression moment also converges almost surely, on one event for every a:
 
 $$
-\frac{1}{n}\operatorname{Tr}S_n(a)
+\frac{1}{n}\mathrm{Tr}\,S_n(a)
 \longrightarrow t\sum_i a_i\qquad\text{almost surely}.
 $$
 
@@ -55,7 +55,7 @@ and applies Borel–Cantelli. Lean indexes the positive input dimension by n+1.
 The exact finite Haar calculation also proves
 
 $$
-\frac{1}{n}\mathbb E\operatorname{Tr}(S_n(a)^2)
+\frac{1}{n}\mathbb E\mathrm{Tr}(S_n(a)^2)
 \longrightarrow
 t^2\left(\sum_i a_i\right)^2+
 \frac{t(1-t)}{k}\sum_i a_i^2.
@@ -77,7 +77,7 @@ projection on C^n tensor C^k. For a real coefficient vector a and Haar U, put
 S = sum_i a_i (UPU*)_ii. For every 1 <= m <= N, the checked formula is
 
 $$
-\mathbb E\operatorname{Tr}(S^m)
+\mathbb E\mathrm{Tr}(S^m)
 =\sum_{\sigma\in S_m}c_\sigma\,
   n^{\#\mathrm{cycles}(\gamma\sigma)}
   \prod_{C\in\mathrm{cycles}(\sigma)}\sum_{i=1}^k a_i^{|C|},
@@ -157,7 +157,7 @@ The last step uses the finite-matrix inequality
 
 $$
 \mathbb P\{\|M_n\|\ge R\}
-\le R^{-2q_n}\mathbb E\operatorname{Tr}(M_n^{2q_n}),
+\le R^{-2q_n}\mathbb E\mathrm{Tr}(M_n^{2q_n}),
 $$
 
 with a moment order allowed to grow with dimension. Establishing a summable
