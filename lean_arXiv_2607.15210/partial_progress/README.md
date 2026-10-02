@@ -36,30 +36,30 @@ and audits their transitive axioms. The recorded outputs are in
 The unmodified projection limits hold for every unitary sample. The first
 Haar compression moment also converges almost surely, on one event for every a:
 
-$$
+```math
 \frac{1}{n}\mathrm{Tr}\,S_n(a)
 \longrightarrow t\sum_i a_i\qquad\text{almost surely}.
-$$
+```
 
 The proof derives Haar quadratic moments from permutation invariance and
 explicit two-coordinate real and imaginary unitary rotations. For the
 normalized trace q_n, it proves the actual estimate
 
-$$
-\mathbb E\bigl[(q_n-\mathbb E q_n)^2\bigr]
+```math
+\mathbb{E}\bigl[(q_n-\mathbb{E} q_n)^2\bigr]
 \leq\frac{\sum_i a_i^2}{k n^2}
-$$
+```
 
 and applies Borel–Cantelli. Lean indexes the positive input dimension by n+1.
 
 The exact finite Haar calculation also proves
 
-$$
-\frac{1}{n}\mathbb E\mathrm{Tr}(S_n(a)^2)
+```math
+\frac{1}{n}\mathbb{E}\mathrm{Tr}(S_n(a)^2)
 \longrightarrow
 t^2\left(\sum_i a_i\right)^2+
 \frac{t(1-t)}{k}\sum_i a_i^2.
-$$
+```
 
 This second-moment limit is in expectation. Almost-sure convergence of the
 second spectral moment would additionally require a concentration argument.
@@ -76,21 +76,21 @@ assumed as an additional input. Write N = nk and let P be a rank-d orthogonal
 projection on C^n tensor C^k. For a real coefficient vector a and Haar U, put
 S = sum_i a_i (UPU*)_ii. For every 1 <= m <= N, the checked formula is
 
-$$
-\mathbb E\mathrm{Tr}(S^m)
+```math
+\mathbb{E}\mathrm{Tr}(S^m)
 =\sum_{\sigma\in S_m}c_\sigma\,
   n^{\#\mathrm{cycles}(\gamma\sigma)}
   \prod_{C\in\mathrm{cycles}(\sigma)}\sum_{i=1}^k a_i^{|C|},
 \qquad \gamma=(1\;2\;\cdots\;m),
-$$
+```
 
 where the coefficients are entirely finite and deterministic:
 
-$$
+```math
 G_{\sigma,\tau}=N^{\#\mathrm{cycles}(\tau\sigma^{-1})},
 \qquad
 c=G^{-1}\bigl(d^{\#\mathrm{cycles}(\tau^{-1})}\bigr)_{\tau\in S_m}.
-$$
+```
 
 The same identity is proved for the actual `Canonical.probability` and its
 floor-rank sequence. The canonical theorem indexes the power by m+1 and the
@@ -112,14 +112,14 @@ The complete proof chain is:
 In the maximum absolute row-sum norm, these files prove the exact identity
 and inverse estimate
 
-$$
+```math
 \|N^{-m}G-I\|_{\mathrm{row}}
 =\varepsilon_{N,m}:=\prod_{j=0}^{m-1}(1+j/N)-1,
 \qquad
 \|N^mG^{-1}-I\|_{\mathrm{row}}
 \le\frac{\varepsilon_{N,m}}{1-\varepsilon_{N,m}}
 \quad(\varepsilon_{N,m}<1).
-$$
+```
 
 These are bounds for a finite permutation Gram matrix. They are not sharp
 spectral bounds for the random compression.
@@ -155,10 +155,10 @@ must also be established for those polynomials.
 
 The last step uses the finite-matrix inequality
 
-$$
-\mathbb P\{\|M_n\|\ge R\}
-\le R^{-2q_n}\mathbb E\mathrm{Tr}(M_n^{2q_n}),
-$$
+```math
+\mathbb{P}\{\|M_n\|\ge R\}
+\le R^{-2q_n}\mathbb{E}\mathrm{Tr}(M_n^{2q_n}),
+```
 
 with a moment order allowed to grow with dimension. Establishing a summable
 right-hand side for every R above the proposed limiting norm is the remaining
