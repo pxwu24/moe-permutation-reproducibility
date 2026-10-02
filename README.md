@@ -7,7 +7,11 @@ This repository provides Lean verification of the following arXiv papers, alongs
 | arXiv:2608.25961 | [Lean proofs and Python certificates](reproduce_numerics.py) |
 | arXiv:2609.26743 | [Lean proofs and Python certificates](./lean_arXiv:2609.26743/README.md) |
 
-For arXiv:2608.25961, the linked file currently provides Python numerical reproducibility code.
+For arXiv:2609.26743, the Lean project formalizes all the results, including the Supplement and the main
+theorem of *Explicit channels with unbounded gains in classical communication
+using entangled inputs*.
+
+For arXiv:2608.25961, the linked file currently provides a Python numerical reproducibility code.
 
 For arXiv:2607.15210, start with the [verification summary](lean_arXiv_2607.15210/README.md).
 It lists the checked results, provides installation instructions, and states the
@@ -20,10 +24,6 @@ bound is `k_high(1) <= 182`.
 ```sh
 bash lean_arXiv_2607.15210/verify-all.sh
 ```
-
-The Lean project for arXiv:2609.26743 formalizes the Supplement and the main
-theorem of *Explicit channels with unbounded gains in classical communication
-using entangled inputs*.
 
 The active Lean 4.33 project combines the adder trace bounds, entropy estimates,
 actual channel construction, finite-field Pauli randomization, Holevo bounds,
