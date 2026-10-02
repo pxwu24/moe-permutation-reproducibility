@@ -80,7 +80,7 @@ The following proofs are complete if we assume the block-modified strong converg
 | [Proposition VI.1](results/VI_1.md) | Dimension-182 finite-channel consequence of the certified gap |
 <!-- CONDITIONAL_TABLE_END -->
 
-## Remaining unverified theorem
+## Remaining unverified block-modified strong convergence theorem
 
 The remaining input is **block-modified strong convergence for Haar projections, for fixed output dimension $k\ge2$**. The precise part used in the paper is the following.
 
