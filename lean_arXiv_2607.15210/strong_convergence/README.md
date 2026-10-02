@@ -29,6 +29,12 @@ and audits their transitive axioms. The recorded outputs are in
 | Summable variance for the actual canonical compression | `ProjectionChannels.Canonical.normalizedCompressionTrace_variance_le` | [StrongConvergenceCanonicalVariance.lean](../StrongConvergenceCanonicalVariance.lean) |
 | Almost-sure first-moment convergence on one event for every real coefficient vector | `ProjectionChannels.Canonical.ae_normalizedCompressionTrace_tendsto_all` | [StrongConvergenceHaarFirstMomentAE.lean](../StrongConvergenceHaarFirstMomentAE.lean) |
 | Actual expected second compression moment, every k >= 2 | `ProjectionChannels.Canonical.normalized_second_moment_tendsto` | [StrongConvergenceHaarSecondCompression.lean](../StrongConvergenceHaarSecondCompression.lean) |
+| Actual Haar entry products at every order m <= N | `ProjectionChannels.TensorHaar.integral_projection_entry_product` | [Weingarten formula](../StrongConvergenceTensorWeingarten.lean) |
+| Actual compression trace moments at every order m <= N | `ProjectionChannels.TensorHaar.integral_projection_compression_trace_cycles` | [Compression cycle formula](../StrongConvergenceTensorCompressionCycles.lean) |
+| Exact formula for the canonical sequence, eventually for each fixed order | `ProjectionChannels.Canonical.eventually_integral_compression_trace_cycles` | [Canonical ensemble](../StrongConvergenceTensorCanonical.lean) |
+| Each color contraction is a product of power sums over cycles | `ProjectionChannels.TensorHaar.weightedCycleMoment_eq_product_powerSums` | [Weighted cycles](../StrongConvergenceTensorWeightedCycles.lean) |
+| Exact dimension-dependent normalized Gram row error | `ProjectionChannels.TensorHaar.normalized_permutationGram_sub_one_row_product` | [Gram row formula](../StrongConvergenceTensorGramRow.lean) |
+| Quantitative inverse-Gram row error | `ProjectionChannels.TensorHaar.scaled_inverse_permutationGram_row_bound` | [Inverse bound](../StrongConvergenceTensorInverseBound.lean) |
 | Deterministic tensor matrix units have a joint strong limit | `StrongConvergenceBlock.tensorUnits_stronglyConverge` | [StrongConvergenceBlockMatrixUnits.lean](../StrongConvergenceBlockMatrixUnits.lean) |
 | Uniform compact spectral bound for every projection compression | `StrongConvergence.projection_compression_norm_le` | [StrongConvergenceCompressionBounds.lean](../StrongConvergenceCompressionBounds.lean) |
 | Fixed moments and weak spectral convergence do not imply norm convergence | `StrongConvergence.spikeMatrix_weak_spectral_limit`, `spikeMatrix_norm` | [StrongConvergenceOutlier.lean](../StrongConvergenceOutlier.lean) |
@@ -69,6 +75,72 @@ output-unitary rotations, and bounded continuous test functions. The paper
 needs k >= 2, where the compression is no longer a scalar multiple of the
 original projection.
 
+## All-order finite Haar integration
+
+The finite integration formula is proved from Haar invariance, rather than
+assumed as an additional input. Write N = nk and let P be a rank-d orthogonal
+projection on C^n tensor C^k. For a real coefficient vector a and Haar U, put
+S = sum_i a_i (UPU*)_ii. For every 1 <= m <= N, the checked formula is
+
+\[
+\mathbb E\operatorname{Tr}(S^m)
+=\sum_{\sigma\in S_m}c_\sigma\,
+  n^{\#\mathrm{cycles}(\gamma\sigma)}
+  \prod_{C\in\mathrm{cycles}(\sigma)}\sum_{i=1}^k a_i^{|C|},
+\qquad \gamma=(1\;2\;\cdots\;m),
+\]
+
+where the coefficients are entirely finite and deterministic:
+
+\[
+G_{\sigma,\tau}=N^{\#\mathrm{cycles}(\tau\sigma^{-1})},
+\qquad
+c=G^{-1}\bigl(d^{\#\mathrm{cycles}(\tau^{-1})}\bigr)_{\tau\in S_m}.
+\]
+
+The same identity is proved for the actual `Canonical.probability` and its
+floor-rank sequence. The canonical theorem indexes the power by m+1 and the
+input dimension by n+1; its eventual version constructs the required
+dimension embedding internally. Signed coefficients are included.
+
+The complete proof chain is:
+
+| Step | Related Lean files |
+| --- | --- |
+| Tensor powers and diagonal phase invariance | [Power](../StrongConvergenceTensorPower.lean), [Phase](../StrongConvergenceTensorPhase.lean) |
+| Unitary commutation extends to all complex matrices; invariant tensors are spanned by permutations | [Complexification](../StrongConvergenceTensorComplexification.lean), [Spanning](../StrongConvergenceTensorSpanning.lean) |
+| Actual Haar average is invariant; its contractions are preserved | [Haar integral](../StrongConvergenceTensorHaarIntegral.lean), [Haar trace](../StrongConvergenceTensorHaarTrace.lean) |
+| Permutation operators, cycle counts, and invertible Gram matrix | [Permutation](../StrongConvergenceTensorPermutation.lean), [Cycles](../StrongConvergenceTensorCycles.lean), [Gram](../StrongConvergenceTensorGram.lean) |
+| Projection contractions and all-order integration | [Projection](../StrongConvergenceTensorProjection.lean), [Weingarten](../StrongConvergenceTensorWeingarten.lean) |
+| Compression expansion, cycle formula, and canonical specialization | [Block moments](../StrongConvergenceTensorBlockMoments.lean), [Compression cycles](../StrongConvergenceTensorCompressionCycles.lean), [Weighted cycles](../StrongConvergenceTensorWeightedCycles.lean), [Canonical](../StrongConvergenceTensorCanonical.lean) |
+| Quantitative bounds, including a Burnside orbit-count calculation | [Gram bounds](../StrongConvergenceTensorGramBounds.lean), [Gram row](../StrongConvergenceTensorGramRow.lean), [Inverse bound](../StrongConvergenceTensorInverseBound.lean) |
+
+In the maximum absolute row-sum norm, these files prove the exact identity
+and inverse estimate
+
+\[
+\|N^{-m}G-I\|_{\mathrm{row}}
+=\varepsilon_{N,m}:=\prod_{j=0}^{m-1}(1+j/N)-1,
+\qquad
+\|N^mG^{-1}-I\|_{\mathrm{row}}
+\le\frac{\varepsilon_{N,m}}{1-\varepsilon_{N,m}}
+\quad(\varepsilon_{N,m}<1).
+\]
+
+These are bounds for a finite permutation Gram matrix. They are not sharp
+spectral bounds for the random compression.
+
+The standard-library Python implementation uses exact rational arithmetic:
+
+```sh
+python3 lean_arXiv_2607.15210/strong_convergence/exact_haar_moments.py
+```
+
+[The program](exact_haar_moments.py) checks the first two known moments,
+zero/full-rank and rank-one projections through order four, and the Gram
+and inverse-Gram bounds. Its matrix has m! rows, so it is intended for small
+orders. These finite checks do not certify asymptotic strong convergence.
+
 ## Proved reductions with explicit hypotheses
 
 These are intermediate theorems. Their hypotheses still need to be proved
@@ -102,10 +174,14 @@ while its operator norm is always 2.
 
 ## Remaining mathematical work
 
-1. Prove the limiting mixed-moment law for Haar projections and tensor matrix
-   units, and identify the compression's inverse-Cauchy germ with the Bernoulli
-   free-sum germ used by `IsBernoulliFreeSumLaw`. The first and second moment
-   calculations do not identify that law.
+1. Extract the all-order limiting moments from the finite permutation formula
+   and identify the compression's inverse-Cauchy germ with the Bernoulli
+   free-sum germ used by `IsBernoulliFreeSumLaw`. This requires the scaled
+   off-diagonal inverse-Gram coefficients and the geodesic/noncrossing
+   permutation cancellations. The unweighted inverse-row bound alone does
+   not determine those coefficients after the dimension factors are applied.
+   The moment-based route also needs summable fluctuation estimates to pass
+   from expected moments to almost-sure weak convergence.
 2. Prove sharp high-degree moment estimates or resolvent estimates that exclude
    eigenvalues outside the limiting support. The probability and norm lemmas
    above make the required quantitative implication explicit, but do not

@@ -1,0 +1,48 @@
+{
+  "status": "pass",
+  "arithmetic": "exact rational",
+  "scope": "Finite Haar moment formula checks, not asymptotic convergence",
+  "low_moments": [
+    {
+      "n": 2,
+      "k": 2,
+      "rank": 2,
+      "first": "0",
+      "second": "4/15"
+    },
+    {
+      "n": 2,
+      "k": 3,
+      "rank": 3,
+      "first": "3/4",
+      "second": "471/280"
+    },
+    {
+      "n": 3,
+      "k": 2,
+      "rank": 4,
+      "first": "2/3",
+      "second": "106/105"
+    },
+    {
+      "n": 1,
+      "k": 3,
+      "rank": 2,
+      "first": "5/3",
+      "second": "77/24"
+    }
+  ],
+  "endpoint_and_rank_one_orders": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "gram_bound": {
+    "dimension": 17,
+    "order": 3,
+    "epsilon": "53/289",
+    "inverse_error": "49/240",
+    "bound": "53/236"
+  }
+}

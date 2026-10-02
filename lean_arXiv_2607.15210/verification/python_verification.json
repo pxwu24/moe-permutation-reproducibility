@@ -6,14 +6,14 @@
       "exit_code": 0,
       "source": "final_draft_audit/random_compression_check.py",
       "source_sha256": "b706e2997748dc78d2bfaa3121c46cf4826bea4d1e968af38cdf6c61595d6b55",
-      "seconds": 5.79
+      "seconds": 5.921
     },
     {
       "check": "entropy",
       "exit_code": 0,
       "source": "entropy/verify_entropy.py",
       "source_sha256": "60092ef9250920d51345052872862092d5adf9c6b9337629c23c98462049a5a1",
-      "seconds": 0.515
+      "seconds": 0.554
     },
     {
       "check": "tensor",
@@ -27,29 +27,36 @@
       "exit_code": 0,
       "source": "final_draft_audit/verify_bell_limit.py",
       "source_sha256": "8b9d6831621d7003e5a3047ad3cea9661d2c8994d68e4d7ce8327b7d8d9a1b96",
-      "seconds": 2.205
+      "seconds": 2.347
     },
     {
       "check": "main",
       "exit_code": 0,
       "source": "final_draft_audit/verify_main_coefficient.py",
       "source_sha256": "94f2171624e1a78c5b2aee82f7fa1badebda65339e055053b54b2f4e856cd24c",
-      "seconds": 0.512
+      "seconds": 0.534
     },
     {
       "check": "k182",
       "exit_code": 0,
       "source": "final_draft_audit/certify_k182_exact.py",
       "source_sha256": "ac954813354c31e6ecd96e1dab7aab4a790d0c7ef0ec3f5d3113ffcabd75956c",
-      "seconds": 0.05
+      "seconds": 0.048
     },
     {
       "check": "k182_optimized_python",
       "exit_code": 0,
       "source": "final_draft_audit/certify_k182_exact.py",
       "source_sha256": "ac954813354c31e6ecd96e1dab7aab4a790d0c7ef0ec3f5d3113ffcabd75956c",
-      "seconds": 0.177
+      "seconds": 0.188
+    },
+    {
+      "check": "finite_haar_moments",
+      "exit_code": 0,
+      "source": "strong_convergence/exact_haar_moments.py",
+      "source_sha256": "dd3da0d1400816d83675eb85d546e7df3d8a9f75e5906e2fff4fc510911ea68a",
+      "seconds": 0.065
     }
   ],
-  "scope": "Exact k182 scalar certificate; other numerical checks are not universal proofs."
+  "scope": "Exact k182 scalar certificate and finite rational Haar moment checks; numerical checks do not prove general asymptotic convergence."
 }

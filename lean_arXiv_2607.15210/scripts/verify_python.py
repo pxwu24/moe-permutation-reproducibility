@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the seven-part numerical checks and the exact k182 certificate."""
+"""Run the numerical checks and exact finite arithmetic certificates."""
 import json
 from pathlib import Path
 import subprocess
@@ -23,7 +23,9 @@ def run():
         ('bell', A, ['verify_bell_limit.py']),
         ('main', A, ['verify_main_coefficient.py']),
         ('k182', A, ['certify_k182_exact.py', '--json', 'certificate_results.json']),
-        ('k182_optimized_python', A, ['-O', 'certify_k182_exact.py'])]
+        ('k182_optimized_python', A, ['-O', 'certify_k182_exact.py']),
+        ('finite_haar_moments', ROOT/'strong_convergence',
+         ['exact_haar_moments.py', '--output', 'exact_haar_moments_results.json'])]
     records = []
     for name, cwd, args in cases:
         start = time.monotonic()
@@ -39,7 +41,7 @@ def run():
                         'source_sha256': hashlib.sha256((cwd/next(a for a in args if a.endswith('.py'))).read_bytes()).hexdigest(),
                         'seconds': round(time.monotonic()-start, 3)})
     summary = {'status': 'pass', 'checks': records,
-               'scope': 'Exact k182 scalar certificate; other numerical checks are not universal proofs.'}
+               'scope': 'Exact k182 scalar certificate and finite rational Haar moment checks; numerical checks do not prove general asymptotic convergence.'}
     status_file.write_text(json.dumps(summary, indent=2)+'\n')
 
 

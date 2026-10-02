@@ -97,8 +97,10 @@ of this development.
 
 [Work toward removing this input](strong_convergence/README.md) now proves
 the full input for k = 1 and the unmodified Bernoulli projection limit for
-every k > 0, together with finite Haar moments and the analytic and
-probabilistic convergence reductions. The general block-modified theorem
+every k > 0. For every k >= 2 it also proves the exact Haar compression
+moment formula at every order below the ambient dimension, with explicit
+permutation-cycle coefficients and quantitative inverse-Gram bounds.
+The general block-modified theorem
 for k >= 2 remains unproved; the conditional statuses in the table remain
 in force.
 

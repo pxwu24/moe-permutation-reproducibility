@@ -215,10 +215,29 @@ lean_lib Preliminaries where
     `StrongConvergenceScalarProjection,
     `StrongConvergenceScalarProjectionTrace,
     `StrongConvergenceScalarTrace,
+    `StrongConvergenceTensorBlockMoments,
+    `StrongConvergenceTensorCanonical,
+    `StrongConvergenceTensorComplexification,
+    `StrongConvergenceTensorCompressionCycles,
+    `StrongConvergenceTensorCycles,
+    `StrongConvergenceTensorGram,
+    `StrongConvergenceTensorGramBounds,
+    `StrongConvergenceTensorGramRow,
+    `StrongConvergenceTensorHaarIntegral,
+    `StrongConvergenceTensorHaarTrace,
+    `StrongConvergenceTensorInverseBound,
+    `StrongConvergenceTensorPermutation,
+    `StrongConvergenceTensorPhase,
+    `StrongConvergenceTensorPower,
+    `StrongConvergenceTensorProjection,
+    `StrongConvergenceTensorSpanning,
+    `StrongConvergenceTensorWeightedCycles,
+    `StrongConvergenceTensorWeingarten,
     `StrongConvergenceVarianceAlgebra,
     `StrongConvergenceVarianceBorelCantelli,
     `SuppliedBernoulliEdge,
-    `UnprovedTargets]
+    `UnprovedTargets
+  ]
 
 
 lean_lib Entropy where

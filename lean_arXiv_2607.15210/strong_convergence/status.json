@@ -6,19 +6,30 @@
     "ProjectionChannels.canonical_fullBlockModifiedStrongInput_one",
     "ProjectionChannels.ScalarStrong.canonical_projection_scalar_strong",
     "ProjectionChannels.Canonical.ae_normalizedCompressionTrace_tendsto_all",
-    "ProjectionChannels.Canonical.normalized_second_moment_tendsto"
+    "ProjectionChannels.Canonical.normalized_second_moment_tendsto",
+    "ProjectionChannels.TensorHaar.integral_projection_entry_product",
+    "ProjectionChannels.TensorHaar.integral_projection_compression_trace_cycles",
+    "ProjectionChannels.TensorHaar.weightedCycleMoment_eq_product_powerSums",
+    "ProjectionChannels.Canonical.eventually_integral_compression_trace_cycles",
+    "ProjectionChannels.TensorHaar.normalized_permutationGram_sub_one_row_product",
+    "ProjectionChannels.TensorHaar.scaled_inverse_permutationGram_row_bound"
   ],
   "scope_notes": [
     "The full black-box interface is proved only for k = 1.",
     "The unmodified projection convergence is proved for every k > 0.",
     "The actual normalized first compression moment converges almost surely, on one event for all real coefficient vectors.",
     "The actual normalized second compression moment is proved to converge in expectation, not almost surely.",
-    "Conditional reduction theorems retain their displayed hypotheses."
+    "Conditional reduction theorems retain their displayed hypotheses.",
+    "All finite Haar projection entry products and compression trace moments are evaluated at every order below the ambient dimension, including k >= 2 and signed coefficient vectors.",
+    "The invariant tensor spanning theorem, Gram invertibility, Haar integration formula, and cycle contractions are proved rather than assumed.",
+    "Exact normalized Gram and quantitative inverse-Gram row estimates are proved with the product error parameter.",
+    "These finite formulas do not yet establish higher-order limiting freeness or sharp spectral outlier exclusion."
   ],
   "remaining_obligations": [
-    "Higher Haar mixed-moment convergence and identification with the Bernoulli free-sum law.",
+    "Permutation-dependent inverse-Gram asymptotics, fixed-order compression moment limits with summable fluctuation control, and identification with the Bernoulli free-sum law.",
     "Sharp upper spectral bounds excluding outliers for general block compressions.",
     "Assembly of FullBlockModifiedStrongInput for every required k and t."
   ],
-  "verification": "../verification/verification_status.json"
+  "verification": "../verification/verification_status.json",
+  "finite_exact_python_checks": "exact_haar_moments_results.json"
 }
