@@ -107,7 +107,7 @@ $$
 such that, for every fixed $c\in\mathbb R$, almost surely,
 
 $$
-\lim_{n\to\infty} \| cI_n+S_n^V(a) \|_\infty
+\lim_{n\to\infty} || cI_n+S_n^V(a) ||_\infty
 =\max_{x\in\mathrm{supp}\,\mu_{a,t}}|c+x|.
 $$
 
