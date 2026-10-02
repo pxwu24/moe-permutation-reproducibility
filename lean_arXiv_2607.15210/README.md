@@ -119,9 +119,9 @@ $$
 =\int_{\mathbb R}f(x)\,d\mu_{a,t}(x).
 $$
 
-The same deterministic measure is used in both limits. In the precise Lean interface, the probability-one event may depend on the fixed choices $V,a,c$ or $V,a,f$; a common event for all these uncountably many choices is not an assumption.
+The same deterministic measure is used in both limits. In the precise Lean interface, the probability-one event may depend on the fixed choices $V,a,c$ or $V,a,f$.
 
-The law is specified analytically, without assuming its spectral edge. Its $R$-transform germ is
+The law is specified analytically, without assuming its spectral edge. Its $R$-transform is
 
 $$
 R_{\mu_{a,t}}(w)=\sum_{i=1}^k a_iR_{b_t}(a_iw/k),
