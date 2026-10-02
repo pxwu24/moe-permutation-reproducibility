@@ -95,6 +95,13 @@ theorem to that concrete ensemble for the channel-existence result. An abstract
 C*-algebraic construction of free additive convolution is not a separate claim
 of this development.
 
+[Work toward removing this input](strong_convergence/README.md) now proves
+the full input for k = 1 and the unmodified Bernoulli projection limit for
+every k > 0, together with finite Haar moments and the analytic and
+probabilistic convergence reductions. The general block-modified theorem
+for k >= 2 remains unproved; the conditional statuses in the table remain
+in force.
+
 The numbered guides follow the supplied draft. In Lemma II.3, write
 “output-first Choi matrix” for `C_phi = I tensor A`; the preliminaries'
 input-first convention gives `J_phi = A tensor I`. Lemma III.3 needs nonempty

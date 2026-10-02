@@ -124,6 +124,10 @@ def verify(direct=False, jobs=2):
     modules['AggregateAudit'] = ROOT / 'AggregateAudit.lean'
     ordered.append('AggregateAudit')
     prefix = ['lean'] if direct else ['lake', 'env', 'lean']
+    # Resolve a changed Lake configuration once before independent workers
+    # enter `lake env`; simultaneous reconfiguration requires an exclusive lock.
+    subprocess.run(prefix + ['--version'], cwd=ROOT, check=True,
+                   stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     hashes = {name: hashlib.sha256(path.read_bytes()).hexdigest()
               for name, path in modules.items()}
     dependencies = {name: set(IMPORT.findall(path.read_text())) & modules.keys()
