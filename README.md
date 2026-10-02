@@ -3,9 +3,11 @@ This repository provides Lean verification of the following arXiv papers, alongs
 
 | Paper | Available files |
 | --- | --- |
-| arXiv:2607.15210 | [Lean proofs, installation guide, and Python certificates](./lean_arXiv_2607.15210/README.md) |
-| arXiv:2608.25961 | [Numerical reproducibility code](reproduce_numerics.py) |
-| arXiv:2609.26743 | [`lean_arXiv:2609.26743/`](./lean_arXiv:2609.26743/README.md) |
+| arXiv:2607.15210 | [Lean proofs and Python certificates](./lean_arXiv_2607.15210/README.md) |
+| arXiv:2608.25961 | [Lean proofs and Python certificates](reproduce_numerics.py) |
+| arXiv:2609.26743 | [Lean proofs and Python certificates](./lean_arXiv:2609.26743/README.md) |
+
+For arXiv:2608.25961, the linked file currently provides Python numerical reproducibility code.
 
 For arXiv:2607.15210, start with the [verification summary](lean_arXiv_2607.15210/README.md).
 It lists the checked results, provides installation instructions, and states the
