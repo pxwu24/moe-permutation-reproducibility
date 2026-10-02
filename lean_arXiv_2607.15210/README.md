@@ -82,7 +82,7 @@ The following proofs are complete if we assume the block-modified strong converg
 
 ## Remaining unverified block-modified strong convergence theorem
 
-The remaining input is **block-modified strong convergence for Haar projections, for fixed output dimension $k\ge2$**. The precise part used in the paper is the following.
+The remaining unverified result is **block-modified strong convergence for Haar projections, for fixed output dimension $k\ge2$**. It is Theorem 5.2 in https://arxiv.org/pdf/1802.00067. The precise statement used in the paper is the following.
 
 Fix $k\ge2$, $t\in(0,1)$, and integers $0\le d_n\le nk$ such that $d_n/(nk)\to t$. Let $P_n$ be independent Haar-distributed orthogonal projections of rank $d_n$ on $\mathbb C^n\otimes\mathbb C^k$. For a fixed $V\in\mathcal U(k)$ and $a\in\mathbb R^k$, write
 
