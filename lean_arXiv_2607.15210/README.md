@@ -62,7 +62,7 @@ The dimension-182 certificate proves the strict limiting spectral inequality.
 The finite-channel consequence uses the convergence theorem below, and the
 bound is **k_high(1) ≤ 182**.
 
-## Verified results assuming block-modified strong convergence theorem
+## Results verified conditioned on block-modified strong convergence theorem
 
 The following proofs are complete if we assume the block-modified strong convergence theorem.
 
