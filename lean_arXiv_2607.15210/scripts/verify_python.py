@@ -8,7 +8,7 @@ import time
 import hashlib
 
 ROOT = Path(__file__).resolve().parents[1]
-A = ROOT/'final_draft_audit'
+P = ROOT/'python'
 
 
 def run():
@@ -17,14 +17,14 @@ def run():
     status_file = ROOT/'verification/python_verification.json'
     status_file.write_text(json.dumps({'status': 'running'})+'\n')
     cases = [
-        ('compression', A, ['random_compression_check.py', '--output', 'random_compression_results.json']),
-        ('entropy', ROOT/'entropy', ['verify_entropy.py', '--output', 'python_results.json']),
-        ('tensor', ROOT/'entropy', ['verify_tensor_spectra.py', '--output', 'tensor_spectra_results.json']),
-        ('bell', A, ['verify_bell_limit.py']),
-        ('main', A, ['verify_main_coefficient.py']),
-        ('k182', A, ['certify_k182_exact.py', '--json', 'certificate_results.json']),
-        ('k182_optimized_python', A, ['-O', 'certify_k182_exact.py']),
-        ('finite_haar_moments', ROOT/'strong_convergence',
+        ('compression', P/'random_compression', ['random_compression_check.py', '--output', 'random_compression_results.json']),
+        ('entropy', P/'entropy', ['verify_entropy.py', '--output', 'python_results.json']),
+        ('tensor', P/'entropy', ['verify_tensor_spectra.py', '--output', 'tensor_spectra_results.json']),
+        ('bell', P/'bell_output', ['verify_bell_limit.py']),
+        ('main', P/'nonadditivity', ['verify_main_coefficient.py']),
+        ('k182', P/'dimension_182', ['certify_k182_exact.py', '--json', 'certificate_results.json']),
+        ('k182_optimized_python', P/'dimension_182', ['-O', 'certify_k182_exact.py']),
+        ('finite_haar_moments', ROOT/'partial_progress',
          ['exact_haar_moments.py', '--output', 'exact_haar_moments_results.json'])]
     records = []
     for name, cwd, args in cases:

@@ -1,8 +1,0 @@
-import RevisionBellHessianResult
-
-#print axioms ProjectionChannels.IsBernoulliFreeSumLaw.positive_bounds
-#print axioms RevisionBell.exists_smooth_bernoulli_root_general
-#print axioms RevisionBell.rootLogExpression_hessian
-#print axioms RevisionBell.bernoulli_logPotential_hessian
-#print axioms RevisionBell.bernoulli_logPotential_eventually_differentiable
-#check RevisionBell.bernoulli_logPotential_hessian

@@ -1,0 +1,3 @@
+'ProjectionChannels.TensorHaar.permutation_trace_tensorHaarMoment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

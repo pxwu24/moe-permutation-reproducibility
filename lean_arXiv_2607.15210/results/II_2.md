@@ -1,6 +1,6 @@
 # Lemma II.2: Full local support of a Haar-random subspace
 
-**Status: Complete.**
+Complete.
 
 Actual unitary Haar probability measure, projection conjugation, partial-trace rank min(n,k*d), and almost-sure positive-definiteness iff n<=k*d.
 
@@ -25,25 +25,25 @@ The displayed hypotheses are part of the checked statement. A theorem conditiona
 
 ## Entry files
 
-- [HaarFullLocalSupport](../HaarFullLocalSupport.lean)
+- [HaarProjections.HaarFullLocalSupport](../lean/HaarProjections/HaarFullLocalSupport.lean)
 
 ## All related Lean files
 
 This is the complete transitive local import closure of the entry files. Mathlib dependencies are pinned in `lake-manifest.json`.
 
-- [GaussianMatrixLaw.lean](../GaussianMatrixLaw.lean)
-- [GaussianRadial.lean](../GaussianRadial.lean)
-- [GaussianRank.lean](../GaussianRank.lean)
-- [GaussianUnitary.lean](../GaussianUnitary.lean)
-- [GaussianWhitening.lean](../GaussianWhitening.lean)
-- [HaarFullLocalSupport.lean](../HaarFullLocalSupport.lean)
-- [HaarLocalSupport.lean](../HaarLocalSupport.lean)
-- [HaarMeasure.lean](../HaarMeasure.lean)
-- [HaarOrbitUnique.lean](../HaarOrbitUnique.lean)
-- [HaarProjection.lean](../HaarProjection.lean)
-- [MatrixRankMeasurable.lean](../MatrixRankMeasurable.lean)
-- [PreliminariesMatrix.lean](../PreliminariesMatrix.lean)
-- [ProjectionOrbit.lean](../ProjectionOrbit.lean)
+- [lean/HaarProjections/GaussianMatrixLaw.lean](../lean/HaarProjections/GaussianMatrixLaw.lean)
+- [lean/HaarProjections/GaussianRadial.lean](../lean/HaarProjections/GaussianRadial.lean)
+- [lean/HaarProjections/GaussianRank.lean](../lean/HaarProjections/GaussianRank.lean)
+- [lean/HaarProjections/GaussianUnitary.lean](../lean/HaarProjections/GaussianUnitary.lean)
+- [lean/HaarProjections/GaussianWhitening.lean](../lean/HaarProjections/GaussianWhitening.lean)
+- [lean/HaarProjections/HaarFullLocalSupport.lean](../lean/HaarProjections/HaarFullLocalSupport.lean)
+- [lean/HaarProjections/HaarLocalSupport.lean](../lean/HaarProjections/HaarLocalSupport.lean)
+- [lean/HaarProjections/HaarMeasure.lean](../lean/HaarProjections/HaarMeasure.lean)
+- [lean/HaarProjections/HaarOrbitUnique.lean](../lean/HaarProjections/HaarOrbitUnique.lean)
+- [lean/HaarProjections/HaarProjection.lean](../lean/HaarProjections/HaarProjection.lean)
+- [lean/HaarProjections/MatrixRankMeasurable.lean](../lean/HaarProjections/MatrixRankMeasurable.lean)
+- [lean/HaarProjections/ProjectionOrbit.lean](../lean/HaarProjections/ProjectionOrbit.lean)
+- [lean/Preliminaries/PreliminariesMatrix.lean](../lean/Preliminaries/PreliminariesMatrix.lean)
 
 ## Assumptions and dependencies
 

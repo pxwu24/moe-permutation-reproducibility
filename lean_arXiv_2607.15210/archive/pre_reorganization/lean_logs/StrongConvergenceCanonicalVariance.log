@@ -1,0 +1,3 @@
+'ProjectionChannels.Canonical.normalizedCompressionTrace_variance_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

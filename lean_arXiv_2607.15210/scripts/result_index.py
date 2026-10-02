@@ -5,7 +5,7 @@ import argparse
 import json
 import re
 from pathlib import Path
-from verify_lean import ROOT, IMPORT, source_modules
+from verify_lean import ROOT, IMPORT, source_modules, partial_progress_index
 
 KINDS = {'II.2':'Lemma', 'II.3':'Lemma', 'III.1':'Theorem', 'III.2':'Corollary',
          'III.3':'Lemma', 'III.4':'Lemma', 'IV.1':'Theorem', 'IV.2':'Corollary',
@@ -14,8 +14,8 @@ KINDS = {'II.2':'Lemma', 'II.3':'Lemma', 'III.1':'Theorem', 'III.2':'Corollary',
          'B.1':'Proposition', 'B.2':'Proposition', 'C.1':'Lemma', 'C.2':'Lemma'}
 
 
-def generate():
-    data = json.loads((ROOT / 'RESULTS.json').read_text())
+def generate(include_readme=True):
+    data = json.loads((ROOT / 'results/RESULTS.json').read_text())
     modules = source_modules()
     artifacts, index, declarations = {}, [], []
     for row in data['results']:
@@ -37,10 +37,13 @@ def generate():
         filename = number.replace('.', '_') + '.md'
         kind = KINDS[number]
         status = {'complete': 'Complete',
-                  'complete_under_permitted_black_box': 'Complete under the permitted block-modified strong-convergence input'
+                  'complete_under_permitted_black_box': 'Deduction verified; the block-modified strong-convergence theorem remains an input'
                  }.get(row['status'], 'Components checked; full statement unfinished')
-        body = f'# {kind} {number}: {title}\n\n**Status: {status}.**\n\n'
+        body = f'# {kind} {number}: {title}\n\n{status}.\n\n'
         body += row['proved_scope'] + '\n\n'
+        if row['status'] == 'complete_under_permitted_black_box':
+            body += ('The full unverified input and the Lean progress are stated in '
+                     '[partial_progress/](../partial_progress/README.md).\n\n')
         body += '## Check this result\n\nFirst run `bash lean_arXiv_2607.15210/verify-all.sh` from the repository root. '
         body += 'Then, from `lean_arXiv_2607.15210/`, run:\n\n```sh\n'
         body += "cat > InspectResult.lean <<'LEAN'\nimport AllProofs\n\n"
@@ -78,20 +81,32 @@ def generate():
         index.append({'number': number, 'status': row['status'],
                       'declarations': row['declarations'], 'local_import_closure': related})
     artifacts[ROOT / 'verification/result_sources.json'] = json.dumps(index, indent=2) + '\n'
-    readme = (ROOT / 'README.md').read_text()
-    table = '| Paper result | Checked result | Status |\n| --- | --- | --- |\n'
-    for row in data['results']:
-        status = {'complete': 'Complete',
-                  'complete_under_permitted_black_box': 'Complete under the permitted convergence theorem'
-                 }.get(row['status'], 'Unfinished')
-        number = row['number']
-        table += (f"| [{KINDS[number]} {number}](results/{number.replace('.', '_')}.md) | "
-                  f"{row['title']} | {status} |\n")
-    readme = re.sub(r'<!-- RESULT_TABLE_START -->.*?<!-- RESULT_TABLE_END -->',
-                    '<!-- RESULT_TABLE_START -->\n' + table + '<!-- RESULT_TABLE_END -->',
-                    readme, flags=re.S)
-    artifacts[ROOT / 'README.md'] = readme
-    artifacts[ROOT / 'ResultChecks.lean'] = ('import AllProofs\n\n'
+    artifacts[ROOT / 'partial_progress/source_index.json'] = partial_progress_index(modules)
+    if include_readme:
+        readme = (ROOT / 'README.md').read_text()
+        for marker, status in [('RESULT_TABLE', 'complete'),
+                               ('CONDITIONAL_TABLE', 'complete_under_permitted_black_box')]:
+            table = '| Paper result | Verified statement |\n| --- | --- |\n'
+            for row in data['results']:
+                number = row['number']
+                if row['status'] == status:
+                    title = row['title']
+                    if number == 'VI.1':
+                        title = 'Dimension-182 finite-channel consequence of the certified gap'
+                elif marker == 'RESULT_TABLE' and number == 'VI.1':
+                    title = 'Dimension-182 spectral/body certificate (exact entropy gap)'
+                else:
+                    continue
+                table += (f"| [{KINDS[number]} {number}](results/{number.replace('.', '_')}.md) | "
+                          f"{title} |\n")
+            pattern = f'<!-- {marker}_START -->.*?<!-- {marker}_END -->'
+            readme, matches = re.subn(pattern,
+                f'<!-- {marker}_START -->\n' + table + f'<!-- {marker}_END -->',
+                readme, flags=re.S)
+            if matches != 1:
+                raise ValueError('README must contain exactly one ' + marker + ' marker pair')
+        artifacts[ROOT / 'README.md'] = readme
+    artifacts[ROOT / 'lean/Checks/ResultChecks.lean'] = ('import AllProofs\n\n'
         + '\n'.join('#check ' + name for name in dict.fromkeys(declarations)) + '\n')
     return artifacts
 
@@ -99,8 +114,9 @@ def generate():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--check', action='store_true')
+    parser.add_argument('--no-readme', action='store_true', help='Regenerate guides without editing README prose or tables')
     args = parser.parse_args()
-    for path, content in generate().items():
+    for path, content in generate(include_readme=not args.no_readme).items():
         if args.check:
             if not path.is_file() or path.read_text() != content:
                 raise SystemExit('Result index is stale: ' + str(path.relative_to(ROOT)))

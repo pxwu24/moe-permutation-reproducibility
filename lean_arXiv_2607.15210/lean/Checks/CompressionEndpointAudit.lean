@@ -1,0 +1,5 @@
+import RandomCompression.CompressionEndpointGlue
+
+#print axioms ProjectionChannels.cauchy_agreement_upper_of_real_right
+#print axioms ProjectionChannels.no_real_holomorphic_right_continuation_at_support
+#print axioms ProjectionChannels.inverse_cauchy_finite_endpoint_deriv_eq_zero

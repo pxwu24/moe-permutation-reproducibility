@@ -1,0 +1,37 @@
+import Preliminaries.PreliminariesMatrix
+import Preliminaries.PreliminariesChoi
+import Preliminaries.PreliminariesLegendre
+import Preliminaries.PreliminariesAnalysis
+import Preliminaries.CompletePositivity
+import RandomCompression.BernoulliCalculus
+import RandomCompression.BernoulliDuality
+import RandomCompression.BernoulliEdgeCalculus
+import RandomCompression.BernoulliCriticalPoint
+import RandomCompression.CompressionSpectral
+import RandomCompression.CompressionExtension
+import RandomCompression.BlockModification
+import RandomCompression.ProjectionStrongConvergence
+import HaarProjections.GaussianRank
+import HaarProjections.GaussianRadial
+import HaarProjections.GaussianUnitary
+import HaarProjections.GaussianMatrixLaw
+import HaarProjections.HaarProjection
+import HaarProjections.HaarMeasure
+import HaarProjections.HaarOrbitUnique
+import HaarProjections.GaussianWhitening
+import HaarProjections.ProjectionOrbit
+import HaarProjections.MatrixRankMeasurable
+import HaarProjections.HaarLocalSupport
+import HaarProjections.HaarFullLocalSupport
+import RandomCompression.CauchyBernoulli
+import RandomCompression.CauchyHolomorphic
+import RandomCompression.SpectralEdge
+import RandomCompression.CauchyHolomorphy
+import RandomCompression.CauchyLocalInverse
+
+/-!
+Verified components of the manuscript. This import file does not assert the
+full random-compression or free-convolution spectral-edge theorem.
+See verification_notes.md for the exact verification boundary.
+-/
+

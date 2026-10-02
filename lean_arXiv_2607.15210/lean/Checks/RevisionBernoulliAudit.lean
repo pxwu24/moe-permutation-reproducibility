@@ -1,0 +1,11 @@
+import RandomCompression.RevisionBernoulliCompression
+
+#print axioms ProjectionChannels.bernoulli_free_sum_right_edge
+#print axioms ProjectionChannels.fixed_random_compression_from_block_strong
+#print axioms ProjectionChannels.random_compression_from_block_strong
+#print axioms ProjectionChannels.random_compression_from_amplified_block_strong
+#print axioms ProjectionChannels.norm_kronecker_identity
+#print ProjectionChannels.BlockModifiedStrongInput
+#check ProjectionChannels.IsBernoulliFreeSumLaw
+#check ProjectionChannels.bernoulli_free_sum_right_edge
+#check ProjectionChannels.random_compression_from_block_strong

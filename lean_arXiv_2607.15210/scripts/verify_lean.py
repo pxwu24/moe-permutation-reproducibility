@@ -17,16 +17,36 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 RECORDS = ROOT / 'verification'
+LEAN_ROOT = ROOT / 'lean'
+AGGREGATE = 'Checks.AggregateAudit'
 IMPORT = re.compile(r'^import\s+([\w.]+)\s*$', re.M)
 
 
 def source_modules():
-    modules = {p.stem: p for p in ROOT.glob('*.lean')
-               if p.name not in {'lakefile.lean', 'AggregateAudit.lean'}}
-    modules.update({'Entropy.' + p.stem: p
-                    for p in (ROOT / 'entropy/Entropy').glob('*.lean')})
-    modules['Entropy'] = ROOT / 'entropy/Entropy.lean'
-    return modules
+    """Every maintained source, including helper and audit modules."""
+    return {'.'.join(p.relative_to(LEAN_ROOT).with_suffix('').parts): p
+            for p in sorted(LEAN_ROOT.rglob('*.lean'))
+            if p != LEAN_ROOT / 'Checks/AggregateAudit.lean'}
+
+
+def partial_progress_index(modules):
+    """Record every local dependency of each strong-convergence source."""
+    rows = []
+    for name in sorted(m for m in modules if m.startswith('StrongConvergence.')):
+        seen = set()
+        def visit(module):
+            if module in seen:
+                return
+            seen.add(module)
+            for dep in IMPORT.findall(modules[module].read_text()):
+                if dep in modules:
+                    visit(dep)
+        visit(name)
+        rows.append({'module': name, 'path': str(modules[name].relative_to(ROOT)),
+                     'local_import_closure': [
+                         {'module': m, 'path': str(modules[m].relative_to(ROOT))}
+                         for m in sorted(seen)]})
+    return json.dumps(rows, indent=2) + '\n'
 
 
 def import_order(modules):
@@ -88,11 +108,11 @@ run_elab do
     throwError "Aggregate axiom audit failed"
   logInfo "Aggregate audit passed"
 '''.replace('MODULE_NAMES', ', '.join('`' + name for name in names))
-    (ROOT / 'AggregateAudit.lean').write_text(source)
+    (LEAN_ROOT / 'Checks/AggregateAudit.lean').write_text(source)
 
 
 def write_all_proofs(modules):
-    excluded = {'AllProofs', 'ResultChecks', 'UnprovedTargets'}
+    excluded = {'AllProofs', 'Checks.ResultChecks', 'Checks.UnprovedTargets', AGGREGATE}
     names = sorted(name for name in modules
                    if name not in excluded and not name.endswith('Audit'))
     source = '\n'.join('import ' + name for name in names)
@@ -106,7 +126,7 @@ identify the exact paper statements, hypotheses, and proof obligations.
 Importing a conditional theorem does not discharge its hypotheses.
 -/
 '''
-    (ROOT / 'AllProofs.lean').write_text(source)
+    (LEAN_ROOT / 'AllProofs.lean').write_text(source)
 
 
 def verify(direct=False, jobs=2):
@@ -118,11 +138,12 @@ def verify(direct=False, jobs=2):
     status_path.write_text(json.dumps({'status': 'running'}) + '\n')
     modules = source_modules()
     write_all_proofs(modules)
-    modules['AllProofs'] = ROOT / 'AllProofs.lean'
+    modules['AllProofs'] = LEAN_ROOT / 'AllProofs.lean'
     ordered = import_order(modules)
     write_aggregate_audit(modules)
-    modules['AggregateAudit'] = ROOT / 'AggregateAudit.lean'
-    ordered.append('AggregateAudit')
+    modules[AGGREGATE] = LEAN_ROOT / 'Checks/AggregateAudit.lean'
+    ordered.append(AGGREGATE)
+    (ROOT / 'partial_progress/source_index.json').write_text(partial_progress_index(modules))
     prefix = ['lean'] if direct else ['lake', 'env', 'lean']
     # Resolve a changed Lake configuration once before independent workers
     # enter `lake env`; simultaneous reconfiguration requires an exclusive lock.
@@ -140,7 +161,7 @@ def verify(direct=False, jobs=2):
         log = logs / (name + '.log')
         start = time.monotonic()
         with log.open('w') as handle:
-            run = subprocess.run(prefix + ['-o', str(out), str(path.relative_to(ROOT))],
+            run = subprocess.run(prefix + ['--root=lean', '-o', str(out), str(path.relative_to(ROOT))],
                                  cwd=ROOT, stdout=handle, stderr=subprocess.STDOUT)
         text = log.read_text()
         if run.returncode or 'sorryAx' in text or "declaration uses 'sorry'" in text:
@@ -172,7 +193,7 @@ def verify(direct=False, jobs=2):
         status_path.write_text(json.dumps({'status': 'failed', 'error': str(exc)}) + '\n')
         raise
     records = [completed[name] for name in ordered]
-    audit = (logs / 'AggregateAudit.log').read_text()
+    audit = (logs / (AGGREGATE + '.log')).read_text()
     if 'Aggregate audit passed' not in audit:
         raise RuntimeError('Missing successful aggregate audit')
     count = int(re.search(r'AUDITED DECLARATIONS: (\d+)', audit)[1])
@@ -182,9 +203,9 @@ def verify(direct=False, jobs=2):
               'compiled_modules': len(records), 'audited_declarations': count,
               'audited_theorem_declarations_including_generated': theorem_count,
               'allowed_axioms': ['propext', 'Classical.choice', 'Quot.sound'],
-              'scope': 'All indexed source declarations checked; consult RESULTS.json for paper coverage.',
+              'scope': 'All indexed source declarations checked; consult results/RESULTS.json for paper coverage.',
               'modules': records}
-    subprocess.run(['python3', 'verify_statements.py'], cwd=ROOT / 'entropy', check=True)
+    subprocess.run(['python3', 'scripts/verify_entropy_statements.py'], cwd=ROOT, check=True)
     for record in records:
         if hashlib.sha256((ROOT / record['path']).read_bytes()).hexdigest() != record['sha256']:
             raise RuntimeError('Source changed during verification: ' + record['module'])

@@ -1,0 +1,27 @@
+import StrongConvergence.StrongConvergenceMomentMatrices
+import StrongConvergence.StrongConvergenceMomentStrong
+
+/-! Kernel dependency audit. All mathematical hypotheses are explicit:
+common compact support, probability measures, and convergence of moments.
+No free-probability or random-matrix convergence theorem is assumed here. -/
+
+#print axioms StrongConvergenceMoments.integrable_of_continuousOn_of_ae_mem_Icc
+#print axioms StrongConvergenceMoments.integral_polynomial_eq_moments
+#print axioms StrongConvergenceMoments.polynomial_integral_tendsto_of_moments
+#print axioms StrongConvergenceMoments.integral_difference_le_of_uniform_Icc
+#print axioms StrongConvergenceMoments.continuous_integral_tendsto_of_moments
+#print axioms StrongConvergenceMoments.bounded_continuous_integral_tendsto_of_moments
+#print axioms StrongConvergenceMoments.empiricalMeasure_isProbability
+#print axioms StrongConvergenceMoments.integral_empiricalMeasure
+#print axioms StrongConvergenceMoments.empiricalMeasure_ae_mem_Icc
+#print axioms StrongConvergenceMoments.empirical_integral_tendsto_of_moments
+#print axioms StrongConvergenceMoments.trace_power_eq_sum_eigenvalues
+#print axioms StrongConvergenceMoments.empiricalSpectralMeasure_moment
+#print axioms StrongConvergenceMoments.empiricalSpectralMeasure_ae_mem_of_norm_le
+#print axioms StrongConvergenceMoments.matrix_spectral_tests_tendsto_of_trace_moments
+#print axioms StrongConvergenceMoments.ae_matrix_spectral_tests_of_ae_trace_moments
+#print axioms StrongConvergence.normLowerTest_integral_pos
+#print axioms StrongConvergence.eventually_lt_norm_of_support
+#print axioms StrongConvergence.eventually_lt_norm_of_lt_supportNorm
+#print axioms StrongConvergence.supportNorm_le_liminf_norm
+#print axioms StrongConvergence.ae_norm_and_spectral_tests_of_moments

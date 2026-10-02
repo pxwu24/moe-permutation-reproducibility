@@ -1,10 +1,10 @@
-entropy/Entropy/BellLimitCoefficients.lean:56:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+lean/Entropy/BellLimitCoefficients.lean:56:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-entropy/Entropy/BellLimitCoefficients.lean:105:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+lean/Entropy/BellLimitCoefficients.lean:105:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-entropy/Entropy/BellLimitCoefficients.lean:117:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+lean/Entropy/BellLimitCoefficients.lean:117:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-entropy/Entropy/BellLimitCoefficients.lean:121:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+lean/Entropy/BellLimitCoefficients.lean:121:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 'BellLimitVerification.denominator_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BellLimitVerification.denominator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]

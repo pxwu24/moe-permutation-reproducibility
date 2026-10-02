@@ -7,14 +7,13 @@ This repository provides Lean verification of the following arXiv papers, alongs
 | arXiv:2608.25961 | [Numerical reproducibility code](reproduce_numerics.py) |
 | arXiv:2609.26743 | [`lean_arXiv:2609.26743/`](./lean_arXiv:2609.26743/README.md) |
 
-For arXiv:2607.15210, the [verification guide](lean_arXiv_2607.15210/README.md)
-starts with installation instructions and indexes all 20 requested numbered
-results, with exact Lean declarations and every related local proof file.
-The channel-limit and existence results use only the stated block-modified
-strong-convergence theorem. The remaining spectral, entropy, operator, and
-optimization steps are proved in Lean. The dimension-182 result includes the
-global minimizer reduction and an exact rational Python certificate for a gap
-greater than 0.000477 nats; its conclusion is `k_high(1) <= 182).
+For arXiv:2607.15210, start with the [verification summary](lean_arXiv_2607.15210/README.md).
+It lists the checked results, provides installation instructions, and states the
+remaining block-modified strong-convergence theorem in full. Proofs are grouped
+by topic, with [partial convergence work](lean_arXiv_2607.15210/partial_progress/)
+listed separately. The dimension-182 spectral certificate is exact; its
+finite-channel consequence depends on that convergence theorem. The certified
+bound is `k_high(1) <= 182`.
 
 ```sh
 bash lean_arXiv_2607.15210/verify-all.sh

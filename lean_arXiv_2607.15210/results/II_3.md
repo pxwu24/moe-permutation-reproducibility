@@ -1,8 +1,10 @@
 # Lemma II.3: Random compression formula
 
-**Status: Complete under the permitted block-modified strong-convergence input.**
+Deduction verified; the block-modified strong-convergence theorem remains an input.
 
 For an actual projection sequence, affine operator-norm convergence from the permitted amplified block-modified strong-convergence input implies largest-eigenvalue convergence to the stated body support, simultaneously for all real coefficient vectors on one probability-one event. The spectral edge is proved through Lemma A.1.
+
+The full unverified input and the Lean progress are stated in [partial_progress/](../partial_progress/README.md).
 
 ## Check this result
 
@@ -31,52 +33,52 @@ The displayed hypotheses are part of the checked statement. A theorem conditiona
 
 ## Entry files
 
-- [RevisionBernoulliCompression](../RevisionBernoulliCompression.lean)
-- [ProjectionStrongConvergence](../ProjectionStrongConvergence.lean)
-- [BlockModification](../BlockModification.lean)
-- [RevisionFullBlockInput](../RevisionFullBlockInput.lean)
+- [RandomCompression.RevisionBernoulliCompression](../lean/RandomCompression/RevisionBernoulliCompression.lean)
+- [RandomCompression.ProjectionStrongConvergence](../lean/RandomCompression/ProjectionStrongConvergence.lean)
+- [RandomCompression.BlockModification](../lean/RandomCompression/BlockModification.lean)
+- [RandomCompression.RevisionFullBlockInput](../lean/RandomCompression/RevisionFullBlockInput.lean)
 
 ## All related Lean files
 
 This is the complete transitive local import closure of the entry files. Mathlib dependencies are pinned in `lake-manifest.json`.
 
-- [BernoulliCalculus.lean](../BernoulliCalculus.lean)
-- [BernoulliCriticalPoint.lean](../BernoulliCriticalPoint.lean)
-- [BernoulliDuality.lean](../BernoulliDuality.lean)
-- [BernoulliEdgeCalculus.lean](../BernoulliEdgeCalculus.lean)
-- [BlockModification.lean](../BlockModification.lean)
-- [CauchyBernoulli.lean](../CauchyBernoulli.lean)
-- [CauchyHolomorphic.lean](../CauchyHolomorphic.lean)
-- [CauchyHolomorphy.lean](../CauchyHolomorphy.lean)
-- [CauchyLocalInverse.lean](../CauchyLocalInverse.lean)
-- [CompletePositivity.lean](../CompletePositivity.lean)
-- [CompressionEndpointGlue.lean](../CompressionEndpointGlue.lean)
-- [CompressionExtension.lean](../CompressionExtension.lean)
-- [CompressionSpectral.lean](../CompressionSpectral.lean)
-- [entropy/Entropy/Defs.lean](../entropy/Entropy/Defs.lean)
-- [entropy/Entropy/OutputSpace.lean](../entropy/Entropy/OutputSpace.lean)
-- [entropy/Entropy/OutputSpaceBody.lean](../entropy/Entropy/OutputSpaceBody.lean)
-- [HaarMeasure.lean](../HaarMeasure.lean)
-- [HaarProjection.lean](../HaarProjection.lean)
-- [OutputSpaceCompressionBridge.lean](../OutputSpaceCompressionBridge.lean)
-- [OutputSpaceMatrix.lean](../OutputSpaceMatrix.lean)
-- [PreliminariesAnalysis.lean](../PreliminariesAnalysis.lean)
-- [PreliminariesChoi.lean](../PreliminariesChoi.lean)
-- [PreliminariesLegendre.lean](../PreliminariesLegendre.lean)
-- [PreliminariesMatrix.lean](../PreliminariesMatrix.lean)
-- [ProjectionStrongConvergence.lean](../ProjectionStrongConvergence.lean)
-- [RevisionBernoulliCauchy.lean](../RevisionBernoulliCauchy.lean)
-- [RevisionBernoulliCompression.lean](../RevisionBernoulliCompression.lean)
-- [RevisionBernoulliEdge.lean](../RevisionBernoulliEdge.lean)
-- [RevisionBernoulliHolomorphic.lean](../RevisionBernoulliHolomorphic.lean)
-- [RevisionBernoulliLaw.lean](../RevisionBernoulliLaw.lean)
-- [RevisionBernoulliTensor.lean](../RevisionBernoulliTensor.lean)
-- [RevisionFullBlockInput.lean](../RevisionFullBlockInput.lean)
-- [RevisionOutputChannel.lean](../RevisionOutputChannel.lean)
-- [RevisionOutputConvergence.lean](../RevisionOutputConvergence.lean)
-- [RevisionOutputDuality.lean](../RevisionOutputDuality.lean)
-- [RevisionOutputUnitary.lean](../RevisionOutputUnitary.lean)
-- [SpectralEdge.lean](../SpectralEdge.lean)
+- [lean/Entropy/Defs.lean](../lean/Entropy/Defs.lean)
+- [lean/Entropy/OutputSpace.lean](../lean/Entropy/OutputSpace.lean)
+- [lean/Entropy/OutputSpaceBody.lean](../lean/Entropy/OutputSpaceBody.lean)
+- [lean/HaarProjections/HaarMeasure.lean](../lean/HaarProjections/HaarMeasure.lean)
+- [lean/HaarProjections/HaarProjection.lean](../lean/HaarProjections/HaarProjection.lean)
+- [lean/OutputStates/OutputSpaceCompressionBridge.lean](../lean/OutputStates/OutputSpaceCompressionBridge.lean)
+- [lean/OutputStates/OutputSpaceMatrix.lean](../lean/OutputStates/OutputSpaceMatrix.lean)
+- [lean/OutputStates/RevisionOutputChannel.lean](../lean/OutputStates/RevisionOutputChannel.lean)
+- [lean/OutputStates/RevisionOutputConvergence.lean](../lean/OutputStates/RevisionOutputConvergence.lean)
+- [lean/OutputStates/RevisionOutputDuality.lean](../lean/OutputStates/RevisionOutputDuality.lean)
+- [lean/OutputStates/RevisionOutputUnitary.lean](../lean/OutputStates/RevisionOutputUnitary.lean)
+- [lean/Preliminaries/CompletePositivity.lean](../lean/Preliminaries/CompletePositivity.lean)
+- [lean/Preliminaries/PreliminariesAnalysis.lean](../lean/Preliminaries/PreliminariesAnalysis.lean)
+- [lean/Preliminaries/PreliminariesChoi.lean](../lean/Preliminaries/PreliminariesChoi.lean)
+- [lean/Preliminaries/PreliminariesLegendre.lean](../lean/Preliminaries/PreliminariesLegendre.lean)
+- [lean/Preliminaries/PreliminariesMatrix.lean](../lean/Preliminaries/PreliminariesMatrix.lean)
+- [lean/RandomCompression/BernoulliCalculus.lean](../lean/RandomCompression/BernoulliCalculus.lean)
+- [lean/RandomCompression/BernoulliCriticalPoint.lean](../lean/RandomCompression/BernoulliCriticalPoint.lean)
+- [lean/RandomCompression/BernoulliDuality.lean](../lean/RandomCompression/BernoulliDuality.lean)
+- [lean/RandomCompression/BernoulliEdgeCalculus.lean](../lean/RandomCompression/BernoulliEdgeCalculus.lean)
+- [lean/RandomCompression/BlockModification.lean](../lean/RandomCompression/BlockModification.lean)
+- [lean/RandomCompression/CauchyBernoulli.lean](../lean/RandomCompression/CauchyBernoulli.lean)
+- [lean/RandomCompression/CauchyHolomorphic.lean](../lean/RandomCompression/CauchyHolomorphic.lean)
+- [lean/RandomCompression/CauchyHolomorphy.lean](../lean/RandomCompression/CauchyHolomorphy.lean)
+- [lean/RandomCompression/CauchyLocalInverse.lean](../lean/RandomCompression/CauchyLocalInverse.lean)
+- [lean/RandomCompression/CompressionEndpointGlue.lean](../lean/RandomCompression/CompressionEndpointGlue.lean)
+- [lean/RandomCompression/CompressionExtension.lean](../lean/RandomCompression/CompressionExtension.lean)
+- [lean/RandomCompression/CompressionSpectral.lean](../lean/RandomCompression/CompressionSpectral.lean)
+- [lean/RandomCompression/ProjectionStrongConvergence.lean](../lean/RandomCompression/ProjectionStrongConvergence.lean)
+- [lean/RandomCompression/RevisionBernoulliCauchy.lean](../lean/RandomCompression/RevisionBernoulliCauchy.lean)
+- [lean/RandomCompression/RevisionBernoulliCompression.lean](../lean/RandomCompression/RevisionBernoulliCompression.lean)
+- [lean/RandomCompression/RevisionBernoulliEdge.lean](../lean/RandomCompression/RevisionBernoulliEdge.lean)
+- [lean/RandomCompression/RevisionBernoulliHolomorphic.lean](../lean/RandomCompression/RevisionBernoulliHolomorphic.lean)
+- [lean/RandomCompression/RevisionBernoulliLaw.lean](../lean/RandomCompression/RevisionBernoulliLaw.lean)
+- [lean/RandomCompression/RevisionBernoulliTensor.lean](../lean/RandomCompression/RevisionBernoulliTensor.lean)
+- [lean/RandomCompression/RevisionFullBlockInput.lean](../lean/RandomCompression/RevisionFullBlockInput.lean)
+- [lean/RandomCompression/SpectralEdge.lean](../lean/RandomCompression/SpectralEdge.lean)
 
 ## Assumptions and dependencies
 
@@ -88,6 +90,6 @@ Paper dependencies: A.1.
 
 ## Python checks
 
-- [random_compression_check.py](../final_draft_audit/random_compression_check.py)
+- [random_compression_check.py](../python/random_compression/random_compression_check.py)
 
 The exact rational certificate is a certificate of its scalar inequalities; the other numerical checks are cross-checks, not universal proofs.

@@ -1,6 +1,6 @@
 # Lemma III.4: Channel support and generalized-eigenvalue threshold
 
-**Status: Complete.**
+Complete.
 
 For the actual normalized channel output of Eq. (20), maximization over positive-semidefinite trace-one matrices equals the largest normalized compression eigenvalue, and its infimum threshold is exactly the paper formula. The density eigenstate attaining the maximum and all trace identities are proved.
 
@@ -29,19 +29,19 @@ The displayed hypotheses are part of the checked statement. A theorem conditiona
 
 ## Entry files
 
-- [RevisionOutputChannel](../RevisionOutputChannel.lean)
+- [OutputStates.RevisionOutputChannel](../lean/OutputStates/RevisionOutputChannel.lean)
 
 ## All related Lean files
 
 This is the complete transitive local import closure of the entry files. Mathlib dependencies are pinned in `lake-manifest.json`.
 
-- [CompressionSpectral.lean](../CompressionSpectral.lean)
-- [OutputSpaceMatrix.lean](../OutputSpaceMatrix.lean)
-- [PreliminariesAnalysis.lean](../PreliminariesAnalysis.lean)
-- [PreliminariesChoi.lean](../PreliminariesChoi.lean)
-- [PreliminariesLegendre.lean](../PreliminariesLegendre.lean)
-- [PreliminariesMatrix.lean](../PreliminariesMatrix.lean)
-- [RevisionOutputChannel.lean](../RevisionOutputChannel.lean)
+- [lean/OutputStates/OutputSpaceMatrix.lean](../lean/OutputStates/OutputSpaceMatrix.lean)
+- [lean/OutputStates/RevisionOutputChannel.lean](../lean/OutputStates/RevisionOutputChannel.lean)
+- [lean/Preliminaries/PreliminariesAnalysis.lean](../lean/Preliminaries/PreliminariesAnalysis.lean)
+- [lean/Preliminaries/PreliminariesChoi.lean](../lean/Preliminaries/PreliminariesChoi.lean)
+- [lean/Preliminaries/PreliminariesLegendre.lean](../lean/Preliminaries/PreliminariesLegendre.lean)
+- [lean/Preliminaries/PreliminariesMatrix.lean](../lean/Preliminaries/PreliminariesMatrix.lean)
+- [lean/RandomCompression/CompressionSpectral.lean](../lean/RandomCompression/CompressionSpectral.lean)
 
 ## Assumptions and dependencies
 
