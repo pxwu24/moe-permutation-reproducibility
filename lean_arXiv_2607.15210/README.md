@@ -194,7 +194,7 @@ For this verification project, use:
 @misc{wu_lean_2607_15210,
   author       = {Wu, Peixue},
   title        = {{Lean verification for counterexamples to additivity of minimum output p-Renyi entropy}},
-  howpublished = {\href{https://github.com/pxwu24/superadditivity-of-classical-communication/tree/109345ec675bee1fa588870c83d01f0a43411772/lean_arXiv_2607.15210}{Github Repository}}
+  howpublished = {\href{https://github.com/pxwu24/superadditivity-of-classical-communication/tree/cdb8187fc94aba565abc53f0004da365f63aed22/lean_arXiv_2607.15210}{Github Repository}}
 }
 ```
 
